@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documents on mvrck</title>
+    <link>https://mvrck.jp/documents/</link>
+    <description>Recent content in Documents on mvrck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Tue, 27 Dec 2011 15:09:27 +0900</lastBuildDate>
+    
+	<atom:link href="https://mvrck.jp/documents/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AppleScript演算子リファレンス</title>
+      <link>https://mvrck.jp/documents/applescript-operators/</link>
+      <pubDate>Tue, 27 Dec 2011 15:09:27 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/documents/applescript-operators/</guid>
+      <description>AppleScript の演算子と、結合の優先順位一覧です。
+同じ意味の演算子でも数多くの表記方法が存在します（ is not は isn&#39;t でもいい、などなど）。本表では個人的によく使うもの以外は省略しています。
+演算子    機能 演算子 備考     加算 (Addition) +    減算 (Subtraction) -    乗算 (Multiplication) *    除算 (Division) /,
+÷    整数除算 (Integral division) div    剰余・余り (Remainder) mod    累乗 (Exponentiation) ^    否定 (Negation) not    連言・論理積 (Logical conjunction) and    選言・論理和 (Logical disjunction) or    等しい (Equality) =,</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,5 @@
+main article p.moved samp {
+    font-size: 12px;
+    color: #666;
+    overflow-wrap: break-word;
+}

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://mvrck.jp/about/</loc>
+    <lastmod>2017-05-26T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/blog/lubuntu-on-vaio-p/</loc>
+    <lastmod>2013-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/documents/applescript-operators/</loc>
+    <lastmod>2011-12-27T15:09:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/blog/flipout-us-keypad/</loc>
+    <lastmod>2011-12-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/blog/flipout-keyboard-config/</loc>
+    <lastmod>2011-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/tags/android/</loc>
+    <lastmod>2011-12-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/tags/applescript/</loc>
+    <lastmod>2011-12-27T15:09:27+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/blog/</loc>
+    <lastmod>2013-09-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/tags/device/</loc>
+    <lastmod>2013-09-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/documents/</loc>
+    <lastmod>2011-12-27T15:09:27+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/tags/flipout/</loc>
+    <lastmod>2011-12-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/tags/reference/</loc>
+    <lastmod>2011-12-27T15:09:27+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/tags/</loc>
+    <lastmod>2011-12-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/tags/teardown/</loc>
+    <lastmod>2011-12-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/tags/ubuntu/</loc>
+    <lastmod>2013-09-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/tags/vaio-p/</loc>
+    <lastmod>2013-09-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mvrck.jp/</loc>
+    <lastmod>2017-05-26T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
