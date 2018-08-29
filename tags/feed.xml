@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on mvrck</title>
+    <link>https://mvrck.jp/tags/</link>
+    <description>Recent content in Tags on mvrck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Fri, 02 Dec 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mvrck.jp/tags/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android</title>
+      <link>https://mvrck.jp/tags/android/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://mvrck.jp/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Applescript</title>
+      <link>https://mvrck.jp/tags/applescript/</link>
+      <pubDate>Tue, 27 Dec 2011 15:09:27 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/applescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Device</title>
+      <link>https://mvrck.jp/tags/device/</link>
+      <pubDate>Tue, 09 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mvrck.jp/tags/device/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flipout</title>
+      <link>https://mvrck.jp/tags/flipout/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://mvrck.jp/tags/flipout/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reference</title>
+      <link>https://mvrck.jp/tags/reference/</link>
+      <pubDate>Tue, 27 Dec 2011 15:09:27 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/reference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teardown</title>
+      <link>https://mvrck.jp/tags/teardown/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://mvrck.jp/tags/teardown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://mvrck.jp/tags/ubuntu/</link>
+      <pubDate>Tue, 09 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mvrck.jp/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vaio P</title>
+      <link>https://mvrck.jp/tags/vaio-p/</link>
+      <pubDate>Tue, 09 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mvrck.jp/tags/vaio-p/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

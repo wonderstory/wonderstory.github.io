@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on mvrck</title>
+    <link>https://mvrck.jp/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on mvrck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Tue, 09 Jul 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mvrck.jp/tags/ubuntu/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>VAIO P (VPCP11) に Lubuntu 13.04 を導入</title>
+      <link>https://mvrck.jp/blog/lubuntu-on-vaio-p/</link>
+      <pubDate>Tue, 09 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mvrck.jp/blog/lubuntu-on-vaio-p/</guid>
+      <description>Windows 7 の動作がどうしても一呼吸遅い感じがして、積極的には使わなくなってしまった後期型 VAIO P に Lubuntu を入れてみました。
+いちおう新しくパーティションを切って、元の環境にも戻せるようにしておきましたが、 Lubuntu が特に目立った設定もしないまま予想以上の快適さで動いているので、 Windows 7 がますますいらない子になりつつあります。
+以下、設定。
+grub4dos (on Windows 7) 経由でブートできるようにする grldr と grldr.mbr を c:\ にコピー
+ [c:\menu.lst] timeout 4 default /Linux title Linux root (hd0,3) kernel /boot/grub/i386-pc/core.img title Reboot reboot   bcdedit /create で項目を追加：
+&amp;gt; bcdedit /create /d &amp;quot;Linux&amp;quot; /application bootsector {__UUID__}  返ってきた値を使って、
+&amp;gt; bcdedit /set {__UUID__} device partition=C: &amp;gt; bcdedit /set {__UUID__} path \grldr.mbr &amp;gt; bcdedit /displayorder {__UUID__} /addlast  grub  [/etc/default/grub] GRUB_TIMEOUT=4   $ sudo update-grub2  サスペンドからの復帰 ほとんど唯一といっていい困ったことが、サスペンドから（たぶんXが）復帰してくれない、という動きでした。</description>
+    </item>
+    
+  </channel>
+</rss>

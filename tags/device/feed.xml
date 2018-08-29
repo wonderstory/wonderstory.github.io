@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Device on mvrck</title>
+    <link>https://mvrck.jp/tags/device/</link>
+    <description>Recent content in Device on mvrck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Tue, 09 Jul 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mvrck.jp/tags/device/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>VAIO P (VPCP11) に Lubuntu 13.04 を導入</title>
+      <link>https://mvrck.jp/blog/lubuntu-on-vaio-p/</link>
+      <pubDate>Tue, 09 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mvrck.jp/blog/lubuntu-on-vaio-p/</guid>
+      <description>Windows 7 の動作がどうしても一呼吸遅い感じがして、積極的には使わなくなってしまった後期型 VAIO P に Lubuntu を入れてみました。
+いちおう新しくパーティションを切って、元の環境にも戻せるようにしておきましたが、 Lubuntu が特に目立った設定もしないまま予想以上の快適さで動いているので、 Windows 7 がますますいらない子になりつつあります。
+以下、設定。
+grub4dos (on Windows 7) 経由でブートできるようにする grldr と grldr.mbr を c:\ にコピー
+ [c:\menu.lst] timeout 4 default /Linux title Linux root (hd0,3) kernel /boot/grub/i386-pc/core.img title Reboot reboot   bcdedit /create で項目を追加：
+&amp;gt; bcdedit /create /d &amp;quot;Linux&amp;quot; /application bootsector {__UUID__}  返ってきた値を使って、
+&amp;gt; bcdedit /set {__UUID__} device partition=C: &amp;gt; bcdedit /set {__UUID__} path \grldr.mbr &amp;gt; bcdedit /displayorder {__UUID__} /addlast  grub  [/etc/default/grub] GRUB_TIMEOUT=4   $ sudo update-grub2  サスペンドからの復帰 ほとんど唯一といっていい困ったことが、サスペンドから（たぶんXが）復帰してくれない、という動きでした。</description>
+    </item>
+    
+    <item>
+      <title>Motorola Flipout 分解＆キーパッド交換</title>
+      <link>https://mvrck.jp/blog/flipout-us-keypad/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://mvrck.jp/blog/flipout-us-keypad/</guid>
+      <description>Motorola Flipout の US 印字キーパッドが届いたので、本体を分解して交換しました。
+   Motorola Flipout 分解 (1)    Motorola Flipout 分解 (2)  裏蓋を外すと、カメラ側にトルクスねじ（たぶんT2）が3か所あります。手持ちの工具がないので、溝を掘り下げて強引に回しました（非推奨）。スピーカー側はつめで引っかかっているだけなので、かぱっとカメラ方向にずらすだけで、基盤を覆っている部分が外れます。
+覆いを外した勢いで SIM カードを保持する部品もいっしょに取れます。ボリュームボタンと電源ボタンもなくしやすいです。開けた弾みでどこかに飛んでいかないよう注意です。
+  Motorola Flipout 分解 (3)  基盤をフレームに固定しているねじは4か所。径は前のねじと同じで、長さが少し短いものでした。堅いケーブルの下にあるねじは、近くの端子を外してから。
+これでキーパッドにたどり着きます。
+   Motorola Flipout 分解 (4)    Motorola Flipout 分解 (5) キーボード取り替え  キーパッドは下のシートで圧力を検知しているだけなので、配線や特別な工夫は要りません。接着されている元のキーをぺりぺりとはがして新しいものを取り付けるだけです。周囲にはくぼみが多くあって、一度組み立てれば簡単には動かないので、特に接着はしなくても平気だと思います。
+元通りに組み立てれば完成です。
+  Motorola Flipout  HK 版はキーボード上に入力補助記号があって印字がごちゃごちゃしていたので、黒いインクを塗って目立たないようにしていました。これですっきり。
+Flipout ネタはこれでひととおりやりつくした感がありますが、まだまだメイン機としてがしがし使い続けたいと思います。</description>
+    </item>
+    
+    <item>
+      <title>Motorola Flipout キーボードカスタマイズ</title>
+      <link>https://mvrck.jp/blog/flipout-keyboard-config/</link>
+      <pubDate>Mon, 13 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://mvrck.jp/blog/flipout-keyboard-config/</guid>
+      <description>ちいささと、ころっとした外見、ぷちぷちした感触のキーボードがだいぶ気に入ってしまって、ローエンド機種だし動作は遅めだし公式アップデートはたぶん来ないけれど、ここのところメイン機になっている Motorola Flipout MB511 ですが、キーボードの設定をいじって文字入力をより快適にしてみました。要root権取得。
+   MB511    MB511  けっこう打ちやすい Flipout のキーボードで少し不満なのが、
+ Wnn系のIMで、日本語・英語の入力切り替え Shift+Space が押しにくい（Shift が左端にあって中心から遠い）。 日本語ではそれなりに使うハイフンが Alt+Z に割り当てられていて、両手の親指でぽちぽち入力するときに動きが大きくて煩わしい。  というところで、どうにかならないかといろいろとAndroidのキーボードカスタマイズ情報を探すと、
+ /system/usr/keylayout/*.kl ： ハードキーに対応するキーコードを設定 /system/usr/keychars/*.kcm.bin ： キーコードに対応して入力される文字を設定  というファイルをいじればよさそうです。 logcat を眺めた感じでは、手持ちの HK版Flipout で使われていたのは次の2つ。本体からコピーしてきます。
+ sholes-keypad.kl sholes-keypad.kcm.bin  日本語・英語の入力切り替えをしやすく。 (sholes-keypad.kl) まず、スペースの右隣に「A|中」という何も反応しないキー（たぶん日本語入力でいうところの文字キー）があるので、それを Shift+Space に割り当てられないかと思ったものの、修飾キーつきの割り当てはファイルをいじるだけでは無理なようでした。
+仕方がないので、右手親指だけで スペース+A|中 が押せるのを利用することにして、「A|中」キーには Shift に割り当てることにしました。手の動きが減って、なんとなく手間が減ったような気になれます。
+*.kl ファイルは、単純にスキャンコードとキーコードが並ぶテキストファイルで、キーコードは android.view.KeyEvent で定義されている定数の先頭（KEYCODE_）を省いたものを書けるようです。「A|中」キーのスキャンコードは 162 で、これを SHIFT_RIGHT に変えました。
+#key 162 EXPLORER WAKE_DROPPED key 162 SHIFT_RIGHT WAKE_DROPPED  あと、試しに音量アップキーをカメラキーに置き換えてみました。</description>
+    </item>
+    
+  </channel>
+</rss>

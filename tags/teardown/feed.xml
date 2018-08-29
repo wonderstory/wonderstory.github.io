@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teardown on mvrck</title>
+    <link>https://mvrck.jp/tags/teardown/</link>
+    <description>Recent content in Teardown on mvrck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Fri, 02 Dec 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mvrck.jp/tags/teardown/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Motorola Flipout 分解＆キーパッド交換</title>
+      <link>https://mvrck.jp/blog/flipout-us-keypad/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://mvrck.jp/blog/flipout-us-keypad/</guid>
+      <description>Motorola Flipout の US 印字キーパッドが届いたので、本体を分解して交換しました。
+   Motorola Flipout 分解 (1)    Motorola Flipout 分解 (2)  裏蓋を外すと、カメラ側にトルクスねじ（たぶんT2）が3か所あります。手持ちの工具がないので、溝を掘り下げて強引に回しました（非推奨）。スピーカー側はつめで引っかかっているだけなので、かぱっとカメラ方向にずらすだけで、基盤を覆っている部分が外れます。
+覆いを外した勢いで SIM カードを保持する部品もいっしょに取れます。ボリュームボタンと電源ボタンもなくしやすいです。開けた弾みでどこかに飛んでいかないよう注意です。
+  Motorola Flipout 分解 (3)  基盤をフレームに固定しているねじは4か所。径は前のねじと同じで、長さが少し短いものでした。堅いケーブルの下にあるねじは、近くの端子を外してから。
+これでキーパッドにたどり着きます。
+   Motorola Flipout 分解 (4)    Motorola Flipout 分解 (5) キーボード取り替え  キーパッドは下のシートで圧力を検知しているだけなので、配線や特別な工夫は要りません。接着されている元のキーをぺりぺりとはがして新しいものを取り付けるだけです。周囲にはくぼみが多くあって、一度組み立てれば簡単には動かないので、特に接着はしなくても平気だと思います。
+元通りに組み立てれば完成です。
+  Motorola Flipout  HK 版はキーボード上に入力補助記号があって印字がごちゃごちゃしていたので、黒いインクを塗って目立たないようにしていました。これですっきり。
+Flipout ネタはこれでひととおりやりつくした感がありますが、まだまだメイン機としてがしがし使い続けたいと思います。</description>
+    </item>
+    
+  </channel>
+</rss>
