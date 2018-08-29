@@ -201,10 +201,10 @@ div#neighbors a::before {
     color: #999;
 }
 div#neighbors a[rel=prev]::before {
-    content: "\f10c  later";
+    content: "\f10c  earlier";
 }
 div#neighbors a[rel=next]::before {
-    content: "\f10c  earlier";
+    content: "\f10c  later";
 }
 
 main #general {
@@ -227,13 +227,13 @@ div#paging a {
     border: solid 1px #999;
     border-radius: 10%;
     font-weight: 300;
-} 
+}
 div#paging a.current {
     border: dashed 1px #ccc;
 }
 div#paging a mark {
     color: #ccc;
-} 
+}
 
 ul#tagcloud, ul#tagcloud li {
     margin-left: 0;
@@ -287,7 +287,7 @@ main a[href] {
 }
 
 a mark {
-    background: inherit;    
+    background: inherit;
 }
 nav a mark {
     font-weight: 200;
