@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.53-DEV" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="theme-color" content="#663300">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://mvrck.jp/css/main.css">
+<link rel="stylesheet" href="https://mvrck.jp/css/custom.css">
+<title>GPD Pocket2 (7Y30) - mvrck</title>
+
+<link rel="canonical" href="https://mvrck.jp/blog/gpd-pocket2-7y30/">
+
+
+</head>
+
+<body>
+
+<header>
+<div id="logo" class="wd">
+
+<a href="https://mvrck.jp/">mvrck</a>
+
+</div>
+
+<nav id="menu">
+
+<ul>
+
+
+<li class="blog">
+
+
+<a href="https://mvrck.jp/blog/">Blog</a>
+
+
+</li>
+
+
+<li class="documents">
+
+
+<a href="https://mvrck.jp/documents/">Documents</a>
+
+
+</li>
+
+
+<li class="about">
+
+
+<a href="https://mvrck.jp/about/">About</a>
+
+
+</li>
+
+</ul>
+</nav>
+</header>
+
+<main>
+
+<article>
+<header>
+<h1>GPD Pocket2 (7Y30)</h1>
+<p class="date"><time datetime="2018-11-05T00:00:00">2018-11-05</time>
+<span class="modified">modified</span> <time datetime="2018-12-15T00:00:00">2018-12-15</time></p>
+<p class="tags"> <a href="https://mvrck.jp/tags/device/">device</a> <a href="https://mvrck.jp/tags/windows/">windows</a> <a href="https://mvrck.jp/tags/gpd-pocket2/">gpd-pocket2</a></p>
+
+</header>
+
+<div class="content">
+
+
+<p>高確率でカバンの中でアルミ製カイロになっている GPD Pocket (Z8750) の置き換えとして、 GPD Pocket2 (7Y30) を導入しました。モノは悪くない。</p>
+
+<h2 id="ime切替問題">IME切替問題</h2>
+
+<p>修飾キーが左側にしかないため、 <a href="https://github.com/karakaram/alt-ime-ahk/blob/master/alt-ime-ahk.ahk">左右のAltでIMEのON/OFFを切り替える手法</a> が使えない問題。</p>
+
+<p>CtrlでIMEをOFF、AltでONとして回避しました。</p>
+
+
+<figure>
+    <figcaption>[alt-ime-ahk.ahk を変更]</figcaption>
+    <pre><code>; (前略)
+
+*~LCtrl::Send {Blind}{vk07}
+*~LAlt::Send {Blind}{vk07}
+*~RAlt::Send {Blind}{vk07}
+
+; 左 Ctrl 空打ちで IME を OFF
+LCtrl up::
+    if (A_PriorHotkey == &quot;*~LCtrl&quot;)
+    {
+        IME_SET(0)
+    }
+    Return
+
+; 左 Alt 空打ちで IME を ON
+LAlt up::
+    if (A_PriorHotkey == &quot;*~LAlt&quot;)
+    {
+        IME_SET(1)
+    }
+    Return
+
+; 右 Alt 空打ちで IME を ON
+RAlt up::
+    if (A_PriorHotkey == &quot;*~RAlt&quot;)
+    {
+        IME_SET(1)
+    }
+    Return
+</code></pre>
+
+</figure>
+
+
+<p>外付けキーボードの使用も考え、右Altの設定は残しました。</p>
+
+<h2 id="日常使いにはじゅうぶん">日常使いにはじゅうぶん</h2>
+
+<p>謎の「半/全」キーとか、右側に修飾キーがないとか、マウスクリックが固くて音が大きいとか、多少不満はありますが……。
+壊れなければ、もう買い替えることはないのでは。持ち歩き用途ではもうこれでじゅうぶんです。</p>
+
+<!--
+たまたま店頭在庫があったので、高確率でカバンの中でアルミ製カイロになっているのはひたすら不安でしかなかった初代GPD Pocketの代替として購入してみました。OneMix2やいっそのことSurface Go (LTE)でも、と考えていましたが、単純にタイミングの問題でこちらを選択。
+
+初代でも（ちょっと処理を待たされる感じと大味な電源・無線通信まわりを除いて）あまり不満はなかったので、いろいろバグもあるらしいAtomよりは状況が良くなるだろうという思惑です。
+
+一定の保証はあるとはいえ、大陸系特有の雑な不良品に当たらないことを願う感じでした。
+
+## 雑感
+
+- ACアダプタは初代と同一のものが付属。量販店から買ったからか、シール貼りでリンクスインターナショナルの表記が。
+- 液晶側の周囲にごく浅い溝がついていて、端末を開くときの取っ掛かりになっている。
+  - 特段開けにくいわけではないが、凄く開けやすいわけでもない。
+- 最上段のマウスクリックボタンが結構固い。
+  - 電源ボタンなどはこれで良いけれど、クリックボタンは押す頻度が多いので気になる。
+  - クリック音も大きめ。
+- ポインティングデバイスは光学式になったが、特に違和感がない。むしろ力を掛けなくても動くので、少し楽かも。
+  - 右上にあるため、両手持ちでの操作がしやすくなった。
+  - クリックの感触は、こちらもやや固い。
+  - 長押しで右クリック扱いになる。慣れるまで、普通のクリックのつもりが右クリックになってしまうことが。
+  - 部品や取り付けの個体差かもしれないが、微妙にデバイス右上が高い感じで傾いている。液晶面との干渉はないようなので気にしないことにする。
+- 発熱のことを考えると、無理にSSDを積まなくても良いように思う。体感的に遅くはない。
+- microSDカードスロットの底が深め。
+  - くぼみがついているが、更にその奥まで入る。
+  - 頻繁に取り出す派にとっては辛いかもしれないが、差しっぱなし派としては特に問題ない。
+- micro HDMIポートがなくなった。
+  - 結局変換が必要なので、Type-C経由で困りはしない（DisplayPort Alternate Modeに対応している）。
+  - ただ、給電しつつ外部画面出力や別のType-C接続機器を使いたい、という場合はちょっと悲しい。そういうことを実現できる機器（給電用途でないType-Cポートを備えるハブ、給電もできるType-C - DisplayPort/HDMIアダプタ、ロールスワップできるディスプレイなど）は限られるし、だいたい高い。
+
+## 良い点
+
+- Atomからの脱却。軽作業をしている限り、処理を待たされる感じは全然ない。
+- USB Type-Aポートが増えている。ただし、左側のポートは上下逆……。
+- ファンを停止できる。ただ、停止状態で使い続けることの不安は多少ある。
+- ほんのちょっと薄くなった（代わりにほんのちょっと大きくなった）。
+- 排気口が側面からヒンジに移ったため、熱風を手に受けずに済む。
+- （そこまで重要でもないが）Deleteキーの位置が標準的になった。
+
+※初代Pocketで結構見かけた「BackspaceとDeleteの位置が逆」との声は、個人的には同意できなくて、「Deleteの位置が変（別の行にあるほうが良い）」と考える。Backspaceが数字キーの行にあるのは正しいし、Pの右隣がBackspaceとなると、それはそれで変だと思う。
+
+## 悪い点
+
+- 謎の「半/全」キーがある。2つ右にあるバッククォートキーと同じコードを発するので、正直なところ、無意味。ただでさえ少ないキーが無駄に……。
+  - 仮にJIS配列などを下手に再現されたら、US配列派としては悪夢でしかない。
+- キーの総数が減っている。個人的にはキーサイズ・ピッチ確保よりも、右側にも修飾キーが欲しい（特にShift。あとは右手でAltとカーソルキー同時押しがしにくいのは痛い）。このサイズだとどう頑張っても超快適にはならないので、いっそのこと数が多いほうが良かった。多少窮屈でも、どうせいずれは慣れてしまう。
+
+## 追記 (2018-11-24)
+
+当たり端末を引けたようで、変な挙動は特にありませんでした。よかった。
+
+- 心配していたアルミ製カイロ状態にはならず、スリープ後の電池消費も皆無。文章打ち程度なら少なくとも5時間は持つので満足。
+- 初代Pocketはスリープ後に高頻度でネットワークアダプタが変になったが、Pocket2では安定してつながっている。
+- ファンの音が初代よりは控えめに聞こえる。低負荷状態では、やたら頻繁にON/OFFするのでかえって不安なくらい。
+- キーボードのカチャカチャ感が強めなのは少々気になる。固め・浅めで底を打つ感じ。近年のMacBookのようなぺちゃぺちゃした触感とはまたちょっと違う。好みの問題ではある。
+
+後出しで第8世代Core m3版が出るとか。まあ、たとえこれ以降の後継品が出ても、きっともう買い替えはしないですね。Pocket2でじゅうぶん、というのが半分。あとはかってにしてくれ、というのが半分。壊れたらまた考えます。
+-->
+
+</div>
+</article>
+
+
+<div id="neighbors">
+<a rel="prev" href="https://mvrck.jp/blog/lubuntu-on-vaio-p/">VAIO P (VPCP11) に Lubuntu 13.04 を導入</a>
+
+</div>
+
+
+
+</main>
+
+<footer>
+<div id="link">
+
+<a href="https://github.com/wonderstory" title="GitHub" aria-label="GitHub"><i class="fa fa-lg fa-github" aria-hidden="true"></i></a>
+
+<a href="https://twitter.com/wonderstory" title="Twitter" aria-label="Twitter"><i class="fa fa-lg fa-twitter" aria-hidden="true"></i></a>
+
+<a href="http://note.mvrck.jp" title="Tumblr" aria-label="Tumblr"><i class="fa fa-lg fa-tumblr-square" aria-hidden="true"></i></a>
+
+<a href="https://www.flickr.com/photos/wonderstory/" title="Flickr" aria-label="Flickr"><i class="fa fa-lg fa-flickr" aria-hidden="true"></i></a>
+
+</div>
+
+<div id="author">
+
+
+<b>wonderstory</b>
+
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
+
+
+
+</div>
+
+</footer>
+
+
+</body>
+</html>

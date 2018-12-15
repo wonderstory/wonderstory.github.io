@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gpd Pocket2 on mvrck</title>
+    <link>https://mvrck.jp/tags/gpd-pocket2/</link>
+    <description>Recent content in Gpd Pocket2 on mvrck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Mon, 05 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mvrck.jp/tags/gpd-pocket2/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GPD Pocket2 (7Y30)</title>
+      <link>https://mvrck.jp/blog/gpd-pocket2-7y30/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mvrck.jp/blog/gpd-pocket2-7y30/</guid>
+      <description>高確率でカバンの中でアルミ製カイロになっている GPD Pocket (Z8750) の置き換えとして、 GPD Pocket2 (7Y30) を導入しました。モノは悪くない。
+IME切替問題 修飾キーが左側にしかないため、 左右のAltでIMEのON/OFFを切り替える手法 が使えない問題。
+CtrlでIMEをOFF、AltでONとして回避しました。
+ [alt-ime-ahk.ahk を変更] ; (前略) *~LCtrl::Send {Blind}{vk07} *~LAlt::Send {Blind}{vk07} *~RAlt::Send {Blind}{vk07} ; 左 Ctrl 空打ちで IME を OFF LCtrl up:: if (A_PriorHotkey == &amp;quot;*~LCtrl&amp;quot;) { IME_SET(0) } Return ; 左 Alt 空打ちで IME を ON LAlt up:: if (A_PriorHotkey == &amp;quot;*~LAlt&amp;quot;) { IME_SET(1) } Return ; 右 Alt 空打ちで IME を ON RAlt up:: if (A_PriorHotkey == &amp;quot;*~RAlt&amp;quot;) { IME_SET(1) } Return   外付けキーボードの使用も考え、右Altの設定は残しました。</description>
+    </item>
+    
+  </channel>
+</rss>
