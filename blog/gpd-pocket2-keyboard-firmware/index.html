@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.54-DEV" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="theme-color" content="#663300">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://mvrck.jp/css/main.css">
+<link rel="stylesheet" href="https://mvrck.jp/css/custom.css">
+<title>GPD Pocket2 のキーボードファームウェアが出ていた - mvrck</title>
+
+<link rel="canonical" href="https://mvrck.jp/blog/gpd-pocket2-keyboard-firmware/">
+
+
+</head>
+
+<body>
+
+<header>
+<div id="logo" class="wd">
+
+<a href="https://mvrck.jp/">mvrck</a>
+
+</div>
+
+<nav id="menu">
+
+<ul>
+
+
+<li class="blog">
+
+
+<a href="https://mvrck.jp/blog/">Blog</a>
+
+
+</li>
+
+
+<li class="documents">
+
+
+<a href="https://mvrck.jp/documents/">Documents</a>
+
+
+</li>
+
+
+<li class="about">
+
+
+<a href="https://mvrck.jp/about/">About</a>
+
+
+</li>
+
+</ul>
+</nav>
+</header>
+
+<main>
+
+<article>
+<header>
+<h1>GPD Pocket2 のキーボードファームウェアが出ていた</h1>
+<p class="date"><time datetime="2018-12-23T00:00:00">2018-12-23</time>
+<span class="modified">modified</span> <time datetime="2018-12-30T00:00:00">2018-12-30</time></p>
+<p class="tags"> <a href="https://mvrck.jp/tags/device/">device</a> <a href="https://mvrck.jp/tags/windows/">windows</a> <a href="https://mvrck.jp/tags/gpd-pocket2/">gpd-pocket2</a></p>
+
+</header>
+
+<div class="content">
+
+
+<p>バッククォートと謎の半/全キーとで発行するコードを異なるものにするファームウェアが出ていたので適用しました。</p>
+
+<ul>
+<li>公式ページ <a href="https://www.gpd.hk/gpdp2firmware">GPD Pocket 2 Firmware &amp; Driver &amp; BIOS</a> から
+「GPD Pocket 2 Keyboard Firmware (Japan)」をたどって入手</li>
+</ul>
+
+<h2 id="変更点">変更点</h2>
+
+<p>適用後のスキャンコードは以下の通り、バッククォートキーが変化します。</p>
+
+<table>
+<thead>
+<tr>
+<th>キー</th>
+<th>FW適用前</th>
+<th>FW適用後</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>半/全</td>
+<td>0x0029</td>
+<td>0x0029</td>
+</tr>
+
+<tr>
+<td>バッククォート</td>
+<td>0x0029</td>
+<td><em>0x007D</em></td>
+</tr>
+</tbody>
+</table>
+
+<p>なお、ファームウェアに添付されているレジストリファイルを適用するとJIS配列相当として認識されるようになってしまうので、キーの表示をそのまま活かしたいときは、ファームウェアだけを当てて手動で調整する必要があります。</p>
+
+<h2 id="調整例">調整例</h2>
+
+<p>バッククォートキーは、バックスラッシュ・円マークキー（スキャンコード 0x007D）として機能するようになっているので、表記通りバッククォート（0x0029）に。</p>
+
+<p>半/全キーはUS配列としてはバッククォート（0x0029）となっているので、これを適当なキーに（W10Wheel.NET で スクロールキーに割り当てている ScrollLock: 0x0046 としてみました。ついでに CapsLock: 0x003A を Application: 0xE05D に）。</p>
+
+<p>ということで、こんな感じに。
+US配列の外付けキーボードではバッククォートが使えなくなるのが難点です。</p>
+
+<table>
+<thead>
+<tr>
+<th>キー</th>
+<th>FW適用前</th>
+<th>FW適用後</th>
+<th>調整後</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>半/全</td>
+<td>0x0029</td>
+<td>0x0029</td>
+<td>0x0046 （ScrollLock）</td>
+</tr>
+
+<tr>
+<td>CapsLock</td>
+<td>0x003A</td>
+<td>0x003A</td>
+<td>0xE05D （Application）</td>
+</tr>
+
+<tr>
+<td>バッククォート</td>
+<td>0x0029</td>
+<td><em>0x007D</em></td>
+<td>0x0029 （バッククォート）</td>
+</tr>
+</tbody>
+</table>
+
+<script src="https://gist.github.com/wonderstory/74ec5d3fbbb88499e414207c59a31829.js"></script>
+
+</div>
+</article>
+
+
+<div id="neighbors">
+<a rel="prev" href="https://mvrck.jp/blog/hugo-0-52-config-cache/">Hugo 0.52 でファイルキャッシュの設定が変わった</a>
+
+</div>
+
+
+
+</main>
+
+<footer>
+<div id="link">
+
+<a href="https://github.com/wonderstory" title="GitHub" aria-label="GitHub"><i class="fa fa-lg fa-github" aria-hidden="true"></i></a>
+
+<a href="https://twitter.com/wonderstory" title="Twitter" aria-label="Twitter"><i class="fa fa-lg fa-twitter" aria-hidden="true"></i></a>
+
+<a href="http://note.mvrck.jp" title="Tumblr" aria-label="Tumblr"><i class="fa fa-lg fa-tumblr-square" aria-hidden="true"></i></a>
+
+<a href="https://www.flickr.com/photos/wonderstory/" title="Flickr" aria-label="Flickr"><i class="fa fa-lg fa-flickr" aria-hidden="true"></i></a>
+
+</div>
+
+<div id="author">
+
+
+<b>wonderstory</b>
+
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
+
+
+
+</div>
+
+</footer>
+
+
+</body>
+</html>

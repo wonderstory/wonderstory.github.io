@@ -6,10 +6,25 @@
     <description>Recent content in Device on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Mon, 05 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mvrck.jp/tags/device/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GPD Pocket2 のキーボードファームウェアが出ていた</title>
+      <link>https://mvrck.jp/blog/gpd-pocket2-keyboard-firmware/</link>
+      <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mvrck.jp/blog/gpd-pocket2-keyboard-firmware/</guid>
+      <description> バッククォートと謎の半/全キーとで発行するコードを異なるものにするファームウェアが出ていたので適用しました。
+ 公式ページ GPD Pocket 2 Firmware &amp;amp; Driver &amp;amp; BIOS から 「GPD Pocket 2 Keyboard Firmware (Japan)」をたどって入手  変更点 適用後のスキャンコードは以下の通り、バッククォートキーが変化します。
+   キー FW適用前 FW適用後     半/全 0x0029 0x0029   バッククォート 0x0029 0x007D    なお、ファームウェアに添付されているレジストリファイルを適用するとJIS配列相当として認識されるようになってしまうので、キーの表示をそのまま活かしたいときは、ファームウェアだけを当てて手動で調整する必要があります。
+調整例 バッククォートキーは、バックスラッシュ・円マークキー（スキャンコード 0x007D）として機能するようになっているので、表記通りバッククォート（0x0029）に。
+半/全キーはUS配列としてはバッククォート（0x0029）となっているので、これを適当なキーに（W10Wheel.NET で スクロールキーに割り当てている ScrollLock: 0x0046 としてみました。ついでに CapsLock: 0x003A を Application: 0xE05D に）。
+ということで、こんな感じに。 US配列の外付けキーボードではバッククォートが使えなくなるのが難点です。
+   キー FW適用前 FW適用後 調整後     半/全 0x0029 0x0029 0x0046 （ScrollLock）   CapsLock 0x003A 0x003A 0xE05D （Application）   バッククォート 0x0029 0x007D 0x0029 （バッククォート）     </description>
+    </item>
     
     <item>
       <title>GPD Pocket2 (7Y30)</title>
