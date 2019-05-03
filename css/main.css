@@ -13,10 +13,17 @@ div#author {
     font-family: 'Ubuntu', 'Yu Gothic Medium', 'YuGothic', sans-serif;
 }
 
+.content pre,
+.content code,
+.moved samp {
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+}
+
 div#logo.wd > *::before,
 .content h2::before,
 .content h3::before,
-.content h4::before {
+.content h4::before,
+#related h2::before {
     font-family: "FontAwesome";
     font-size: 40px;
     content: "\f10c";
@@ -183,8 +190,19 @@ main article > h1 {
 div.content {
     margin-top: 48px;
 }
+div#related,
 div#neighbors {
     margin-top: 48px;
+}
+
+
+div#related h2::after {
+    margin-top: -.75em;
+    margin-left: 4.5em;
+    display: block;
+    content: " ";
+    height: .75em;
+    border-top: dashed 3px #eee6e0;
 }
 
 
@@ -281,6 +299,7 @@ body > footer {
 a {
     color: #000;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
 main a[href] {
     border-bottom: solid 1px #ccc;
@@ -292,6 +311,10 @@ a mark {
 nav a mark {
     font-weight: 200;
     color: #ccc;
+}
+
+a:hover {
+    opacity: 0.8;
 }
 
 

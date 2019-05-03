@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8" />
+<meta name="generator" content="Hugo 0.56.0-DEV" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+<meta name="theme-color" content="#663300" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/main.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/custom.css" />
+<title>Hugo 0.55 の変更点いろいろメモ - mvrck</title>
+
+<link rel="canonical" href="https://mvrck.jp/blog/hugo-0-55-destructive-changes/" />
+
+
+</head>
+
+<body>
+
+<header>
+<div id="logo" class="wd">
+
+<a href="https://mvrck.jp/">mvrck</a>
+
+</div>
+
+<nav id="menu">
+
+<ul>
+
+
+<li class="blog">
+
+
+<a href="https://mvrck.jp/blog/">Blog</a>
+
+
+</li>
+
+
+<li class="documents">
+
+
+<a href="https://mvrck.jp/documents/">Documents</a>
+
+
+</li>
+
+
+<li class="about">
+
+
+<a href="https://mvrck.jp/about/">About</a>
+
+
+</li>
+
+</ul>
+</nav>
+</header>
+
+<main>
+
+<article>
+<header>
+<h1>Hugo 0.55 の変更点いろいろメモ</h1>
+<p class="date"><time datetime="2019-05-03T20:27:00">2019-05-03</time>
+</p>
+<p class="tags"> <a href="https://mvrck.jp/tags/web/">web</a> <a href="https://mvrck.jp/tags/hugo/">hugo</a></p>
+
+</header>
+
+<div class="content">
+
+
+<p>記事を書こうとするといつも Hugo が新しくなっており、それへの対応についても記事を書くことになる不思議。</p>
+
+<h2 id="shortcodes-の挙動変更">shortcodes の挙動変更</h2>
+
+<p>いままで Markdown が適用されていた部分でも、適用されない場面が増えました。
+記事内の呼び出し方によって挙動が違います。</p>
+
+<p><code>{{% &hellip; %}}</code> は、文脈依存。</p>
+
+<p><code>{{&lt; &hellip; &gt;}}</code> は、出力をかっちり決めたいとき。基本はそのまま出力。Markdown による変換が必要なら、実装側で <code>{{ .Inner | markdownify }}</code> とします。</p>
+
+<p>個人的には <code>{{&lt; &hellip; &gt;}}</code> としての記載を意図して shortcodes をつくると思うので、覚え書きとして。</p>
+
+<p>Hugo はこういった変更が割とカジュアルに行われるので、油断すると刺される。</p>
+
+<h2 id="rsslink-は廃止予定">.RSSLink は廃止予定</h2>
+
+<p>これまでは下記のように記述していたところですが、</p>
+
+<pre><code>{{ if .RSSLink }}
+&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;{{ .Title | plainify }}&quot; href=&quot;{{ .RSSLink }}&quot; /&gt;
+{{ end }}
+</code></pre>
+
+<p>表示中のページが対象であれば、</p>
+
+<pre><code>{{ with .OutputFormats.Get &quot;RSS&quot; }}
+&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;{{ $.Title | plainify }}&quot; href=&quot;{{ .RelPermalink }}&quot; /&gt;
+{{ end }}
+</code></pre>
+
+<p>Home固定であれば、</p>
+
+<pre><code>{{ with .Site.Home.AlternativeOutputFormats.Get &quot;RSS&quot; }}
+&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;{{ $.Site.Title | plainify }}&quot; href=&quot;{{ .Permalink }}&quot; /&gt;
+{{ end }}
+</code></pre>
+
+<p>といった記述が必要となります。</p>
+
+<h2 id="hugo-変数は-global-な-hugo-関数へ">.Hugo 変数は global な hugo 関数へ</h2>
+
+<p>例えば <code>{{ .Hugo.Generator }}</code> は <code>{{ hugo.Generator }}</code> とします。</p>
+
+<h2 id="page-on-taxonomy">.Page on Taxonomy</h2>
+
+<p>自前で対象ページを引き出さなくても、素直に書けるようになりました。</p>
+
+<pre><code>{{ range .Data.Terms }}
+&lt;li&gt;&lt;a href=&quot;{{ .Page.Permalink }}&quot;&gt;{{ .Page.Title }}&lt;/a&gt; ({{ .Count }})&lt;/li&gt;
+{{ end }}
+</code></pre>
+
+</div>
+</article>
+
+
+
+<div id="related">
+<h2>Related</h2>
+<ul>
+
+<li><a href="https://mvrck.jp/blog/hugo-0-52-config-cache/">Hugo 0.52 でファイルキャッシュの設定が変わった</a></li>
+
+</ul>
+</div>
+
+
+
+<div id="neighbors">
+<a rel="prev" href="https://mvrck.jp/blog/gpd-pocket2-keyboard-firmware/">GPD Pocket2 のキーボードファームウェアが出ていた</a>
+
+</div>
+
+
+
+</main>
+
+<footer>
+<div id="link">
+
+<a href="https://github.com/wonderstory" title="GitHub" aria-label="GitHub"><i class="fa fa-lg fa-github" aria-hidden="true"></i></a>
+
+<a href="https://twitter.com/wonderstory" title="Twitter" aria-label="Twitter"><i class="fa fa-lg fa-twitter" aria-hidden="true"></i></a>
+
+<a href="http://note.mvrck.jp" title="Tumblr" aria-label="Tumblr"><i class="fa fa-lg fa-tumblr-square" aria-hidden="true"></i></a>
+
+<a href="https://www.flickr.com/photos/wonderstory/" title="Flickr" aria-label="Flickr"><i class="fa fa-lg fa-flickr" aria-hidden="true"></i></a>
+
+</div>
+
+<div id="author">
+
+
+<b>wonderstory</b>
+
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
+
+
+
+</div>
+
+</footer>
+
+
+</body>
+</html>

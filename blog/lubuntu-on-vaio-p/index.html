@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja-JP">
 <head>
-<meta charset="utf-8">
-<meta name="generator" content="Hugo 0.54-DEV" />
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="theme-color" content="#663300">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://mvrck.jp/css/main.css">
-<link rel="stylesheet" href="https://mvrck.jp/css/custom.css">
+<meta charset="utf-8" />
+<meta name="generator" content="Hugo 0.56.0-DEV" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+<meta name="theme-color" content="#663300" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/main.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/custom.css" />
 <title>VAIO P (VPCP11) に Lubuntu 13.04 を導入 - mvrck</title>
 
-<link rel="canonical" href="https://mvrck.jp/blog/lubuntu-on-vaio-p/">
+<link rel="canonical" href="https://mvrck.jp/blog/lubuntu-on-vaio-p/" />
 
 
 </head>
@@ -83,7 +83,6 @@
 
 <p>grldr と grldr.mbr を <code>c:\</code> にコピー</p>
 
-
 <figure>
     <figcaption>[c:\menu.lst]</figcaption>
     <pre><code>timeout 4
@@ -94,11 +93,8 @@ root (hd0,3)
 kernel /boot/grub/i386-pc/core.img
 
 title Reboot
-reboot
-</code></pre>
-
+reboot</code></pre>
 </figure>
-
 
 <p><code>bcdedit /create</code> で項目を追加：</p>
 
@@ -115,14 +111,10 @@ reboot
 
 <h2 id="grub">grub</h2>
 
-
 <figure>
     <figcaption>[/etc/default/grub]</figcaption>
-    <pre><code>GRUB_TIMEOUT=4
-</code></pre>
-
+    <pre><code>GRUB_TIMEOUT=4</code></pre>
 </figure>
-
 
 <pre><code>$ sudo update-grub2
 </code></pre>
@@ -131,14 +123,10 @@ reboot
 
 <p>ほとんど唯一といっていい困ったことが、サスペンドから（たぶんXが）復帰してくれない、という動きでした。</p>
 
-
 <figure>
     <figcaption>[/etc/pm/config.d/gma500]</figcaption>
-    <pre><code>ADD_PARAMETERS='-quirk-vbemode-restore'
-</code></pre>
-
+    <pre><code>ADD_PARAMETERS=&#39;-quirk-vbemode-restore&#39;</code></pre>
 </figure>
-
 
 <p>これでふたを開けたりキーボードを押せば（パスワード入力画面が出る前にロック直前の画面が一瞬出てしまいますが）、普通に復帰してくれるようになります。</p>
 
@@ -173,6 +161,20 @@ $ sudo aptitude install gobi-loader
 
 </div>
 </article>
+
+
+
+<div id="related">
+<h2>Related</h2>
+<ul>
+
+<li><a href="https://mvrck.jp/blog/flipout-us-keypad/">Motorola Flipout 分解＆キーパッド交換</a></li>
+
+<li><a href="https://mvrck.jp/blog/flipout-keyboard-config/">Motorola Flipout キーボードカスタマイズ</a></li>
+
+</ul>
+</div>
+
 
 
 <div id="neighbors">

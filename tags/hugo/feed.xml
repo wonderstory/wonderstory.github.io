@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on mvrck</title>
+    <title>hugo on mvrck</title>
     <link>https://mvrck.jp/tags/hugo/</link>
-    <description>Recent content in Hugo on mvrck</description>
+    <description>Recent content in hugo on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sun, 16 Dec 2018 00:46:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 03 May 2019 20:27:00 +0900</lastBuildDate>
     
 	<atom:link href="https://mvrck.jp/tags/hugo/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo 0.55 の変更点いろいろメモ</title>
+      <link>https://mvrck.jp/blog/hugo-0-55-destructive-changes/</link>
+      <pubDate>Fri, 03 May 2019 20:27:00 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/blog/hugo-0-55-destructive-changes/</guid>
+      <description>記事を書こうとするといつも Hugo が新しくなっており、それへの対応についても記事を書くことになる不思議。
+shortcodes の挙動変更 いままで Markdown が適用されていた部分でも、適用されない場面が増えました。 記事内の呼び出し方によって挙動が違います。
+{{% &amp;hellip; %}} は、文脈依存。
+{{&amp;lt; &amp;hellip; &amp;gt;}} は、出力をかっちり決めたいとき。基本はそのまま出力。Markdown による変換が必要なら、実装側で {{ .Inner | markdownify }} とします。
+個人的には {{&amp;lt; &amp;hellip; &amp;gt;}} としての記載を意図して shortcodes をつくると思うので、覚え書きとして。
+Hugo はこういった変更が割とカジュアルに行われるので、油断すると刺される。
+.RSSLink は廃止予定 これまでは下記のように記述していたところですが、
+{{ if .RSSLink }} &amp;lt;link rel=&amp;quot;alternate&amp;quot; type=&amp;quot;application/rss+xml&amp;quot; title=&amp;quot;{{ .Title | plainify }}&amp;quot; href=&amp;quot;{{ .RSSLink }}&amp;quot; /&amp;gt; {{ end }}  表示中のページが対象であれば、
+{{ with .OutputFormats.Get &amp;quot;RSS&amp;quot; }} &amp;lt;link rel=&amp;quot;alternate&amp;quot; type=&amp;quot;application/rss+xml&amp;quot; title=&amp;quot;{{ $.Title | plainify }}&amp;quot; href=&amp;quot;{{ .</description>
+    </item>
     
     <item>
       <title>Hugo 0.52 でファイルキャッシュの設定が変わった</title>

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja-JP">
 <head>
-<meta charset="utf-8">
-<meta name="generator" content="Hugo 0.54-DEV" />
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="theme-color" content="#663300">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://mvrck.jp/css/main.css">
-<link rel="stylesheet" href="https://mvrck.jp/css/custom.css">
+<meta charset="utf-8" />
+<meta name="generator" content="Hugo 0.56.0-DEV" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+<meta name="theme-color" content="#663300" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/main.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/custom.css" />
 <title>GPD Pocket2 (7Y30) - mvrck</title>
 
-<link rel="canonical" href="https://mvrck.jp/blog/gpd-pocket2-7y30/">
+<link rel="canonical" href="https://mvrck.jp/blog/gpd-pocket2-7y30/" />
 
 
 </head>
@@ -81,7 +81,6 @@
 
 <p>CtrlでIMEをOFF、AltでONとして回避しました。</p>
 
-
 <figure>
     <figcaption>[alt-ime-ahk.ahk を変更]</figcaption>
     <pre><code>; (前略)
@@ -92,7 +91,7 @@
 
 ; 左 Ctrl 空打ちで IME を OFF
 LCtrl up::
-    if (A_PriorHotkey == &quot;*~LCtrl&quot;)
+    if (A_PriorHotkey == &#34;*~LCtrl&#34;)
     {
         IME_SET(0)
     }
@@ -100,7 +99,7 @@ LCtrl up::
 
 ; 左 Alt 空打ちで IME を ON
 LAlt up::
-    if (A_PriorHotkey == &quot;*~LAlt&quot;)
+    if (A_PriorHotkey == &#34;*~LAlt&#34;)
     {
         IME_SET(1)
     }
@@ -108,15 +107,12 @@ LAlt up::
 
 ; 右 Alt 空打ちで IME を ON
 RAlt up::
-    if (A_PriorHotkey == &quot;*~RAlt&quot;)
+    if (A_PriorHotkey == &#34;*~RAlt&#34;)
     {
         IME_SET(1)
     }
-    Return
-</code></pre>
-
+    Return</code></pre>
 </figure>
-
 
 <p>外付けキーボードの使用も考え、右Altの設定は残しました。</p>
 
@@ -184,6 +180,22 @@ RAlt up::
 
 </div>
 </article>
+
+
+
+<div id="related">
+<h2>Related</h2>
+<ul>
+
+<li><a href="https://mvrck.jp/blog/lubuntu-on-vaio-p/">VAIO P (VPCP11) に Lubuntu 13.04 を導入</a></li>
+
+<li><a href="https://mvrck.jp/blog/flipout-us-keypad/">Motorola Flipout 分解＆キーパッド交換</a></li>
+
+<li><a href="https://mvrck.jp/blog/flipout-keyboard-config/">Motorola Flipout キーボードカスタマイズ</a></li>
+
+</ul>
+</div>
+
 
 
 <div id="neighbors">

@@ -6,31 +6,58 @@
     <description>Recent content in Tags on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Fri, 02 Dec 2011 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 May 2019 20:27:00 +0900</lastBuildDate>
     
 	<atom:link href="https://mvrck.jp/tags/feed.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Android</title>
-      <link>https://mvrck.jp/tags/android/</link>
-      <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+      <title>hugo</title>
+      <link>https://mvrck.jp/tags/hugo/</link>
+      <pubDate>Fri, 03 May 2019 20:27:00 +0900</pubDate>
       
-      <guid>https://mvrck.jp/tags/android/</guid>
+      <guid>https://mvrck.jp/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Applescript</title>
-      <link>https://mvrck.jp/tags/applescript/</link>
-      <pubDate>Tue, 27 Dec 2011 15:09:27 +0900</pubDate>
+      <title>web</title>
+      <link>https://mvrck.jp/tags/web/</link>
+      <pubDate>Fri, 03 May 2019 20:27:00 +0900</pubDate>
       
-      <guid>https://mvrck.jp/tags/applescript/</guid>
+      <guid>https://mvrck.jp/tags/web/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Config</title>
+      <title>device</title>
+      <link>https://mvrck.jp/tags/device/</link>
+      <pubDate>Sun, 23 Dec 2018 00:00:00 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/device/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gpd-pocket2</title>
+      <link>https://mvrck.jp/tags/gpd-pocket2/</link>
+      <pubDate>Sun, 23 Dec 2018 00:00:00 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/gpd-pocket2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://mvrck.jp/tags/windows/</link>
+      <pubDate>Sun, 23 Dec 2018 00:00:00 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>config</title>
       <link>https://mvrck.jp/tags/config/</link>
       <pubDate>Sun, 16 Dec 2018 00:46:00 +0900</pubDate>
       
@@ -39,43 +66,34 @@
     </item>
     
     <item>
-      <title>Device</title>
-      <link>https://mvrck.jp/tags/device/</link>
-      <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
+      <title>ubuntu</title>
+      <link>https://mvrck.jp/tags/ubuntu/</link>
+      <pubDate>Tue, 09 Jul 2013 00:00:00 +0900</pubDate>
       
-      <guid>https://mvrck.jp/tags/device/</guid>
+      <guid>https://mvrck.jp/tags/ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Flipout</title>
-      <link>https://mvrck.jp/tags/flipout/</link>
-      <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+      <title>vaio-p</title>
+      <link>https://mvrck.jp/tags/vaio-p/</link>
+      <pubDate>Tue, 09 Jul 2013 00:00:00 +0900</pubDate>
       
-      <guid>https://mvrck.jp/tags/flipout/</guid>
+      <guid>https://mvrck.jp/tags/vaio-p/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Gpd Pocket2</title>
-      <link>https://mvrck.jp/tags/gpd-pocket2/</link>
-      <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
+      <title>applescript</title>
+      <link>https://mvrck.jp/tags/applescript/</link>
+      <pubDate>Tue, 27 Dec 2011 15:09:27 +0900</pubDate>
       
-      <guid>https://mvrck.jp/tags/gpd-pocket2/</guid>
+      <guid>https://mvrck.jp/tags/applescript/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Hugo</title>
-      <link>https://mvrck.jp/tags/hugo/</link>
-      <pubDate>Sun, 16 Dec 2018 00:46:00 +0900</pubDate>
-      
-      <guid>https://mvrck.jp/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reference</title>
+      <title>reference</title>
       <link>https://mvrck.jp/tags/reference/</link>
       <pubDate>Tue, 27 Dec 2011 15:09:27 +0900</pubDate>
       
@@ -84,47 +102,29 @@
     </item>
     
     <item>
-      <title>Teardown</title>
+      <title>android</title>
+      <link>https://mvrck.jp/tags/android/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flipout</title>
+      <link>https://mvrck.jp/tags/flipout/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/flipout/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>teardown</title>
       <link>https://mvrck.jp/tags/teardown/</link>
-      <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/tags/teardown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://mvrck.jp/tags/ubuntu/</link>
-      <pubDate>Tue, 09 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://mvrck.jp/tags/ubuntu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vaio P</title>
-      <link>https://mvrck.jp/tags/vaio-p/</link>
-      <pubDate>Tue, 09 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://mvrck.jp/tags/vaio-p/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>https://mvrck.jp/tags/web/</link>
-      <pubDate>Sun, 16 Dec 2018 00:46:00 +0900</pubDate>
-      
-      <guid>https://mvrck.jp/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Windows</title>
-      <link>https://mvrck.jp/tags/windows/</link>
-      <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://mvrck.jp/tags/windows/</guid>
       <description></description>
     </item>
     
