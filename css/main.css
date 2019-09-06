@@ -14,8 +14,7 @@ div#author {
 }
 
 .content pre,
-.content code,
-.moved samp {
+.content code {
     font-family: 'Consolas', 'Courier New', Courier, monospace;
 }
 
@@ -33,6 +32,13 @@ div#logo.wd > *::before,
     margin-left: -.5em;
     z-index: -9;
 }
+.content h3::before {
+    color: #f0eee6;
+}
+.content h4::before {
+    color: #f3f3f3;
+}
+
 div#logo.wd > *::before {
     font-size: 140px;
     margin-top: -.7em;
@@ -365,6 +371,35 @@ a:hover {
     margin-top: 0;
 }
 
+.content blockquote {
+    position: relative;
+    margin: .25em 0 .25em 1.5em;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-style: italic;
+    color: #666;
+    background: #f3f3f3;
+}
+.content blockquote::before {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    content: "\f10d";
+    font-family: "FontAwesome";
+    color: #fcfaf9;
+    font-size: 58px;
+    line-height: 1;
+    font-weight: 900;
+}
+.content blockquote p {
+    position: relative;
+    margin: .5em 0;
+    padding: 0;
+    z-index: 9;
+    line-height: 1.5;
+}
+
 .content table {
     margin: 16px 0;
     border-spacing: 0px;
@@ -399,3 +434,8 @@ a:hover {
     font-weight: bold;
 }
 }/**/
+
+.content dt {
+    font-weight: bold;
+    background: #f3f3f3;
+}

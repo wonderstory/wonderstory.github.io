@@ -6,10 +6,22 @@
     <description>Recent content on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Fri, 03 May 2019 20:27:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 04 Sep 2019 00:11:33 +0900</lastBuildDate>
     
 	<atom:link href="https://mvrck.jp/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Anker PowerPort の商品名と機能の対応がよくわからない (Version 2019)</title>
+      <link>https://mvrck.jp/blog/anker-powerport-2019/</link>
+      <pubDate>Wed, 04 Sep 2019 00:11:33 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/blog/anker-powerport-2019/</guid>
+      <description>ankerjapan.com などに記載されている充電器の製品仕様を眺めていたら、モデルの名前と機能が入り乱れていて大変混乱したので、自分の理解用に整理しました。
+以下をすべて満たす製品のリストです（2019年夏現在）。
+ Type-C ポートがある ポートが1～2個 据え置き向け（電源コード仕様）ではない  PowerIQ 3.0 とはなんだったのか。
+ 【2019-09-06】 Atom III Slim を追加。  Type-C 1ポートの製品 大きめ    品名 型番 参考価格 サイズ mm 重量 Type-C 出力 Type-A 出力 備考     PowerPort Atom III 60W A2613121 3999 61x58x28 132g 60W N/A 規格非適合 *1   PowerPort Speed 1 PD 60 A2015113 3599 64x64x29 157g 60W N/A    PowerPort Speed 1 PD 30 A2014113 2299 61x58x28 101g 30W N/A     *1: 出力 15W 超では 5V - 3A が必須のため、規格非適合。後述。</description>
+    </item>
     
     <item>
       <title>Hugo 0.55 の変更点いろいろメモ</title>
