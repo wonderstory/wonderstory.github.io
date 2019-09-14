@@ -20,7 +20,7 @@
       <description>ankerjapan.com などに記載されている充電器の製品仕様を眺めていたら、モデルの名前と機能が入り乱れていて大変混乱したので、自分の理解用に整理しました。
 以下をすべて満たす製品のリストです（2019年夏現在）。
  Type-C ポートがある ポートが1～2個 据え置き向け（電源コード仕様）ではない  PowerIQ 3.0 とはなんだったのか。
- 【2019-09-06】 Atom III Slim を追加。  Type-C 1ポートの製品 大きめ    品名 型番 参考価格 サイズ mm 重量 Type-C 出力 Type-A 出力 備考     PowerPort Atom III 60W A2613121 3999 61x58x28 132g 60W N/A 規格非適合 *1   PowerPort Speed 1 PD 60 A2015113 3599 64x64x29 157g 60W N/A    PowerPort Speed 1 PD 30 A2014113 2299 61x58x28 101g 30W N/A     *1: 出力 15W 超では 5V - 3A が必須のため、規格非適合。後述。</description>
+ 【2019-09-06】 Atom III Slim （PD規格非適合）を追加。 【2019-09-14】 III Duo と III Nano （どちらもPD規格非適合）を追加。またよくわからないモデル展開……。  Type-C 1ポートの製品 大きめ    品名 型番 参考価格 サイズ mm 重量 Type-C 出力 Type-A 出力 備考     PowerPort Atom III 60W A2613121 3999 61x58x28 132g 60W N/A 規格非適合 *1   PowerPort Speed 1 PD 60 A2015113 3599 64x64x29 157g 60W N/A    PowerPort Speed 1 PD 30 A2014113 2299 61x58x28 101g 30W N/A     *1: 出力 15W 超では 5V - 3A が必須のため、規格非適合。後述。</description>
     </item>
     
   </channel>
