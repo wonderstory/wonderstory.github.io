@@ -32,6 +32,12 @@ div#logo.wd > *::before,
     margin-left: -.5em;
     z-index: -9;
 }
+.content h2 {
+    border-bottom: dotted 3px #eee6e0;
+}
+div#related h2 {
+    border-bottom: dashed 3px #eee6e0;
+}
 .content h3::before {
     color: #f0eee6;
 }
@@ -106,9 +112,20 @@ body > header {
 
 
 main > p.tags {
-    margin: 0;
+    position: absolute;
+    width: 100px;
+    margin: 0 0 0 -100px;
+    text-align: right;
+    font-size: 20px;
     font-weight: 300;
 }
+@media not all and (min-width: 750px) {
+    main > p.tags {
+        position: static;
+        text-align: left;
+        margin: 0 0 -4px 0;
+    }
+}/**/
 main > h1,
 main header > h1 {
     font-size: 20px;
@@ -135,6 +152,21 @@ main > div section {
 }
 main > article {
     margin: 0;
+}
+
+main article.draft::before {
+    content: "draft";
+    position: absolute;
+    transform: rotate(-20deg);
+    text-transform: uppercase;
+    font-family: 'Ubuntu', 'Yu Gothic Medium', 'YuGothic', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: -5em;
+    padding: 2px 8px;
+    background: #876;
+    color: #eee6e0;
+    opacity: 0.4;
 }
 
 @media (min-width: 600px) {
@@ -201,17 +233,6 @@ div#neighbors {
     margin-top: 48px;
 }
 
-
-div#related h2::after {
-    margin-top: -.75em;
-    margin-left: 4.5em;
-    display: block;
-    content: " ";
-    height: .75em;
-    border-top: dashed 3px #eee6e0;
-}
-
-
 div#neighbors a:first-child::after {
     display: block;
     content: " "
@@ -270,9 +291,15 @@ ul#tagcloud li {
     margin-bottom: 4px;
 }
 ul#tagcloud span.count {
+    vertical-align: bottom;
     font-size: 14px;
     color: #999;
 }
+ul#tagcloud span.count span.braket {
+    display: inline-block;
+    transform: translate(1px,1px) scale(0,0);
+}
+
 
 /*
 footer > div#link {
@@ -308,7 +335,7 @@ a {
     transition: all 0.2s ease;
 }
 main a[href] {
-    border-bottom: solid 1px #ccc;
+    border-bottom: solid 2px #ddd6d0;
 }
 
 a mark {
@@ -345,6 +372,22 @@ a:hover {
     background: transparent;
 }
 
+.content strong {
+    font-weight: bold;
+}
+.content em {
+    font-style: normal;
+    font-weight: bold;
+    color: #999;
+}
+.content del {
+    text-decoration: line-through;
+    color: #999;
+}
+.content ins {
+    text-decoration: none;
+    border-bottom: dashed 1px#999;
+}
 
 .content figure {
     margin: 1em 0 auto;
