@@ -6,10 +6,60 @@
     <description>Recent content in Tags on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sun, 20 Oct 2019 17:28:06 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 15 Dec 2020 09:22:13 +0900</lastBuildDate><atom:link href="https://mvrck.jp/tags/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cmd</title>
+      <link>https://mvrck.jp/tags/cmd/</link>
+      <pubDate>Tue, 15 Dec 2020 09:22:13 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/cmd/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://mvrck.jp/tags/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>search</title>
+      <link>https://mvrck.jp/tags/search/</link>
+      <pubDate>Tue, 15 Dec 2020 09:22:13 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/search/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>windows</title>
+      <link>https://mvrck.jp/tags/windows/</link>
+      <pubDate>Tue, 15 Dec 2020 09:22:13 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dotnet</title>
+      <link>https://mvrck.jp/tags/dotnet/</link>
+      <pubDate>Mon, 27 Jan 2020 00:52:11 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/dotnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wpf</title>
+      <link>https://mvrck.jp/tags/wpf/</link>
+      <pubDate>Mon, 27 Jan 2020 00:52:11 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/wpf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xaml</title>
+      <link>https://mvrck.jp/tags/xaml/</link>
+      <pubDate>Mon, 27 Jan 2020 00:52:11 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/xaml/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>device</title>
@@ -53,15 +103,6 @@
       <pubDate>Sat, 19 Oct 2019 23:04:16 +0900</pubDate>
       
       <guid>https://mvrck.jp/tags/gpd-micropc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>windows</title>
-      <link>https://mvrck.jp/tags/windows/</link>
-      <pubDate>Sat, 19 Oct 2019 23:04:16 +0900</pubDate>
-      
-      <guid>https://mvrck.jp/tags/windows/</guid>
       <description></description>
     </item>
     

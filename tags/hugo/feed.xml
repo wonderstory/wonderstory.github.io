@@ -6,26 +6,14 @@
     <description>Recent content in hugo on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Fri, 03 May 2019 20:27:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://mvrck.jp/tags/hugo/feed.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 03 May 2019 20:27:00 +0900</lastBuildDate><atom:link href="https://mvrck.jp/tags/hugo/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 0.55 の変更点いろいろメモ</title>
       <link>https://mvrck.jp/blog/hugo-0-55-destructive-changes/</link>
       <pubDate>Fri, 03 May 2019 20:27:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/hugo-0-55-destructive-changes/</guid>
-      <description>記事を書こうとするといつも Hugo が新しくなっており、それへの対応についても記事を書くことになる不思議。
-shortcodes の挙動変更 いままで Markdown が適用されていた部分でも、適用されない場面が増えました。 記事内の呼び出し方によって挙動が違います。
-{{% &amp;hellip; %}} は、文脈依存。
-{{&amp;lt; &amp;hellip; &amp;gt;}} は、出力をかっちり決めたいとき。基本はそのまま出力。Markdown による変換が必要なら、実装側で {{ .Inner | markdownify }} とします。
-個人的には {{&amp;lt; &amp;hellip; &amp;gt;}} としての記載を意図して shortcodes をつくると思うので、覚え書きとして。
-Hugo はこういった変更が割とカジュアルに行われるので、油断すると刺される。
-.RSSLink は廃止予定 これまでは下記のように記述していたところですが、
-{{ if .RSSLink }} &amp;lt;link rel=&amp;quot;alternate&amp;quot; type=&amp;quot;application/rss+xml&amp;quot; title=&amp;quot;{{ .Title | plainify }}&amp;quot; href=&amp;quot;{{ .RSSLink }}&amp;quot; /&amp;gt; {{ end }}  表示中のページが対象であれば、
-{{ with .OutputFormats.Get &amp;quot;RSS&amp;quot; }} &amp;lt;link rel=&amp;quot;alternate&amp;quot; type=&amp;quot;application/rss+xml&amp;quot; title=&amp;quot;{{ $.Title | plainify }}&amp;quot; href=&amp;quot;{{ .</description>
+      <description>記事を書こうとするといつも Hugo が新しくなっており、それへの対応についても記事を書くことになる不思議。 shortcodes の挙動変更 いままで Markdown が適用されていた部分</description>
     </item>
     
     <item>
@@ -34,11 +22,7 @@ Hugo はこういった変更が割とカジュアルに行われるので、油
       <pubDate>Sun, 16 Dec 2018 00:46:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/hugo-0-52-config-cache/</guid>
-      <description>ひさしぶりに記事を更新したら Hugo さんが急にエラーを出したため困惑していたところ、 なんと Hugo 0.52 からファイルキャッシュの設定方法が変わっていたうえ、相対パスを受け付けなくなっていました。
-Error: failed to create file caches from configuration: &amp;quot;cache/hugo&amp;quot; must resolve to an absolute directory  Hugo のドキュメントを参考に、設定ファイルを書き換える必要があります。 このサイトの config.toml だと
-cachedir = &amp;#34;cache&amp;#34; だったものを
-[caches] [caches.getjson] dir = &amp;#34;:resourceDir/_gen&amp;#34; maxAge = -1 に変更しました（必要ならJSON以外も設定）。
-今まではプロジェクトルート階層にある cache ディレクトリに生成されていたものが resources/_gen/getjson の中に作られるようになります。 :resourceDir は resourceDir の設定を書いておけば変更可能ですが、ディレクトリ構成にこだわりはないのでおとなしくデフォルトを使うことにします。</description>
+      <description>ひさしぶりに記事を更新したら Hugo さんが急にエラーを出したため困惑していたところ、 なんと Hugo 0.52 からファイルキャッシュの設定方法が変わっていたうえ、</description>
     </item>
     
   </channel>

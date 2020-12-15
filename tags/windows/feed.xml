@@ -6,10 +6,15 @@
     <description>Recent content in windows on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sat, 19 Oct 2019 23:04:16 +0900</lastBuildDate>
-    
-	<atom:link href="https://mvrck.jp/tags/windows/feed.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 15 Dec 2020 09:22:13 +0900</lastBuildDate><atom:link href="https://mvrck.jp/tags/windows/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>findstr</title>
+      <link>https://mvrck.jp/documents/windows-commands/findstr/</link>
+      <pubDate>Tue, 15 Dec 2020 09:22:13 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/documents/windows-commands/findstr/</guid>
+      <description>ファイル内の文字列を検索する。 形式 findstr /s /n 検索文字列 ファイル名 パラメータ 値 意味 備考 /l 検索文字列を文字通り扱う * /r 検索文字列を正規表現として扱う</description>
+    </item>
     
     <item>
       <title>なぜか GPD MicroPC がメイン端末になった</title>
@@ -17,22 +22,7 @@
       <pubDate>Sat, 19 Oct 2019 23:04:16 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/gpd-micropc-n4100/</guid>
-      <description>GPD Pocket2 をメイン運用していて一番困るというか煩わしいのが、 両手持ちでぽちぽち文字入力するにはキーがでかすぎるという点で、 かといって机に置いて長時間タイピングするにはちょっと窮屈（右側に修飾キーがないし）。
-いっそのこと、 GPD Win 系統の小さいキーボードでもいいなと考えていた矢先、 GPD MicroPC が市場に出回りはじめたため、 「もし使い勝手が悪ければ、 いつのまにか使用開始から10年が経っていた Mac mini の代わりとしてもいいか」 と思い、調達してみました。
-その結果、メイン端末となってもう3か月経っていました。
-  GPD MicroPC SSD 入れ替え  キーボードは両手持ちに最適 思惑通り、両手持ちでの入力はいい感じで、無理なく全域に手が届くので快適でした。 数値の2段配置は、片手だけで入力できるようになり、配置上の理にかなっているので歓迎。 修飾キーは、右側にShiftだけはあるので及第点。 記号の配列は変則ではあるものの、このようなPCにまともな配列を望むのが無茶というもの。
-キーの感触は割とカチャカチャカチカチするもので、もう少し軽い感じでもよいのかなと思います。 また、スペースキーは両端以外の部分を押すと安定しないのか、堅い樹脂がぶつかるような大きな音と鈍い触感がします。
-右上にあるトラックパッドに触れてしまって意図しない状態になったり、 トラックパッドのタッチによるクリックが過剰反応したりするのがいまいち。
-ディスプレイまわりは残念 180度まで開き切らないのが残念。 入手した個体は、開いた画面が明らかに右に大きく傾いていて残念。 6インチで1280×720なのはちょっと物足りないですが……まあ許容範囲。
-なければないでも良いと思っていたタッチパネルも、あるならあったほうが便利だったなあ （トラックパッドの反応が過剰なので、タッチパネルだったら補完できたのに）という感想です。
-ファンの動作音がかなり大きい たまに共振（？）しているので余計うるさい。一時的にOFFにできるのが救い。
-端子が多い とにかく端子が多い。ミニPC級の充実ぶりなので、メディアサーバ方面にも転用できて中長期的な活躍が期待できます。
-初めて EIA-574 搭載の端末を買ったんですけど……動作確認したくても対応する装置がないんですけど……。
-メイン端末の座へ 初代 Pocket のときにあったバッテリー方面の不安定感もなく、 Celeron N4100 はそつなく仕事をこなしてくれており、好印象。 動作上、ちょっとだけ引っかかりを感じるものの、普段使いではほぼ影響ない範囲だったため、 晴れてメイン端末の座を得ることになりました。
-さっそくSSDを512GBのものに入れ替えたので、かなり強い。
-Pocket2 同様、Altキーが右側にないので、 CtrlでIMEをOFF、AltでONに切り替えできるように設定。 そして、中央マウスボタンへの対応として W10Wheel.NET にて「中央ドラッグ」をトリガーに設定。
-感想 GPD社は変な個性的な端末をつくっているときのほうが輝いているように思います。 Pocket系列もいいんですけどね。他社が真似してこない領域が真骨頂というか。
-さて、図らずもサブに回ることになった Pocket2 は思いのほか出番が減ることに。 もったいないですけど、バックアップ用として待機。次は二つ折りSurfaceに期待。</description>
+      <description>GPD Pocket2 をメイン運用していて一番困るというか煩わしいのが、 両手持ちでぽちぽち文字入力するにはキーがでかすぎるという点で、 かといって机に置いて長時</description>
     </item>
     
     <item>
@@ -41,13 +31,7 @@ Pocket2 同様、Altキーが右側にないので、 CtrlでIMEをOFF、AltでO
       <pubDate>Sun, 23 Dec 2018 00:00:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/gpd-pocket2-keyboard-firmware/</guid>
-      <description> バッククォートと謎の半/全キーとで発行するコードを異なるものにするファームウェアが出ていたので適用しました。
- 公式ページ GPD Pocket 2 Firmware &amp;amp; Driver &amp;amp; BIOS から 「GPD Pocket 2 Keyboard Firmware (Japan)」をたどって入手  変更点 適用後のスキャンコードは以下の通り、バッククォートキーが変化します。
-   キー FW適用前 FW適用後     半/全 0x0029 0x0029   バッククォート 0x0029 0x007D    なお、ファームウェアに添付されているレジストリファイルを適用するとJIS配列相当として認識されるようになってしまうので、キーの表示をそのまま活かしたいときは、ファームウェアだけを当てて手動で調整する必要があります。
-調整例 バッククォートキーは、バックスラッシュ・円マークキー（スキャンコード 0x007D）として機能するようになっているので、表記通りバッククォート（0x0029）に。
-半/全キーはUS配列としてはバッククォート（0x0029）となっているので、これを適当なキーに（W10Wheel.NET で スクロールキーに割り当てている ScrollLock: 0x0046 としてみました。ついでに CapsLock: 0x003A を Application: 0xE05D に）。
-ということで、こんな感じに。 US配列の外付けキーボードではバッククォートが使えなくなるのが難点です。
-   キー FW適用前 FW適用後 調整後     半/全 0x0029 0x0029 0x0046 （ScrollLock）   CapsLock 0x003A 0x003A 0xE05D （Application）   バッククォート 0x0029 0x007D 0x0029 （バッククォート）     </description>
+      <description>バッククォートと謎の半/全キーとで発行するコードを異なるものにするファームウェアが出ていたので適用しました。 公式ページ GPD Pocket 2 Firmware &amp;amp; Driver &amp;amp; BIOS から 「</description>
     </item>
     
     <item>
@@ -56,10 +40,7 @@ Pocket2 同様、Altキーが右側にないので、 CtrlでIMEをOFF、AltでO
       <pubDate>Mon, 05 Nov 2018 00:00:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/gpd-pocket2-7y30/</guid>
-      <description>高確率でカバンの中でアルミ製カイロになっている GPD Pocket (Z8750) の置き換えとして、 GPD Pocket2 (7Y30) を導入しました。モノは悪くない。
-IME切替問題 修飾キーが左側にしかないため、 左右のAltでIMEのON/OFFを切り替える手法 が使えない問題。
-CtrlでIMEをOFF、AltでONとして回避しました。
- [alt-ime-ahk.ahk を変更] ; (前略) *~LCtrl::Send {Blind}{vk07} *~LAlt::Send {Blind}{vk07} *~RAlt::Send {Blind}{vk07} ; 左 Ctrl 空打ちで IME を OFF LCtrl up:: if (A_PriorHotkey == &amp;#34;*~LCtrl&amp;#34;) { IME_SET(0) } Return ; 左 Alt 空打ちで IME を ON LAlt up:: if (A_PriorHotkey == &amp;#34;*~LAlt&amp;#34;) { IME_SET(1) } Return ; 右 Alt 空打ちで IME を ON RAlt up:: if (A_PriorHotkey == &amp;#34;*~RAlt&amp;#34;) { IME_SET(1) } Return  外付けキーボードの使用も考え、右Altの設定は残しました。</description>
+      <description>高確率でカバンの中でアルミ製カイロになっている GPD Pocket (Z8750) の置き換えとして、 GPD Pocket2 (7Y30) を導入しました。モノは悪くない。 IME切替問題 修飾キーが左側にし</description>
     </item>
     
   </channel>

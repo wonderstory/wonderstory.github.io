@@ -6,10 +6,24 @@
     <description>Recent content on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sun, 20 Oct 2019 17:28:06 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 15 Dec 2020 09:22:13 +0900</lastBuildDate><atom:link href="https://mvrck.jp/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>findstr</title>
+      <link>https://mvrck.jp/documents/windows-commands/findstr/</link>
+      <pubDate>Tue, 15 Dec 2020 09:22:13 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/documents/windows-commands/findstr/</guid>
+      <description>ファイル内の文字列を検索する。 形式 findstr /s /n 検索文字列 ファイル名 パラメータ 値 意味 備考 /l 検索文字列を文字通り扱う * /r 検索文字列を正規表現として扱う</description>
+    </item>
     
-	<atom:link href="https://mvrck.jp/feed.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>ItemsControlのテンプレートをカスタマイズする</title>
+      <link>https://mvrck.jp/documents/dotnet/wpf/itemscontrol-template/</link>
+      <pubDate>Mon, 27 Jan 2020 00:52:11 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/documents/dotnet/wpf/itemscontrol-template/</guid>
+      <description>Template コントロール全体の設定。 全体をScrollViewerで囲ったり、Borderで装飾したりするときは、ここで設定する。 ItemsPrese</description>
+    </item>
     
     <item>
       <title>Xperia Ear Duo (XEA20) 18か月使用レビュー</title>
@@ -17,32 +31,7 @@
       <pubDate>Sun, 20 Oct 2019 17:28:06 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/sony-xperia-ear-duo-xea20/</guid>
-      <description>Sony Xperia Ear Duo を使いはじめて1年半経った感想です。 それなりに良い。刺さる人には刺さる。積極的におすすめはしない。そんな感じのいつものSony製品。
-2018年4月に購入しました。ソニーストアで3年ワイド保証。3万円程度。
-良い点 密閉式ではない どうして世の中に出回るイヤフォンは大半が密閉式なのか。 例えば、現行のSonyのラインナップだと、STH32しか古来からの普通のイヤフォンがないので悲しみが深い。
-苦手なんですよね、密閉型。耳の穴に指を突っ込んだときのようなボワーンとした圧迫された感覚がなんだか息苦しい（耳なのに）気がして。
-本製品は特殊な形状をしていますが、意外と快適な装着状態でした。イヤーピースを選べば落ちてくることも耳の穴が痛くなることもないです。
-ただ、外すときに向きを意識しないとイヤーピースが本体から取れてコロコロ転がることがあるので、特に街中で外すときは注意が必要です。
-外部の音が聞こえる 密閉式でないのはむしろこっちの副産物で、Sonyが言う「ながら聞き」、外部の音と音楽・音声が合わさって聞こえる点。
-公共空間でごついヘッドフォンなどをしたまますたすた歩く人が割といるのですが、聴覚が大きく遮断されるのは怖くないのかなといつも思っていました。人類にはまだ超音波センサは実装されていないはずなのですごいです。
-それはともかく、 Xperia Ear Duo を適度な音量で設定すれば外部の音は完全に聞こえる状態となるので、格段に安全です。 また、普段部屋にいるときでも、話しかけられたら問題なく応対できます。
-音質については、どうしたって流し聞き程度の聴き方になるので、そう思えばじゅうぶん聞ける音質だと思います（Xperia XZ Premiumとペアで使用）。 なお、設定に「音質モード」があるのですが、「再生時間優先（SBC）」「音質優先（AAC）」のどちらにしても私は有意な差を感じませんでした（電池の持ちも大差ないような……）。
-ボイスアシスタントが寿美菜子さん プラス10億点。
-悪い点 お高め 発売当初の3万円はちょっとアレですね。現在の2万円でもうーん。簡単に壊れないのであれば（後述）そんなもんかなと思うのですが。壊れるので。
-連続再生は3時間程度 携帯ケース兼充電器にもバッテリーが搭載されているので、日々の往来で使うぶんにはさほど問題ないです。 朝晩だけ利用、といった想定なのでしょう。
-例えば休日などで外出中につけっぱなしにするような運用は無理。
-音量の調節が難しい 本体のタッチセンサを上下スワイプで音量の調節ができます。が、妙に刻みが粗いので、狙った音量に持っていけないです。結局接続先のAndroidで音量調節が必要になります。
-また、音楽の音量に合わせていると音声ガイドの音が小さすぎて聞こえません。なかなか難しいです （つまり、これって、常時音楽を聴く用途を意図した機器ではないのでは……？）。
-以前は風が吹いたときや周囲の騒音に連動して音量が急騰する動作でしたが、このあたりは後に自然な感じに改善されました。
-トリプルタップは無理 タッチセンサでの曲戻しは無理。
-側面のタッチセンサ、ダブルタップはギリギリできたりできなかったりで、トリプルタップはほぼ無理。実質タップ・長押し・上下スワイプだけ可能と思ったほうが良いです。
-首振りジェスチャーは……便利ですけど、連打が必要な場面（複数曲戻しなど）では傍目には変な人になっちゃいますね……。
-金属の部品がすぐ剥がれる 半年～10か月くらいで、本体の肌に触れる側にある金属片（たぶん充電時のガイドになる）が剥がれる。 単に接着されているだけと思われるので、お手入れを入念にしたとしても日々付着する水分によって次第に剥離していき、 充電器に磁石でくっついた際にいつかはバリッと剥がれる運命にあります。これは マイナス10億点 。
-ソニーストアの長期保証に入っていなかったら、接着材のお世話になるしかないのがつらい。
-長期保証に入っていても、サポートに電話したり送付したり修理後の返送待ちしたりして結局1週間強は使用できないのでつらい。 さらに少なくとも私の居住地では返送が日通航空だったので、平日の日中にうまく受け取りができない向きにはつらいはず （再配達時間指定区分がざっくりし過ぎているうえ、ヤマト佐川日本郵便のような宅配ロッカー系の受け取りソリューションがない）。
-私の場合、都合3回修理に出していて、通算でおよそ1か月間は使用不可状態だったことになります（2月にR側破損でLR両側パーツ交換、7月にL側破損でL側本体交換、8月にR側破損でR側本体交換。 どうして2回目に両側交換してくれなかったのか ）、いいかげん面倒になってきたのでかくなる上は接着剤で……。
-これまでの感じでは、次は冬～春頃に壊れる見通しですが……さてどうでしょうか。
-まとめ  密閉式は苦手なので助かる。 外部の音が聞こえるのが良い。 音質は特に気にならない。 連続再生で3時間くらい持つ。 半年毎に壊れるのは勘弁。  オープンイヤーとやらを試したい場合、ボイスアシスタントが不要ならあとから出たケーブル差して充電するやつや充電のいらないやつをおすすめします。Ear Duoより安いので。ただ、これらは耳に掛かるあたりの管がポキッと折れる懸念はありますね（金属じゃなさそう）。うまくいかないものです。</description>
+      <description>Sony Xperia Ear Duo を使いはじめて1年半経った感想です。 それなりに良い。刺さる人には刺さる。積極的におすすめはしない。そんな感じのいつものSony製品。</description>
     </item>
     
     <item>
@@ -51,22 +40,7 @@
       <pubDate>Sat, 19 Oct 2019 23:04:16 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/gpd-micropc-n4100/</guid>
-      <description>GPD Pocket2 をメイン運用していて一番困るというか煩わしいのが、 両手持ちでぽちぽち文字入力するにはキーがでかすぎるという点で、 かといって机に置いて長時間タイピングするにはちょっと窮屈（右側に修飾キーがないし）。
-いっそのこと、 GPD Win 系統の小さいキーボードでもいいなと考えていた矢先、 GPD MicroPC が市場に出回りはじめたため、 「もし使い勝手が悪ければ、 いつのまにか使用開始から10年が経っていた Mac mini の代わりとしてもいいか」 と思い、調達してみました。
-その結果、メイン端末となってもう3か月経っていました。
-  GPD MicroPC SSD 入れ替え  キーボードは両手持ちに最適 思惑通り、両手持ちでの入力はいい感じで、無理なく全域に手が届くので快適でした。 数値の2段配置は、片手だけで入力できるようになり、配置上の理にかなっているので歓迎。 修飾キーは、右側にShiftだけはあるので及第点。 記号の配列は変則ではあるものの、このようなPCにまともな配列を望むのが無茶というもの。
-キーの感触は割とカチャカチャカチカチするもので、もう少し軽い感じでもよいのかなと思います。 また、スペースキーは両端以外の部分を押すと安定しないのか、堅い樹脂がぶつかるような大きな音と鈍い触感がします。
-右上にあるトラックパッドに触れてしまって意図しない状態になったり、 トラックパッドのタッチによるクリックが過剰反応したりするのがいまいち。
-ディスプレイまわりは残念 180度まで開き切らないのが残念。 入手した個体は、開いた画面が明らかに右に大きく傾いていて残念。 6インチで1280×720なのはちょっと物足りないですが……まあ許容範囲。
-なければないでも良いと思っていたタッチパネルも、あるならあったほうが便利だったなあ （トラックパッドの反応が過剰なので、タッチパネルだったら補完できたのに）という感想です。
-ファンの動作音がかなり大きい たまに共振（？）しているので余計うるさい。一時的にOFFにできるのが救い。
-端子が多い とにかく端子が多い。ミニPC級の充実ぶりなので、メディアサーバ方面にも転用できて中長期的な活躍が期待できます。
-初めて EIA-574 搭載の端末を買ったんですけど……動作確認したくても対応する装置がないんですけど……。
-メイン端末の座へ 初代 Pocket のときにあったバッテリー方面の不安定感もなく、 Celeron N4100 はそつなく仕事をこなしてくれており、好印象。 動作上、ちょっとだけ引っかかりを感じるものの、普段使いではほぼ影響ない範囲だったため、 晴れてメイン端末の座を得ることになりました。
-さっそくSSDを512GBのものに入れ替えたので、かなり強い。
-Pocket2 同様、Altキーが右側にないので、 CtrlでIMEをOFF、AltでONに切り替えできるように設定。 そして、中央マウスボタンへの対応として W10Wheel.NET にて「中央ドラッグ」をトリガーに設定。
-感想 GPD社は変な個性的な端末をつくっているときのほうが輝いているように思います。 Pocket系列もいいんですけどね。他社が真似してこない領域が真骨頂というか。
-さて、図らずもサブに回ることになった Pocket2 は思いのほか出番が減ることに。 もったいないですけど、バックアップ用として待機。次は二つ折りSurfaceに期待。</description>
+      <description>GPD Pocket2 をメイン運用していて一番困るというか煩わしいのが、 両手持ちでぽちぽち文字入力するにはキーがでかすぎるという点で、 かといって机に置いて長時</description>
     </item>
     
     <item>
@@ -75,10 +49,7 @@ Pocket2 同様、Altキーが右側にないので、 CtrlでIMEをOFF、AltでO
       <pubDate>Wed, 04 Sep 2019 00:11:33 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/anker-powerport-2019/</guid>
-      <description>ankerjapan.com などに記載されている充電器の製品仕様を眺めていたら、モデルの名前と機能が入り乱れていて大変混乱したので、自分の理解用に整理しました。
-以下をすべて満たす製品のリストです（2019年夏現在）。
- Type-C ポートがある ポートが1～2個 据え置き向け（電源コード仕様）ではない  PowerIQ 3.0 とはなんだったのか。
- 【2019-09-06】 Atom III Slim （PD規格非適合）を追加。 【2019-09-14】 III Duo と III Nano （どちらもPD規格非適合）を追加。またよくわからないモデル展開……。  Type-C 1ポートの製品 大きめ    品名 型番 参考価格 サイズ mm 重量 Type-C 出力 Type-A 出力 備考     PowerPort Atom III 60W A2613121 3999 61x58x28 132g 60W N/A 規格非適合 *1   PowerPort Speed 1 PD 60 A2015113 3599 64x64x29 157g 60W N/A    PowerPort Speed 1 PD 30 A2014113 2299 61x58x28 101g 30W N/A     *1: 出力 15W 超では 5V - 3A が必須のため、規格非適合。後述。</description>
+      <description>ankerjapan.com などに記載されている充電器の製品仕様を眺めていたら、モデルの名前と機能が入り乱れていて大変混乱したので、自分の理解用に整理しました。 以下を</description>
     </item>
     
     <item>
@@ -87,15 +58,7 @@ Pocket2 同様、Altキーが右側にないので、 CtrlでIMEをOFF、AltでO
       <pubDate>Fri, 03 May 2019 20:27:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/hugo-0-55-destructive-changes/</guid>
-      <description>記事を書こうとするといつも Hugo が新しくなっており、それへの対応についても記事を書くことになる不思議。
-shortcodes の挙動変更 いままで Markdown が適用されていた部分でも、適用されない場面が増えました。 記事内の呼び出し方によって挙動が違います。
-{{% &amp;hellip; %}} は、文脈依存。
-{{&amp;lt; &amp;hellip; &amp;gt;}} は、出力をかっちり決めたいとき。基本はそのまま出力。Markdown による変換が必要なら、実装側で {{ .Inner | markdownify }} とします。
-個人的には {{&amp;lt; &amp;hellip; &amp;gt;}} としての記載を意図して shortcodes をつくると思うので、覚え書きとして。
-Hugo はこういった変更が割とカジュアルに行われるので、油断すると刺される。
-.RSSLink は廃止予定 これまでは下記のように記述していたところですが、
-{{ if .RSSLink }} &amp;lt;link rel=&amp;quot;alternate&amp;quot; type=&amp;quot;application/rss+xml&amp;quot; title=&amp;quot;{{ .Title | plainify }}&amp;quot; href=&amp;quot;{{ .RSSLink }}&amp;quot; /&amp;gt; {{ end }}  表示中のページが対象であれば、
-{{ with .OutputFormats.Get &amp;quot;RSS&amp;quot; }} &amp;lt;link rel=&amp;quot;alternate&amp;quot; type=&amp;quot;application/rss+xml&amp;quot; title=&amp;quot;{{ $.Title | plainify }}&amp;quot; href=&amp;quot;{{ .</description>
+      <description>記事を書こうとするといつも Hugo が新しくなっており、それへの対応についても記事を書くことになる不思議。 shortcodes の挙動変更 いままで Markdown が適用されていた部分</description>
     </item>
     
     <item>
@@ -104,13 +67,7 @@ Hugo はこういった変更が割とカジュアルに行われるので、油
       <pubDate>Sun, 23 Dec 2018 00:00:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/gpd-pocket2-keyboard-firmware/</guid>
-      <description> バッククォートと謎の半/全キーとで発行するコードを異なるものにするファームウェアが出ていたので適用しました。
- 公式ページ GPD Pocket 2 Firmware &amp;amp; Driver &amp;amp; BIOS から 「GPD Pocket 2 Keyboard Firmware (Japan)」をたどって入手  変更点 適用後のスキャンコードは以下の通り、バッククォートキーが変化します。
-   キー FW適用前 FW適用後     半/全 0x0029 0x0029   バッククォート 0x0029 0x007D    なお、ファームウェアに添付されているレジストリファイルを適用するとJIS配列相当として認識されるようになってしまうので、キーの表示をそのまま活かしたいときは、ファームウェアだけを当てて手動で調整する必要があります。
-調整例 バッククォートキーは、バックスラッシュ・円マークキー（スキャンコード 0x007D）として機能するようになっているので、表記通りバッククォート（0x0029）に。
-半/全キーはUS配列としてはバッククォート（0x0029）となっているので、これを適当なキーに（W10Wheel.NET で スクロールキーに割り当てている ScrollLock: 0x0046 としてみました。ついでに CapsLock: 0x003A を Application: 0xE05D に）。
-ということで、こんな感じに。 US配列の外付けキーボードではバッククォートが使えなくなるのが難点です。
-   キー FW適用前 FW適用後 調整後     半/全 0x0029 0x0029 0x0046 （ScrollLock）   CapsLock 0x003A 0x003A 0xE05D （Application）   バッククォート 0x0029 0x007D 0x0029 （バッククォート）     </description>
+      <description>バッククォートと謎の半/全キーとで発行するコードを異なるものにするファームウェアが出ていたので適用しました。 公式ページ GPD Pocket 2 Firmware &amp;amp; Driver &amp;amp; BIOS から 「</description>
     </item>
     
     <item>
@@ -119,11 +76,7 @@ Hugo はこういった変更が割とカジュアルに行われるので、油
       <pubDate>Sun, 16 Dec 2018 00:46:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/hugo-0-52-config-cache/</guid>
-      <description>ひさしぶりに記事を更新したら Hugo さんが急にエラーを出したため困惑していたところ、 なんと Hugo 0.52 からファイルキャッシュの設定方法が変わっていたうえ、相対パスを受け付けなくなっていました。
-Error: failed to create file caches from configuration: &amp;quot;cache/hugo&amp;quot; must resolve to an absolute directory  Hugo のドキュメントを参考に、設定ファイルを書き換える必要があります。 このサイトの config.toml だと
-cachedir = &amp;#34;cache&amp;#34; だったものを
-[caches] [caches.getjson] dir = &amp;#34;:resourceDir/_gen&amp;#34; maxAge = -1 に変更しました（必要ならJSON以外も設定）。
-今まではプロジェクトルート階層にある cache ディレクトリに生成されていたものが resources/_gen/getjson の中に作られるようになります。 :resourceDir は resourceDir の設定を書いておけば変更可能ですが、ディレクトリ構成にこだわりはないのでおとなしくデフォルトを使うことにします。</description>
+      <description>ひさしぶりに記事を更新したら Hugo さんが急にエラーを出したため困惑していたところ、 なんと Hugo 0.52 からファイルキャッシュの設定方法が変わっていたうえ、</description>
     </item>
     
     <item>
@@ -132,10 +85,7 @@ cachedir = &amp;#34;cache&amp;#34; だったものを
       <pubDate>Mon, 05 Nov 2018 00:00:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/gpd-pocket2-7y30/</guid>
-      <description>高確率でカバンの中でアルミ製カイロになっている GPD Pocket (Z8750) の置き換えとして、 GPD Pocket2 (7Y30) を導入しました。モノは悪くない。
-IME切替問題 修飾キーが左側にしかないため、 左右のAltでIMEのON/OFFを切り替える手法 が使えない問題。
-CtrlでIMEをOFF、AltでONとして回避しました。
- [alt-ime-ahk.ahk を変更] ; (前略) *~LCtrl::Send {Blind}{vk07} *~LAlt::Send {Blind}{vk07} *~RAlt::Send {Blind}{vk07} ; 左 Ctrl 空打ちで IME を OFF LCtrl up:: if (A_PriorHotkey == &amp;#34;*~LCtrl&amp;#34;) { IME_SET(0) } Return ; 左 Alt 空打ちで IME を ON LAlt up:: if (A_PriorHotkey == &amp;#34;*~LAlt&amp;#34;) { IME_SET(1) } Return ; 右 Alt 空打ちで IME を ON RAlt up:: if (A_PriorHotkey == &amp;#34;*~RAlt&amp;#34;) { IME_SET(1) } Return  外付けキーボードの使用も考え、右Altの設定は残しました。</description>
+      <description>高確率でカバンの中でアルミ製カイロになっている GPD Pocket (Z8750) の置き換えとして、 GPD Pocket2 (7Y30) を導入しました。モノは悪くない。 IME切替問題 修飾キーが左側にし</description>
     </item>
     
     <item>
@@ -144,11 +94,7 @@ CtrlでIMEをOFF、AltでONとして回避しました。
       <pubDate>Fri, 26 May 2017 00:00:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/about/</guid>
-      <description>Tags タグ一覧
-RSS Feed このウェブサイトでは、最近の更新情報をRSSフィードとして配信しています。
-License 特に表記がない限り、このウェブサイトの内容は「クリエイティブ・コモンズ 表示-非営利 4.0 国際 パブリック・ライセンス（CC BY-NC 4.0）」のもとで公開しています。
-Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0).
-Contact ご意見・励ましのお便りなどは、お問い合わせフォームにて賜ります。</description>
+      <description>Tags タグ一覧 RSS Feed このウェブサイトでは、最近の更新情報をRSSフィードとして配信しています。 License 特に表記がない限り、このウェブサイトの内容は「クリ</description>
     </item>
     
     <item>
@@ -157,13 +103,7 @@ Contact ご意見・励ましのお便りなどは、お問い合わせフォー
       <pubDate>Tue, 09 Jul 2013 00:00:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/lubuntu-on-vaio-p/</guid>
-      <description>Windows 7 の動作がどうしても一呼吸遅い感じがして、積極的には使わなくなってしまった後期型 VAIO P に Lubuntu を入れてみました。
-いちおう新しくパーティションを切って、元の環境にも戻せるようにしておきましたが、 Lubuntu が特に目立った設定もしないまま予想以上の快適さで動いているので、 Windows 7 がますますいらない子になりつつあります。
-以下、設定。
-grub4dos (on Windows 7) 経由でブートできるようにする grldr と grldr.mbr を c:\ にコピー
- [c:\menu.lst] timeout 4 default /Linux title Linux root (hd0,3) kernel /boot/grub/i386-pc/core.img title Reboot reboot  bcdedit /create で項目を追加：
-&amp;gt; bcdedit /create /d &amp;quot;Linux&amp;quot; /application bootsector {__UUID__}  返ってきた値を使って、
-&amp;gt; bcdedit /set {__UUID__} device partition=C: &amp;gt; bcdedit /set {__UUID__} path \grldr.mbr &amp;gt; bcdedit /displayorder {__UUID__} /addlast  grub  [/etc/default/grub] GRUB_TIMEOUT=4  $ sudo update-grub2  サスペンドからの復帰 ほとんど唯一といっていい困ったことが、サスペンドから（たぶんXが）復帰してくれない、という動きでした。</description>
+      <description>Windows 7 の動作がどうしても一呼吸遅い感じがして、積極的には使わなくなってしまった後期型 VAIO P に Lubuntu を入れてみました。 いちおう新しくパーティションを切</description>
     </item>
     
     <item>
@@ -172,10 +112,7 @@ grub4dos (on Windows 7) 経由でブートできるようにする grldr と grl
       <pubDate>Tue, 27 Dec 2011 15:09:27 +0900</pubDate>
       
       <guid>https://mvrck.jp/documents/applescript-operators/</guid>
-      <description>AppleScript の演算子と、結合の優先順位一覧です。
-同じ意味の演算子でも数多くの表記方法が存在します（ is not は isn&#39;t でもいい、などなど）。本表では個人的によく使うもの以外は省略しています。
-演算子    機能 演算子 備考     加算 (Addition) +    減算 (Subtraction) -    乗算 (Multiplication) *    除算 (Division) /,
-÷    整数除算 (Integral division) div    剰余・余り (Remainder) mod    累乗 (Exponentiation) ^    否定 (Negation) not    連言・論理積 (Logical conjunction) and    選言・論理和 (Logical disjunction) or    等しい (Equality) =,</description>
+      <description>AppleScript の演算子と、結合の優先順位一覧です。 同じ意味の演算子でも数多くの表記方法が存在します（ is not は isn&#39;t でもいい、などなど）。本表では個人的によく使</description>
     </item>
     
     <item>
@@ -184,15 +121,7 @@ grub4dos (on Windows 7) 経由でブートできるようにする grldr と grl
       <pubDate>Fri, 02 Dec 2011 00:00:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/flipout-us-keypad/</guid>
-      <description>Motorola Flipout の US 印字キーパッドが届いたので、本体を分解して交換しました。
-  Motorola Flipout 分解 (1)    Motorola Flipout 分解 (2)  裏蓋を外すと、カメラ側にトルクスねじ（たぶんT2）が3か所あります。手持ちの工具がないので、溝を掘り下げて強引に回しました（非推奨）。スピーカー側はつめで引っかかっているだけなので、かぱっとカメラ方向にずらすだけで、基盤を覆っている部分が外れます。
-覆いを外した勢いで SIM カードを保持する部品もいっしょに取れます。ボリュームボタンと電源ボタンもなくしやすいです。開けた弾みでどこかに飛んでいかないよう注意です。
-  Motorola Flipout 分解 (3)  基盤をフレームに固定しているねじは4か所。径は前のねじと同じで、長さが少し短いものでした。堅いケーブルの下にあるねじは、近くの端子を外してから。
-これでキーパッドにたどり着きます。
-  Motorola Flipout 分解 (4)    Motorola Flipout 分解 (5) キーボード取り替え  キーパッドは下のシートで圧力を検知しているだけなので、配線や特別な工夫は要りません。接着されている元のキーをぺりぺりとはがして新しいものを取り付けるだけです。周囲にはくぼみが多くあって、一度組み立てれば簡単には動かないので、特に接着はしなくても平気だと思います。
-元通りに組み立てれば完成です。
-  Motorola Flipout  HK 版はキーボード上に入力補助記号があって印字がごちゃごちゃしていたので、黒いインクを塗って目立たないようにしていました。これですっきり。
-Flipout ネタはこれでひととおりやりつくした感がありますが、まだまだメイン機としてがしがし使い続けたいと思います。</description>
+      <description>Motorola Flipout の US 印字キーパッドが届いたので、本体を分解して交換しました。 Motorola Flipout 分解 (1) Motorola Flipout 分解 (2) 裏蓋を外すと、カメラ側にトルクスねじ（たぶんT2）が3か</description>
     </item>
     
     <item>
@@ -201,14 +130,7 @@ Flipout ネタはこれでひととおりやりつくした感がありますが
       <pubDate>Mon, 13 Jun 2011 00:00:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/flipout-keyboard-config/</guid>
-      <description>ちいささと、ころっとした外見、ぷちぷちした感触のキーボードがだいぶ気に入ってしまって、ローエンド機種だし動作は遅めだし公式アップデートはたぶん来ないけれど、ここのところメイン機になっている Motorola Flipout MB511 ですが、キーボードの設定をいじって文字入力をより快適にしてみました。要root権取得。
-  MB511    MB511  けっこう打ちやすい Flipout のキーボードで少し不満なのが、
- Wnn系のIMで、日本語・英語の入力切り替え Shift+Space が押しにくい（Shift が左端にあって中心から遠い）。 日本語ではそれなりに使うハイフンが Alt+Z に割り当てられていて、両手の親指でぽちぽち入力するときに動きが大きくて煩わしい。  というところで、どうにかならないかといろいろとAndroidのキーボードカスタマイズ情報を探すと、
- /system/usr/keylayout/*.kl ： ハードキーに対応するキーコードを設定 /system/usr/keychars/*.kcm.bin ： キーコードに対応して入力される文字を設定  というファイルをいじればよさそうです。 logcat を眺めた感じでは、手持ちの HK版Flipout で使われていたのは次の2つ。本体からコピーしてきます。
- sholes-keypad.kl sholes-keypad.kcm.bin  日本語・英語の入力切り替えをしやすく。 (sholes-keypad.kl) まず、スペースの右隣に「A|中」という何も反応しないキー（たぶん日本語入力でいうところの文字キー）があるので、それを Shift+Space に割り当てられないかと思ったものの、修飾キーつきの割り当てはファイルをいじるだけでは無理なようでした。
-仕方がないので、右手親指だけで スペース+A|中 が押せるのを利用することにして、「A|中」キーには Shift に割り当てることにしました。手の動きが減って、なんとなく手間が減ったような気になれます。
-*.kl ファイルは、単純にスキャンコードとキーコードが並ぶテキストファイルで、キーコードは android.view.KeyEvent で定義されている定数の先頭（KEYCODE_）を省いたものを書けるようです。「A|中」キーのスキャンコードは 162 で、これを SHIFT_RIGHT に変えました。
-#key 162 EXPLORER WAKE_DROPPED key 162 SHIFT_RIGHT WAKE_DROPPED  あと、試しに音量アップキーをカメラキーに置き換えてみました。</description>
+      <description>ちいささと、ころっとした外見、ぷちぷちした感触のキーボードがだいぶ気に入ってしまって、ローエンド機種だし動作は遅めだし公式アップデートはたぶ</description>
     </item>
     
   </channel>

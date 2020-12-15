@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8" />
+<meta name="generator" content="Hugo 0.79.0" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+<meta name="theme-color" content="#663300" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/main.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/custom.css" />
+<title>ItemsControlのテンプレートをカスタマイズする - mvrck</title>
+
+<link rel="canonical" href="https://mvrck.jp/documents/dotnet/wpf/itemscontrol-template/" />
+
+</head>
+
+<body>
+
+<header>
+<div id="logo" class="wd">
+<a href="https://mvrck.jp/">mvrck</a>
+</div>
+
+<nav id="menu">
+<ul>
+<li class="blog">
+<a href="https://mvrck.jp/blog/">Blog</a>
+</li>
+<li class="documents">
+<a href="https://mvrck.jp/documents/">Documents</a>
+</li>
+<li class="about">
+<a href="https://mvrck.jp/about/">About</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<main>
+
+<article>
+<header>
+
+<ol id="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a itemprop="item" href="https://mvrck.jp/documents/">
+            <span itemprop="name">Documents</span>
+        </a>
+        <meta itemprop="position" content="1" />
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a itemprop="item" href="https://mvrck.jp/documents/dotnet/">
+            <span itemprop="name">.NET memo</span>
+        </a>
+        <meta itemprop="position" content="2" />
+    </li>
+</ol>
+
+
+<h1>ItemsControlのテンプレートをカスタマイズする</h1>
+
+<p class="date">
+<time datetime="2020-01-27T00:52:11">2020-01-27</time>
+</p>
+
+<p class="tags">
+<a href="https://mvrck.jp/tags/dotnet/">dotnet</a>
+<a href="https://mvrck.jp/tags/wpf/">wpf</a>
+<a href="https://mvrck.jp/tags/xaml/">xaml</a>
+</p>
+
+</header>
+
+<div class="content">
+<h2 id="template">Template</h2>
+<p>コントロール全体の設定。
+全体をScrollViewerで囲ったり、Borderで装飾したりするときは、ここで設定する。</p>
+<p>ItemsPresenterには、ItemsPanelの内容が入る。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;ItemsControl.Template&gt;</span>
+    <span style="color:#f92672">&lt;ControlTemplate</span> <span style="color:#a6e22e">TargetType=</span><span style="color:#e6db74">&#34;ItemsControl&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;ScrollViewer</span> <span style="color:#a6e22e">Focusable=</span><span style="color:#e6db74">&#34;False&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;ItemsPresenter/&gt;</span>
+        <span style="color:#f92672">&lt;/ScrollViewer&gt;</span>
+    <span style="color:#f92672">&lt;/ControlTemplate&gt;</span>
+<span style="color:#f92672">&lt;/ItemsControl.Template&gt;</span></code></pre></div>
+<h2 id="itemspanel">ItemsPanel</h2>
+<p>コレクションを乗せるPanelを指定。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;ItemsControl.ItemsPanel&gt;</span>
+    <span style="color:#f92672">&lt;ItemsPanelTemplate&gt;</span>
+        <span style="color:#f92672">&lt;WrapPanel</span> <span style="color:#a6e22e">Orientation=</span><span style="color:#e6db74">&#34;Vertical&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/ItemsPanelTemplate&gt;</span>
+<span style="color:#f92672">&lt;/ItemsControl.ItemsPanel&gt;</span></code></pre></div>
+<h2 id="itemcontainerstyle">ItemContainerStyle</h2>
+<p>コレクションの各オブジェクトを格納するコンテナーの設定。
+これがItemsPanelに乗る。</p>
+<p>ContentPresenterには、ItemTemplateの内容が入る。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;ItemsControl.ItemContainerStyle&gt;</span>
+    <span style="color:#f92672">&lt;Style</span> <span style="color:#a6e22e">TargetType=</span><span style="color:#e6db74">&#34;ListBoxItem&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;Setter</span> <span style="color:#a6e22e">Property=</span><span style="color:#e6db74">&#34;OverridesDefaultStyle&#34;</span> <span style="color:#a6e22e">Value=</span><span style="color:#e6db74">&#34;True&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;Setter</span> <span style="color:#a6e22e">Property=</span><span style="color:#e6db74">&#34;BorderThickness&#34;</span> <span style="color:#a6e22e">Value=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">/&gt;</span>
+
+        <span style="color:#f92672">&lt;Setter</span> <span style="color:#a6e22e">Property=</span><span style="color:#e6db74">&#34;Template&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;Setter.Value&gt;</span>
+                <span style="color:#f92672">&lt;ControlTemplate</span> <span style="color:#a6e22e">TargetType=</span><span style="color:#e6db74">&#34;ContentControl&#34;</span><span style="color:#f92672">&gt;</span>
+                    <span style="color:#f92672">&lt;Border</span>
+                        <span style="color:#a6e22e">Background=</span><span style="color:#e6db74">&#34;{TemplateBinding Background}&#34;</span>
+                        <span style="color:#a6e22e">BorderThickness=</span><span style="color:#e6db74">&#34;{TemplateBinding BorderThickness}&#34;</span>
+                        <span style="color:#a6e22e">BorderBrush=</span><span style="color:#e6db74">&#34;{TemplateBinding BorderBrush}&#34;</span>
+                        <span style="color:#f92672">&gt;</span>
+                        <span style="color:#f92672">&lt;ContentPresenter/&gt;</span>
+                    <span style="color:#f92672">&lt;/Border&gt;</span>
+                <span style="color:#f92672">&lt;/ControlTemplate&gt;</span>
+            <span style="color:#f92672">&lt;/Setter.Value&gt;</span>
+        <span style="color:#f92672">&lt;/Setter&gt;</span>
+
+        <span style="color:#f92672">&lt;Style.Triggers&gt;</span>
+            <span style="color:#f92672">&lt;Trigger</span> <span style="color:#a6e22e">Property=</span><span style="color:#e6db74">&#34;IsSelected&#34;</span> <span style="color:#a6e22e">Value=</span><span style="color:#e6db74">&#34;True&#34;</span><span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;Setter</span> <span style="color:#a6e22e">Property=</span><span style="color:#e6db74">&#34;Background&#34;</span> <span style="color:#a6e22e">Value=</span><span style="color:#e6db74">&#34;#9999CCFF&#34;</span><span style="color:#f92672">/&gt;</span>
+                <span style="color:#f92672">&lt;Setter</span> <span style="color:#a6e22e">Property=</span><span style="color:#e6db74">&#34;BorderBrush&#34;</span> <span style="color:#a6e22e">Value=</span><span style="color:#e6db74">&#34;#3399FF&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;/Trigger&gt;</span>
+        <span style="color:#f92672">&lt;/Style.Triggers&gt;</span>
+    <span style="color:#f92672">&lt;/Style&gt;</span>
+<span style="color:#f92672">&lt;/ItemsControl.ItemContainerStyle&gt;</span></code></pre></div>
+<h2 id="itemtemplate">ItemTemplate</h2>
+<p>各オブジェクトの表示形式を指定。
+下記の例では、各オブジェクトのNameプロパティを表示する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;ItemsControl.ItemTemplate&gt;</span>
+    <span style="color:#f92672">&lt;DataTemplate&gt;</span>
+        <span style="color:#f92672">&lt;TextBlock</span> <span style="color:#a6e22e">Text=</span><span style="color:#e6db74">&#34;{Binding Name}&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/DataTemplate&gt;</span>
+<span style="color:#f92672">&lt;/ItemsControl.ItemTemplate&gt;</span></code></pre></div>
+
+</div>
+</article>
+
+
+</main>
+
+<footer>
+<div id="link">
+<a href="https://github.com/wonderstory" title="GitHub" aria-label="GitHub"><i class="fa fa-lg fa-github" aria-hidden="true"></i></a>
+<a href="https://twitter.com/wonderstory" title="Twitter" aria-label="Twitter"><i class="fa fa-lg fa-twitter" aria-hidden="true"></i></a>
+<a href="http://note.mvrck.jp" title="Tumblr" aria-label="Tumblr"><i class="fa fa-lg fa-tumblr-square" aria-hidden="true"></i></a>
+<a href="https://www.flickr.com/photos/wonderstory/" title="Flickr" aria-label="Flickr"><i class="fa fa-lg fa-flickr" aria-hidden="true"></i></a>
+</div>
+
+<div id="author"><b>wonderstory</b>
+<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
+</div>
+</footer>
+</body>
+</html>

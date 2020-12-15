@@ -6,22 +6,14 @@
     <description>Recent content in config on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sun, 16 Dec 2018 00:46:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://mvrck.jp/tags/config/feed.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 16 Dec 2018 00:46:00 +0900</lastBuildDate><atom:link href="https://mvrck.jp/tags/config/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 0.52 でファイルキャッシュの設定が変わった</title>
       <link>https://mvrck.jp/blog/hugo-0-52-config-cache/</link>
       <pubDate>Sun, 16 Dec 2018 00:46:00 +0900</pubDate>
       
       <guid>https://mvrck.jp/blog/hugo-0-52-config-cache/</guid>
-      <description>ひさしぶりに記事を更新したら Hugo さんが急にエラーを出したため困惑していたところ、 なんと Hugo 0.52 からファイルキャッシュの設定方法が変わっていたうえ、相対パスを受け付けなくなっていました。
-Error: failed to create file caches from configuration: &amp;quot;cache/hugo&amp;quot; must resolve to an absolute directory  Hugo のドキュメントを参考に、設定ファイルを書き換える必要があります。 このサイトの config.toml だと
-cachedir = &amp;#34;cache&amp;#34; だったものを
-[caches] [caches.getjson] dir = &amp;#34;:resourceDir/_gen&amp;#34; maxAge = -1 に変更しました（必要ならJSON以外も設定）。
-今まではプロジェクトルート階層にある cache ディレクトリに生成されていたものが resources/_gen/getjson の中に作られるようになります。 :resourceDir は resourceDir の設定を書いておけば変更可能ですが、ディレクトリ構成にこだわりはないのでおとなしくデフォルトを使うことにします。</description>
+      <description>ひさしぶりに記事を更新したら Hugo さんが急にエラーを出したため困惑していたところ、 なんと Hugo 0.52 からファイルキャッシュの設定方法が変わっていたうえ、</description>
     </item>
     
   </channel>

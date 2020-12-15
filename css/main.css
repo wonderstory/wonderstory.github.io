@@ -142,6 +142,7 @@ main > h1 + h2 {
     margin-left: 4px;
     color: #666;
 }
+main > div > .description + article,
 main > div + h2 {
     margin-top: 48px;
 }
@@ -191,7 +192,7 @@ main article > h3 {
     margin-right: 4px;
 }
 main article > header p a,
-main article > p a,
+main > div > article > p a,
 ul#tagcloud li a {
     padding: 1px 3px;
     border: solid 1px #999 !important;

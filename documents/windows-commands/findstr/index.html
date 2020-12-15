@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8" />
+<meta name="generator" content="Hugo 0.79.0" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+<meta name="theme-color" content="#663300" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/main.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/custom.css" />
+<title>findstr - mvrck</title>
+
+<link rel="canonical" href="https://mvrck.jp/documents/windows-commands/findstr/" />
+
+</head>
+
+<body>
+
+<header>
+<div id="logo" class="wd">
+<a href="https://mvrck.jp/">mvrck</a>
+</div>
+
+<nav id="menu">
+<ul>
+<li class="blog">
+<a href="https://mvrck.jp/blog/">Blog</a>
+</li>
+<li class="documents">
+<a href="https://mvrck.jp/documents/">Documents</a>
+</li>
+<li class="about">
+<a href="https://mvrck.jp/about/">About</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<main>
+
+<article>
+<header>
+
+<ol id="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a itemprop="item" href="https://mvrck.jp/documents/">
+            <span itemprop="name">Documents</span>
+        </a>
+        <meta itemprop="position" content="1" />
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a itemprop="item" href="https://mvrck.jp/documents/windows-commands/">
+            <span itemprop="name">Windows commands</span>
+        </a>
+        <meta itemprop="position" content="2" />
+    </li>
+</ol>
+
+
+<h1>findstr</h1>
+
+<p class="date">
+<time datetime="2020-12-15T09:22:13">2020-12-15</time>
+</p>
+
+<p class="tags">
+<a href="https://mvrck.jp/tags/windows/">windows</a>
+<a href="https://mvrck.jp/tags/cmd/">cmd</a>
+<a href="https://mvrck.jp/tags/search/">search</a>
+</p>
+
+</header>
+
+<div class="content">
+<p>ファイル内の文字列を検索する。</p>
+<h2 id="形式">形式</h2>
+<pre><code>findstr /s /n 検索文字列 ファイル名
+</code></pre><h2 id="パラメータ">パラメータ</h2>
+<table>
+<thead>
+<tr>
+<th>値</th>
+<th>意味</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/l</code></td>
+<td>検索文字列を文字通り扱う</td>
+<td>*</td>
+</tr>
+<tr>
+<td><code>/r</code></td>
+<td>検索文字列を正規表現として扱う (既定)</td>
+<td>* <code>/l</code> <code>/r</code> は排他</td>
+</tr>
+<tr>
+<td><code>/i</code></td>
+<td>検索するとき、文字列の大文字と小文字を区別しない</td>
+<td></td>
+</tr>
+<tr>
+<td><code>/s</code></td>
+<td>現在のディレクトリとすべてのサブディレクトリを検索</td>
+<td></td>
+</tr>
+<tr>
+<td><code>/n</code></td>
+<td>一致する行の番号を出力する</td>
+<td><code>/m</code> が優先</td>
+</tr>
+<tr>
+<td><code>/m</code></td>
+<td>一致する箇所があるファイル名のみを出力する</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="使用例">使用例</h2>
+<p>現在のディレクトリ配下にあるすべての.csファイルについて、文字列「Exception」を探して何行目にあるかを出力する。</p>
+<pre><code>findstr /s /n Exception *.cs
+</code></pre>
+</div>
+</article>
+
+
+<div id="related">
+<h2>Related</h2>
+<ul>
+<li><a href="https://mvrck.jp/blog/gpd-micropc-n4100/">なぜか GPD MicroPC がメイン端末になった</a></li>
+<li><a href="https://mvrck.jp/blog/gpd-pocket2-keyboard-firmware/">GPD Pocket2 のキーボードファームウェアが出ていた</a></li>
+<li><a href="https://mvrck.jp/blog/gpd-pocket2-7y30/">GPD Pocket2 (7Y30)</a></li>
+</ul>
+</div>
+</main>
+
+<footer>
+<div id="link">
+<a href="https://github.com/wonderstory" title="GitHub" aria-label="GitHub"><i class="fa fa-lg fa-github" aria-hidden="true"></i></a>
+<a href="https://twitter.com/wonderstory" title="Twitter" aria-label="Twitter"><i class="fa fa-lg fa-twitter" aria-hidden="true"></i></a>
+<a href="http://note.mvrck.jp" title="Tumblr" aria-label="Tumblr"><i class="fa fa-lg fa-tumblr-square" aria-hidden="true"></i></a>
+<a href="https://www.flickr.com/photos/wonderstory/" title="Flickr" aria-label="Flickr"><i class="fa fa-lg fa-flickr" aria-hidden="true"></i></a>
+</div>
+
+<div id="author"><b>wonderstory</b>
+<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
+</div>
+</footer>
+</body>
+</html>

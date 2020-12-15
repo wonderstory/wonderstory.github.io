@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>search on mvrck</title>
+    <link>https://mvrck.jp/tags/search/</link>
+    <description>Recent content in search on mvrck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Tue, 15 Dec 2020 09:22:13 +0900</lastBuildDate><atom:link href="https://mvrck.jp/tags/search/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>findstr</title>
+      <link>https://mvrck.jp/documents/windows-commands/findstr/</link>
+      <pubDate>Tue, 15 Dec 2020 09:22:13 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/documents/windows-commands/findstr/</guid>
+      <description>ファイル内の文字列を検索する。 形式 findstr /s /n 検索文字列 ファイル名 パラメータ 値 意味 備考 /l 検索文字列を文字通り扱う * /r 検索文字列を正規表現として扱う</description>
+    </item>
+    
+  </channel>
+</rss>

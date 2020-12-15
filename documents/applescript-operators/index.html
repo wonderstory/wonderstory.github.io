@@ -2,7 +2,7 @@
 <html lang="ja-JP">
 <head>
 <meta charset="utf-8" />
-<meta name="generator" content="Hugo 0.59.0-DEV" />
+<meta name="generator" content="Hugo 0.79.0" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 <meta name="theme-color" content="#663300" />
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -12,49 +12,26 @@
 
 <link rel="canonical" href="https://mvrck.jp/documents/applescript-operators/" />
 
-
 </head>
 
 <body>
 
 <header>
 <div id="logo" class="wd">
-
 <a href="https://mvrck.jp/">mvrck</a>
-
 </div>
 
 <nav id="menu">
-
 <ul>
-
-
 <li class="blog">
-
-
 <a href="https://mvrck.jp/blog/">Blog</a>
-
-
 </li>
-
-
 <li class="documents">
-
-
 <a href="https://mvrck.jp/documents/">Documents</a>
-
-
 </li>
-
-
 <li class="about">
-
-
 <a href="https://mvrck.jp/about/">About</a>
-
-
 </li>
-
 </ul>
 </nav>
 </header>
@@ -63,22 +40,34 @@
 
 <article>
 <header>
+
+<ol id="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a itemprop="item" href="https://mvrck.jp/documents/">
+            <span itemprop="name">Documents</span>
+        </a>
+        <meta itemprop="position" content="1" />
+    </li>
+</ol>
+
+
 <h1>AppleScript演算子リファレンス</h1>
-<p class="date"><time datetime="2011-12-27T15:09:27">2011-12-27</time>
+
+<p class="date">
+<time datetime="2011-12-27T15:09:27">2011-12-27</time>
 </p>
-<p class="tags"> <a href="https://mvrck.jp/tags/applescript/">applescript</a> <a href="https://mvrck.jp/tags/reference/">reference</a></p>
+
+<p class="tags">
+<a href="https://mvrck.jp/tags/applescript/">applescript</a>
+<a href="https://mvrck.jp/tags/reference/">reference</a>
+</p>
 
 </header>
 
 <div class="content">
-
-
 <p>AppleScript の演算子と、結合の優先順位一覧です。</p>
-
 <p>同じ意味の演算子でも数多くの表記方法が存在します（ <code>is not</code> は <code>isn't</code> でもいい、などなど）。本表では個人的によく使うもの以外は省略しています。</p>
-
 <h2 id="演算子">演算子</h2>
-
 <table>
 <thead>
 <tr>
@@ -87,150 +76,125 @@
 <th>備考</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>加算 (Addition)</td>
 <td><code>+</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>減算 (Subtraction)</td>
 <td><code>-</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>乗算 (Multiplication)</td>
 <td><code>*</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>除算 (Division)</td>
-<td><code>/</code>,<br><code>÷</code></td>
+<td><code>/</code>,<!-- raw HTML omitted --><code>÷</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>整数除算 (Integral division)</td>
 <td><code>div</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>剰余・余り (Remainder)</td>
 <td><code>mod</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>累乗 (Exponentiation)</td>
 <td><code>^</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>否定 (Negation)</td>
 <td><code>not</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>連言・論理積 (Logical conjunction)</td>
 <td><code>and</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>選言・論理和 (Logical disjunction)</td>
 <td><code>or</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>等しい (Equality)</td>
-<td><code>=</code>,<br><code>equals</code>,<br><code>is equal to</code></td>
+<td><code>=</code>,<!-- raw HTML omitted --><code>equals</code>,<!-- raw HTML omitted --><code>is equal to</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>等しくない (Inequality)</td>
-<td><code>≠</code>,<br><code>is not [equal [to]]</code></td>
+<td><code>≠</code>,<!-- raw HTML omitted --><code>is not [equal [to]]</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>〜より大きい (Greater than)</td>
-<td><code>&gt;</code>,<br><code>is greater than</code>,<br><code>comes after</code></td>
+<td><code>&gt;</code>,<!-- raw HTML omitted --><code>is greater than</code>,<!-- raw HTML omitted --><code>comes after</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>〜に満たない (Less than)</td>
-<td><code>&lt;</code>,<br><code>is less than</code>,<br><code>comes before</code></td>
+<td><code>&lt;</code>,<!-- raw HTML omitted --><code>is less than</code>,<!-- raw HTML omitted --><code>comes before</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>〜以上 (Greater than or equal to)</td>
-<td><code>≥</code>,<br><code>&gt;=</code>,<br><code>is greater than or equal to</code></td>
+<td><code>≥</code>,<!-- raw HTML omitted --><code>&gt;=</code>,<!-- raw HTML omitted --><code>is greater than or equal to</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>〜以下 (Less than or equal to)</td>
-<td><code>≤</code>,<br><code>&lt;=</code>,<br><code>is less than or equal to</code></td>
+<td><code>≤</code>,<!-- raw HTML omitted --><code>&lt;=</code>,<!-- raw HTML omitted --><code>is less than or equal to</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>〜から始まる (Starts with)</td>
-<td><code>starts with</code>,<br><code>begins with</code></td>
+<td><code>starts with</code>,<!-- raw HTML omitted --><code>begins with</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>〜で終わる (Ends with)</td>
 <td><code>ends with</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>含む (Containment)</td>
-<td><code>X contains i</code>,<br><code>i is in X</code></td>
+<td><code>X contains i</code>,<!-- raw HTML omitted --><code>i is in X</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>含まない (Non-containment)</td>
-<td><code>X does not contain i</code>,<br><code>i is not in X</code></td>
+<td><code>X does not contain i</code>,<!-- raw HTML omitted --><code>i is not in X</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>連結 (Concatenation)</td>
 <td><code>&amp;</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>型変換 (Coercion, Object conversion)</td>
 <td><code>X as TYPE</code></td>
 <td></td>
 </tr>
-
 <tr>
 <td>参照 (A reference to)</td>
-<td><code>ref</code>,<br><code>a reference to</code></td>
+<td><code>ref</code>,<!-- raw HTML omitted --><code>a reference to</code></td>
 <td>cf.) <code>contents of</code></td>
 </tr>
 </tbody>
 </table>
-
 <h2 id="優先順位">優先順位</h2>
-
 <ol>
 <li><code>(</code>, <code>)</code> （グループ化）</li>
 <li><code>+</code>, <code>–</code> （正負符号）</li>
@@ -245,9 +209,7 @@
 <li><code>and</code></li>
 <li><code>or</code></li>
 </ol>
-
 <h2 id="参考文献">参考文献</h2>
-
 <ul>
 <li><a href="https://developer.apple.com/library/content/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html">AppleScript Language Guide: Operators Reference</a></li>
 </ul>
@@ -256,40 +218,19 @@
 </article>
 
 
-
-
-
-
-
 </main>
 
 <footer>
 <div id="link">
-
 <a href="https://github.com/wonderstory" title="GitHub" aria-label="GitHub"><i class="fa fa-lg fa-github" aria-hidden="true"></i></a>
-
 <a href="https://twitter.com/wonderstory" title="Twitter" aria-label="Twitter"><i class="fa fa-lg fa-twitter" aria-hidden="true"></i></a>
-
 <a href="http://note.mvrck.jp" title="Tumblr" aria-label="Tumblr"><i class="fa fa-lg fa-tumblr-square" aria-hidden="true"></i></a>
-
 <a href="https://www.flickr.com/photos/wonderstory/" title="Flickr" aria-label="Flickr"><i class="fa fa-lg fa-flickr" aria-hidden="true"></i></a>
-
 </div>
 
-<div id="author">
-
-
-<b>wonderstory</b>
-
-
+<div id="author"><b>wonderstory</b>
 <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
-
-
-
 </div>
-
 </footer>
-
-
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="ja-JP">
 <head>
 <meta charset="utf-8" />
-<meta name="generator" content="Hugo 0.59.0-DEV" />
+<meta name="generator" content="Hugo 0.79.0" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 <meta name="theme-color" content="#663300" />
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -12,49 +12,26 @@
 
 <link rel="canonical" href="https://mvrck.jp/blog/flipout-keyboard-config/" />
 
-
 </head>
 
 <body>
 
 <header>
 <div id="logo" class="wd">
-
 <a href="https://mvrck.jp/">mvrck</a>
-
 </div>
 
 <nav id="menu">
-
 <ul>
-
-
 <li class="blog">
-
-
 <a href="https://mvrck.jp/blog/">Blog</a>
-
-
 </li>
-
-
 <li class="documents">
-
-
 <a href="https://mvrck.jp/documents/">Documents</a>
-
-
 </li>
-
-
 <li class="about">
-
-
 <a href="https://mvrck.jp/about/">About</a>
-
-
 </li>
-
 </ul>
 </nav>
 </header>
@@ -63,98 +40,77 @@
 
 <article>
 <header>
+
+
 <h1>Motorola Flipout キーボードカスタマイズ</h1>
-<p class="date"><time datetime="2011-06-13T00:00:00">2011-06-13</time>
+
+<p class="date">
+<time datetime="2011-06-13T00:00:00">2011-06-13</time>
 </p>
-<p class="tags"> <a href="https://mvrck.jp/tags/device/">device</a> <a href="https://mvrck.jp/tags/android/">android</a> <a href="https://mvrck.jp/tags/flipout/">flipout</a></p>
+
+<p class="tags">
+<a href="https://mvrck.jp/tags/device/">device</a>
+<a href="https://mvrck.jp/tags/android/">android</a>
+<a href="https://mvrck.jp/tags/flipout/">flipout</a>
+</p>
 <p class="moved"><span>moved from</span> <samp>http://wonderstory.posterous.com/motorola-flipout-3518</samp></p>
 </header>
 
 <div class="content">
-
-
 <p>ちいささと、ころっとした外見、ぷちぷちした感触のキーボードがだいぶ気に入ってしまって、ローエンド機種だし動作は遅めだし公式アップデートはたぶん来ないけれど、ここのところメイン機になっている Motorola Flipout MB511 ですが、キーボードの設定をいじって文字入力をより快適にしてみました。要root権取得。</p>
-
 <figure>
   <a href="https://www.flickr.com/photos/wonderstory/5962975548/">
     <img src="https://farm7.staticflickr.com/6028/5962975548_b1f50d2142.jpg">
   </a>
   <figcaption>MB511</figcaption>
 </figure>
-
 <figure>
   <a href="https://www.flickr.com/photos/wonderstory/5962975208/">
     <img src="https://farm7.staticflickr.com/6144/5962975208_261cf7e5f6.jpg">
   </a>
   <figcaption>MB511</figcaption>
 </figure>
-
 <p>けっこう打ちやすい Flipout のキーボードで少し不満なのが、</p>
-
 <ul>
-<li>Wnn系のIMで、日本語・英語の入力切り替え <kbd>Shift</kbd>+<kbd>Space</kbd> が押しにくい（<kbd>Shift</kbd> が左端にあって中心から遠い）。</li>
-<li>日本語ではそれなりに使うハイフンが <kbd>Alt</kbd>+<kbd>Z</kbd> に割り当てられていて、両手の親指でぽちぽち入力するときに動きが大きくて煩わしい。</li>
+<li>Wnn系のIMで、日本語・英語の入力切り替え <!-- raw HTML omitted -->Shift<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Space<!-- raw HTML omitted --> が押しにくい（<!-- raw HTML omitted -->Shift<!-- raw HTML omitted --> が左端にあって中心から遠い）。</li>
+<li>日本語ではそれなりに使うハイフンが <!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Z<!-- raw HTML omitted --> に割り当てられていて、両手の親指でぽちぽち入力するときに動きが大きくて煩わしい。</li>
 </ul>
-
 <p>というところで、どうにかならないかといろいろとAndroidのキーボードカスタマイズ情報を探すと、</p>
-
 <ul>
 <li><code>/system/usr/keylayout/*.kl</code> ： ハードキーに対応するキーコードを設定</li>
 <li><code>/system/usr/keychars/*.kcm.bin</code> ： キーコードに対応して入力される文字を設定</li>
 </ul>
-
 <p>というファイルをいじればよさそうです。 logcat を眺めた感じでは、手持ちの HK版Flipout で使われていたのは次の2つ。本体からコピーしてきます。</p>
-
 <ul>
 <li><code>sholes-keypad.kl</code></li>
 <li><code>sholes-keypad.kcm.bin</code></li>
 </ul>
-
-<h2 id="日本語-英語の入力切り替えをしやすく-sholes-keypad-kl">日本語・英語の入力切り替えをしやすく。 (sholes-keypad.kl)</h2>
-
-<p>まず、スペースの右隣に「<kbd>A|中</kbd>」という何も反応しないキー（たぶん日本語入力でいうところの文字キー）があるので、それを <kbd>Shift</kbd>+<kbd>Space</kbd> に割り当てられないかと思ったものの、修飾キーつきの割り当てはファイルをいじるだけでは無理なようでした。</p>
-
-<p>仕方がないので、右手親指だけで <kbd>スペース</kbd>+<kbd>A|中</kbd> が押せるのを利用することにして、「<kbd>A|中</kbd>」キーには <kbd>Shift</kbd> に割り当てることにしました。手の動きが減って、なんとなく手間が減ったような気になれます。</p>
-
-<p><code>*.kl</code> ファイルは、単純にスキャンコードとキーコードが並ぶテキストファイルで、キーコードは <a href="http://developer.android.com/reference/android/view/KeyEvent.html#KEYCODE_0"><code>android.view.KeyEvent</code></a> で定義されている定数の先頭（<code>KEYCODE_</code>）を省いたものを書けるようです。<a href="http://forum.xda-developers.com/showthread.php?t=1089421">「<kbd>A|中</kbd>」キーのスキャンコードは 162</a> で、これを <code>SHIFT_RIGHT</code> に変えました。</p>
-
+<h2 id="日本語英語の入力切り替えをしやすく-sholes-keypadkl">日本語・英語の入力切り替えをしやすく。 (sholes-keypad.kl)</h2>
+<p>まず、スペースの右隣に「<!-- raw HTML omitted -->A|中<!-- raw HTML omitted -->」という何も反応しないキー（たぶん日本語入力でいうところの文字キー）があるので、それを <!-- raw HTML omitted -->Shift<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Space<!-- raw HTML omitted --> に割り当てられないかと思ったものの、修飾キーつきの割り当てはファイルをいじるだけでは無理なようでした。</p>
+<p>仕方がないので、右手親指だけで <!-- raw HTML omitted -->スペース<!-- raw HTML omitted -->+<!-- raw HTML omitted -->A|中<!-- raw HTML omitted --> が押せるのを利用することにして、「<!-- raw HTML omitted -->A|中<!-- raw HTML omitted -->」キーには <!-- raw HTML omitted -->Shift<!-- raw HTML omitted --> に割り当てることにしました。手の動きが減って、なんとなく手間が減ったような気になれます。</p>
+<p><code>*.kl</code> ファイルは、単純にスキャンコードとキーコードが並ぶテキストファイルで、キーコードは <a href="http://developer.android.com/reference/android/view/KeyEvent.html#KEYCODE_0"><code>android.view.KeyEvent</code></a> で定義されている定数の先頭（<code>KEYCODE_</code>）を省いたものを書けるようです。<!-- raw HTML omitted -->「<!-- raw HTML omitted -->A|中<!-- raw HTML omitted -->」キーのスキャンコードは 162<!-- raw HTML omitted --> で、これを <code>SHIFT_RIGHT</code> に変えました。</p>
 <pre><code>#key 162   EXPLORER          WAKE_DROPPED
 key 162   SHIFT_RIGHT       WAKE_DROPPED
 </code></pre>
-
 <p>あと、試しに音量アップキーをカメラキーに置き換えてみました。</p>
-
 <pre><code>#key 115   VOLUME_UP         WAKE
 key 115   CAMERA            WAKE_DROPPED
 </code></pre>
-
-<h2 id="ハイフンを押しやすい位置に-sholes-keypad-kcm-bin">ハイフンを押しやすい位置に。 (sholes-keypad.kcm.bin)</h2>
-
-<p>次に、 <kbd>Alt</kbd>+<kbd>Z</kbd> にあるハイフンを、比較的押しやすそうなところにあるアンダーバー（<kbd>Alt</kbd>+<kbd>P</kbd>）と入れ替えることにしました。</p>
-
+<h2 id="ハイフンを押しやすい位置に-sholes-keypadkcmbin">ハイフンを押しやすい位置に。 (sholes-keypad.kcm.bin)</h2>
+<p>次に、 <!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Z<!-- raw HTML omitted --> にあるハイフンを、比較的押しやすそうなところにあるアンダーバー（<!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->+<!-- raw HTML omitted -->P<!-- raw HTML omitted -->）と入れ替えることにしました。</p>
 <p><code>*.kcm.bin</code> ファイルはバイナリエディタで開く必要があります。中身自体は単純な構造ですが、どの値が何に対応しているのかがいまいちわかりにくいです。</p>
-
-<p>0x00-0x1fはヘッダ。0x20以降は、16byteでひとつのキー。最初の2byteが <code>frameworks/base/include/ui/KeycodeLabels.h</code> というので定義されているラベル（たとえば「P」が「44 = 0x2C」でした）。後ろ8byteが、2byteごとに「通常入力 ／ <kbd>Shift</kbd>と ／ <kbd>Alt</kbd>と ／ <kbd>Alt</kbd>+<kbd>Shift</kbd>と同時入力」に対応。残りはよくわかりません。</p>
-
-<p>ということで、お目当ての <kbd>Alt</kbd>+<kbd>P</kbd> と <kbd>Alt</kbd>+<kbd>Z</kbd> に対応している定義を交換しておきます。</p>
-
+<p>0x00-0x1fはヘッダ。0x20以降は、16byteでひとつのキー。最初の2byteが <code>frameworks/base/include/ui/KeycodeLabels.h</code> というので定義されているラベル（たとえば「P」が「44 = 0x2C」でした）。後ろ8byteが、2byteごとに「通常入力 ／ <!-- raw HTML omitted -->Shift<!-- raw HTML omitted -->と ／ <!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->と ／ <!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Shift<!-- raw HTML omitted -->と同時入力」に対応。残りはよくわかりません。</p>
+<p>ということで、お目当ての <!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->+<!-- raw HTML omitted -->P<!-- raw HTML omitted --> と <!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Z<!-- raw HTML omitted --> に対応している定義を交換しておきます。</p>
 <pre><code>0x1D0: 2C00 0000 5000 3700  7000 5000 2D00 0000 | p P -  
 0x270: 3600 0000 5A00 3900  7A00 5A00 5F00 0000 | z Z _
 </code></pre>
-
-<p>これで、 <kbd>Alt</kbd>+<kbd>P</kbd> でUnicodeの 0x002D(-) が、 <kbd>Alt</kbd>+<kbd>Z</kbd> で 0x005F(_) が入力されるようになります（「2D00」が「0x002D」を表す）。</p>
-
-<p>ついでに、もともと <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>.</kbd> で 0x2026(&hellip;) が入力できるようになっていたのをまねして、 <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> で 0x2014(&mdash;) を入力できるように設定。</p>
-
+<p>これで、 <!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->+<!-- raw HTML omitted -->P<!-- raw HTML omitted --> でUnicodeの 0x002D(-) が、 <!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Z<!-- raw HTML omitted --> で 0x005F(_) が入力されるようになります（「2D00」が「0x002D」を表す）。</p>
+<p>ついでに、もともと <!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Shift<!-- raw HTML omitted -->+<!-- raw HTML omitted -->.<!-- raw HTML omitted --> で 0x2026(…) が入力できるようになっていたのをまねして、 <!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Shift<!-- raw HTML omitted -->+<!-- raw HTML omitted -->M<!-- raw HTML omitted --> で 0x2014(—) を入力できるように設定。</p>
 <pre><code>0x1A0: 2900 0000 4D00 3600  6D00 4D00 2C00 1420 | m M , —
 </code></pre>
-
-<p>ほかにも、キーボードに印字がない文字を適当に割り当てておきました（「|」を <kbd>Alt</kbd>+<kbd>E</kbd> に、バックスラッシュを <kbd>Alt</kbd>+<kbd>R</kbd> に）。</p>
-
+<p>ほかにも、キーボードに印字がない文字を適当に割り当てておきました（「|」を <!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->+<!-- raw HTML omitted -->E<!-- raw HTML omitted --> に、バックスラッシュを <!-- raw HTML omitted -->Alt<!-- raw HTML omitted -->+<!-- raw HTML omitted -->R<!-- raw HTML omitted --> に）。</p>
 <h2 id="本体に書き込み">本体に書き込み。</h2>
-
 <p>できた2つのファイルを USB デバッグモードでつないだ Flipout に送ってシステムに書き込み、再起動すれば完了です。</p>
-
 <pre><code>$ adb push sholes-keypad.kl /sdcard
 $ adb push sholes-keypad.kcm.bin /sdcard
 $ adb shell
@@ -165,52 +121,27 @@ $ su
 # busybox cp /sdcard/sholes-keypad.kcm.bin /system/usr/keychars
 # reboot
 </code></pre>
-
 <p>より使いやすくなって、ますます愛着がわいてきます。同系統の後継機が出たらうれしいなあ。</p>
 
 </div>
 </article>
 
 
-
-
-
-<div id="neighbors">
-
-<a rel="next" href="https://mvrck.jp/blog/flipout-us-keypad/">Motorola Flipout 分解＆キーパッド交換</a>
+<div id="neighbors"><a rel="next" href="https://mvrck.jp/blog/flipout-us-keypad/">Motorola Flipout 分解＆キーパッド交換</a>
 </div>
-
-
-
 </main>
 
 <footer>
 <div id="link">
-
 <a href="https://github.com/wonderstory" title="GitHub" aria-label="GitHub"><i class="fa fa-lg fa-github" aria-hidden="true"></i></a>
-
 <a href="https://twitter.com/wonderstory" title="Twitter" aria-label="Twitter"><i class="fa fa-lg fa-twitter" aria-hidden="true"></i></a>
-
 <a href="http://note.mvrck.jp" title="Tumblr" aria-label="Tumblr"><i class="fa fa-lg fa-tumblr-square" aria-hidden="true"></i></a>
-
 <a href="https://www.flickr.com/photos/wonderstory/" title="Flickr" aria-label="Flickr"><i class="fa fa-lg fa-flickr" aria-hidden="true"></i></a>
-
 </div>
 
-<div id="author">
-
-
-<b>wonderstory</b>
-
-
+<div id="author"><b>wonderstory</b>
 <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
-
-
-
 </div>
-
 </footer>
-
-
 </body>
 </html>
