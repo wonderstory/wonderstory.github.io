@@ -33,3 +33,9 @@ main article p.moved samp {
     color: #666;
     overflow-wrap: break-word;
 }
+
+.content figure img,
+.content figure > * {
+    width: 100% !important;
+    height: auto !important;
+}
