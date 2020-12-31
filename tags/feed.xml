@@ -6,7 +6,34 @@
     <description>Recent content in Tags on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Tue, 15 Dec 2020 09:22:13 +0900</lastBuildDate><atom:link href="https://mvrck.jp/tags/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Dec 2020 15:48:05 +0900</lastBuildDate><atom:link href="https://mvrck.jp/tags/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>homebrew</title>
+      <link>https://mvrck.jp/tags/homebrew/</link>
+      <pubDate>Tue, 29 Dec 2020 15:48:05 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/homebrew/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>https://mvrck.jp/tags/mac/</link>
+      <pubDate>Tue, 29 Dec 2020 15:48:05 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zsh</title>
+      <link>https://mvrck.jp/tags/zsh/</link>
+      <pubDate>Tue, 29 Dec 2020 15:48:05 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/tags/zsh/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>cmd</title>
       <link>https://mvrck.jp/tags/cmd/</link>

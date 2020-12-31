@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8" />
+<meta name="generator" content="Hugo 0.79.1" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+<meta name="theme-color" content="#663300" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/main.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/custom.css" />
+<title>MacBook Air 13inch (M1, 2020) Homebrew 環境構築 - mvrck</title>
+
+<link rel="canonical" href="https://mvrck.jp/blog/macbook-air-2020-m1-homebrew/" />
+
+</head>
+
+<body>
+
+<header>
+<div id="logo" class="wd">
+<a href="https://mvrck.jp/">mvrck</a>
+</div>
+
+<nav id="menu">
+<ul>
+<li class="blog">
+<a href="https://mvrck.jp/blog/">Blog</a>
+</li>
+<li class="documents">
+<a href="https://mvrck.jp/documents/">Documents</a>
+</li>
+<li class="about">
+<a href="https://mvrck.jp/about/">About</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<main>
+
+<article>
+<header>
+
+
+<h1>MacBook Air 13inch (M1, 2020) Homebrew 環境構築</h1>
+
+<p class="date">
+<time datetime="2020-12-29T15:48:05">2020-12-29</time>
+</p>
+
+<p class="tags">
+<a href="https://mvrck.jp/tags/mac/">mac</a>
+<a href="https://mvrck.jp/tags/zsh/">zsh</a>
+<a href="https://mvrck.jp/tags/homebrew/">homebrew</a>
+</p>
+
+</header>
+
+<div class="content">
+<p>この夏、メディアサーバだった Mac mini (Early 2009) をついに撤去したため、その代替として。</p>
+<p>今となってはWSLもあり、わざわざMacを選ぶ意味はだいぶなくなりましたが……。
+気がついたらUMPCじゃない普通のラップトップが家になかったので、とりあえず話の種に1枚買いました。</p>
+<p>もうほとんどの人にとって、最下位モデルでじゅうぶんなのでは。SSDの容量は用途次第ですが、16GBのメモリを要する人が果たしてどれだけいるのか。</p>
+<h2 id="方針">方針</h2>
+<ul>
+<li>あくまで「端末」なのであまりにも凝ったことはしない</li>
+<li>できる限りHomebrewだけでまかなう</li>
+<li>できる限りarmのバイナリを使う</li>
+<li>無理なものだけx86_64で</li>
+<li>最終的にはx86_64を捨てるつもりで</li>
+</ul>
+<p>インストール先は、</p>
+<dl>
+<dt>arm64</dt>
+<dd><code>/opt/homebrew</code></dd>
+<dt>x86_64</dt>
+<dd><code>~/.local/homebrew</code></dd>
+</dl>
+<p>としてみます。x86がいらなくなったら <code>.local</code> のほうはまるごと消すことにします。</p>
+<h2 id="homebrew-インストール">Homebrew インストール</h2>
+<h3 id="arm64">arm64</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% <span style="color:#038">cd</span> /opt
+% sudo mkdir homebrew
+% sudo chown <span style="color:#369">$USER</span> homebrew
+% curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip <span style="color:#00d;font-weight:bold">1</span> -C homebrew
+</code></pre></div><h3 id="x86_64">x86_64</h3>
+<p>（ここでは既に Rosetta 2 が導入されて、archコマンドがあるものとする）</p>
+<p>ターミナル自体をx86で動かす。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% <span style="color:#038">exec</span> arch -arch x86_64 <span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#369">$SHELL</span><span style="color:#d20;background-color:#fff0f0">&#34;</span>
+
+% <span style="color:#038">cd</span> ~
+% mkdir -p .local/homebrew
+% curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip <span style="color:#00d;font-weight:bold">1</span> -C .local/homebrew
+</code></pre></div><h2 id="zshrc">~/.zshrc</h2>
+<p><code>PATH</code>の設定、補完関係、アーキテクチャの切り替えエイリアスなど。
+果たしてHomebrewのキャッシュディレクトリは移しておくべきなのか。謎。</p>
+<p>そういえばzshを初めて使う気がします。<code>chpwd()</code>とか、初見ではわからんばい。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#038">export</span> <span style="color:#369">LSCOLORS</span>=gxfxxxxxcxxxxxxxxxgxgx
+zstyle <span style="color:#d20;background-color:#fff0f0">&#39;:completion:*&#39;</span> list-colors <span style="color:#d20;background-color:#fff0f0">&#39;di=36&#39;</span> <span style="color:#d20;background-color:#fff0f0">&#39;ln=35&#39;</span> <span style="color:#d20;background-color:#fff0f0">&#39;ex=32&#39;</span>
+
+
+<span style="color:#038">alias</span> <span style="color:#369">ls</span>=<span style="color:#d20;background-color:#fff0f0">&#39;ls -FG&#39;</span>
+
+chpwd() { ls }
+
+
+setopt auto_cd
+setopt magic_equal_subst
+
+
+<span style="color:#038">typeset</span> -U path fpath cdpath
+<span style="color:#369">path</span>=(
+	/opt/homebrew/bin(N-/)
+	~/.local/homebrew/bin(N-/)
+	<span style="color:#369">$path</span>
+)
+<span style="color:#369">fpath</span>=(
+	<span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#080;font-weight:bold">$(</span>brew --prefix<span style="color:#080;font-weight:bold">)</span><span style="color:#d20;background-color:#fff0f0">/share/zsh/site-functions&#34;</span>(N-/)
+	<span style="color:#369">$fpath</span>
+)
+<span style="color:#369">cdpath</span>=(
+	..
+	~
+	<span style="color:#369">$cdpath</span>
+)
+
+<span style="color:#080;font-weight:bold">if</span> (( $+commands[arch] )); <span style="color:#080;font-weight:bold">then</span>
+	<span style="color:#038">alias</span> <span style="color:#369">brew_x86</span>=<span style="color:#d20;background-color:#fff0f0">&#39;arch -arch x86_64 &#34;$HOME/.local/homebrew/bin/brew&#34;&#39;</span>
+	<span style="color:#038">alias</span> <span style="color:#369">switch2x86</span>=<span style="color:#d20;background-color:#fff0f0">&#39;exec arch -arch x86_64 &#34;$SHELL&#34; &amp;&amp; source ~/.zshrc&#39;</span>
+	<span style="color:#038">alias</span> <span style="color:#369">switch2arm</span>=<span style="color:#d20;background-color:#fff0f0">&#39;exec arch -arch arm64e &#34;$SHELL&#34; &amp;&amp; source ~/.zshrc&#39;</span>
+<span style="color:#080;font-weight:bold">fi</span>
+
+<span style="color:#080;font-weight:bold">if</span> [[ <span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#080;font-weight:bold">$(</span>uname -m<span style="color:#080;font-weight:bold">)</span><span style="color:#d20;background-color:#fff0f0">&#34;</span> == x86_64 ]]; <span style="color:#080;font-weight:bold">then</span>
+	<span style="color:#038">export</span> <span style="color:#369">HOMEBREW_CACHE</span>=<span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#369">$HOME</span><span style="color:#d20;background-color:#fff0f0">/.local/homebrew/cache&#34;</span>
+<span style="color:#080;font-weight:bold">else</span>
+	<span style="color:#038">export</span> <span style="color:#369">HOMEBREW_CACHE</span>=
+<span style="color:#080;font-weight:bold">fi</span>
+
+
+autoload -U compinit &amp;&amp; compinit
+</code></pre></div><h2 id="starship">Starship</h2>
+<p>とりあえずこれを書いている時点では、armで失敗するのを確認。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% switch2arm
+% brew install starship
+</code></pre></div><p>代わりにx86でインストール。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% switch2x86
+% brew_x86 install starship
+</code></pre></div><p>適宜、設定と使用の準備。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% switch2arm
+% <span style="color:#038">echo</span> <span style="color:#d20;background-color:#fff0f0">&#39;eval &#34;$(starship init zsh)&#34;&#39;</span> &gt;&gt; ~/.zshrc
+
+% mkdir ~/.config
+% touch ~/.config/starship.toml
+</code></pre></div><p>x86で作業したらarmに戻すのを忘れずに。
+こんな調子で、なんとかなる気がします。</p>
+
+</div>
+</article>
+
+
+<div id="neighbors"><a rel="prev" href="https://mvrck.jp/blog/sony-xperia-ear-duo-xea20/">Xperia Ear Duo (XEA20) 18か月使用レビュー</a>
+</div>
+</main>
+
+<footer>
+<div id="link">
+<a href="https://github.com/wonderstory" title="GitHub" aria-label="GitHub"><i class="fa fa-lg fa-github" aria-hidden="true"></i></a>
+<a href="https://twitter.com/wonderstory" title="Twitter" aria-label="Twitter"><i class="fa fa-lg fa-twitter" aria-hidden="true"></i></a>
+<a href="http://note.mvrck.jp" title="Tumblr" aria-label="Tumblr"><i class="fa fa-lg fa-tumblr-square" aria-hidden="true"></i></a>
+<a href="https://www.flickr.com/photos/wonderstory/" title="Flickr" aria-label="Flickr"><i class="fa fa-lg fa-flickr" aria-hidden="true"></i></a>
+</div>
+
+<div id="author"><b>wonderstory</b>
+<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mac on mvrck</title>
+    <link>https://mvrck.jp/tags/mac/</link>
+    <description>Recent content in mac on mvrck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Tue, 29 Dec 2020 15:48:05 +0900</lastBuildDate><atom:link href="https://mvrck.jp/tags/mac/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MacBook Air 13inch (M1, 2020) Homebrew 環境構築</title>
+      <link>https://mvrck.jp/blog/macbook-air-2020-m1-homebrew/</link>
+      <pubDate>Tue, 29 Dec 2020 15:48:05 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/blog/macbook-air-2020-m1-homebrew/</guid>
+      <description>この夏、メディアサーバだった Mac mini (Early 2009) をついに撤去したため、その代替として。 今となってはWSLもあり、わざわざMacを選ぶ意味はだいぶなくなり</description>
+    </item>
+    
+  </channel>
+</rss>
