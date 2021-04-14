@@ -6,7 +6,16 @@
     <description>Recent content on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Tue, 29 Dec 2020 15:48:05 +0900</lastBuildDate><atom:link href="https://mvrck.jp/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Jan 2021 00:55:49 +0900</lastBuildDate><atom:link href="https://mvrck.jp/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 0.60 では記事からHTMLが取り除かれる</title>
+      <link>https://mvrck.jp/blog/hugo-0-60-new-markdown-renderer/</link>
+      <pubDate>Sun, 24 Jan 2021 00:55:49 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/blog/hugo-0-60-new-markdown-renderer/</guid>
+      <description>そういえば対処していなかった。 Hugo 0.60 ではMarkdown処理系が代わったため、HTMLを直に記載していると該当部分が &amp;lt;!-- raw HTML omitted --&amp;gt; となってしまいま</description>
+    </item>
+    
     <item>
       <title>MacBook Air 13inch (M1, 2020) Homebrew 環境構築</title>
       <link>https://mvrck.jp/blog/macbook-air-2020-m1-homebrew/</link>

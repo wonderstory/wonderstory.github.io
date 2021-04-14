@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="https://mvrck.jp/css/main.css" />
 <link rel="stylesheet" href="https://mvrck.jp/css/custom.css" />
-<title>web - mvrck</title>
+<title>Hugo 0.60 では記事からHTMLが取り除かれる - mvrck</title>
 
-<link rel="alternate" type="application/rss+xml" title="RSS Feed : web in mvrck" href="https://mvrck.jp/tags/web/feed.xml" />
+<link rel="canonical" href="https://mvrck.jp/blog/hugo-0-60-new-markdown-renderer/" />
 
 </head>
 
@@ -37,17 +37,12 @@
 </header>
 
 <main>
-<p class="tags"><a href="https://mvrck.jp/tags/">Tags</a>:</p>
-
-
-<h1>web</h1>
-
-
-<div>
-
 
 <article>
-<h3><a href="https://mvrck.jp/blog/hugo-0-60-new-markdown-renderer/">Hugo 0.60 では記事からHTMLが取り除かれる</a></h3>
+<header>
+
+
+<h1>Hugo 0.60 では記事からHTMLが取り除かれる</h1>
 
 <p class="date">
 <time datetime="2021-01-24T00:55:49">2021-01-24</time>
@@ -57,38 +52,34 @@
 <a href="https://mvrck.jp/tags/web/">web</a>
 <a href="https://mvrck.jp/tags/hugo/">hugo</a>
 </p>
-</article>
 
-<article>
-<h3><a href="https://mvrck.jp/blog/hugo-0-55-destructive-changes/">Hugo 0.55 の変更点いろいろメモ</a></h3>
+</header>
 
-<p class="date">
-<time datetime="2019-05-03T20:27:00">2019-05-03</time>
-</p>
-
-<p class="tags">
-<a href="https://mvrck.jp/tags/web/">web</a>
-<a href="https://mvrck.jp/tags/hugo/">hugo</a>
-</p>
-</article>
-
-<article>
-<h3><a href="https://mvrck.jp/blog/hugo-0-52-config-cache/">Hugo 0.52 でファイルキャッシュの設定が変わった</a></h3>
-
-<p class="date">
-<time datetime="2018-12-16T00:46:00">2018-12-16</time>
-</p>
-
-<p class="tags">
-<a href="https://mvrck.jp/tags/web/">web</a>
-<a href="https://mvrck.jp/tags/hugo/">hugo</a>
-<a href="https://mvrck.jp/tags/config/">config</a>
-</p>
-</article>
+<div class="content">
+<p>そういえば対処していなかった。</p>
+<p>Hugo 0.60 ではMarkdown処理系が代わったため、HTMLを直に記載していると該当部分が</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#888">&lt;!-- raw HTML omitted --&gt;</span>
+</code></pre></div><p>となってしまいます。</p>
+<p><code>config.toml</code> の <code>[markup]</code> 設定を下記のように書き換えると、元の動作に近い結果に。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = <span style="color:#080;font-weight:bold">true</span>
+</code></pre></div><p>相変わらず Hugo は漫然とアップデートしていると刺される。</p>
 
 </div>
+</article>
 
 
+<div id="related">
+<h2>Related</h2>
+<ul>
+<li><a href="https://mvrck.jp/blog/hugo-0-55-destructive-changes/">Hugo 0.55 の変更点いろいろメモ</a></li>
+<li><a href="https://mvrck.jp/blog/hugo-0-52-config-cache/">Hugo 0.52 でファイルキャッシュの設定が変わった</a></li>
+</ul>
+</div>
+<div id="neighbors"><a rel="prev" href="https://mvrck.jp/blog/macbook-air-2020-m1-homebrew/">MacBook Air 13inch (M1, 2020) Homebrew 環境構築</a>
+</div>
 </main>
 
 <footer>

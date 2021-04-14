@@ -2,7 +2,7 @@
 <html lang="ja-JP">
 <head>
 <meta charset="utf-8" />
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.82.0" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 <meta name="theme-color" content="#663300" />
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -60,9 +60,9 @@
 <h2 id="shortcodes-の挙動変更">shortcodes の挙動変更</h2>
 <p>いままで Markdown が適用されていた部分でも、適用されない場面が増えました。
 記事内の呼び出し方によって挙動が違います。</p>
-<p><!-- raw HTML omitted -->{{% &hellip; %}}<!-- raw HTML omitted --> は、文脈依存。</p>
-<p><!-- raw HTML omitted -->{{&lt; &hellip; &gt;}}<!-- raw HTML omitted --> は、出力をかっちり決めたいとき。基本はそのまま出力。Markdown による変換が必要なら、実装側で <code>{{ .Inner | markdownify }}</code> とします。</p>
-<p>個人的には <!-- raw HTML omitted -->{{&lt; &hellip; &gt;}}<!-- raw HTML omitted --> としての記載を意図して shortcodes をつくると思うので、覚え書きとして。</p>
+<p><code>{{% &hellip; %}}</code> は、文脈依存。</p>
+<p><code>{{&lt; &hellip; &gt;}}</code> は、出力をかっちり決めたいとき。基本はそのまま出力。Markdown による変換が必要なら、実装側で <code>{{ .Inner | markdownify }}</code> とします。</p>
+<p>個人的には <code>{{&lt; &hellip; &gt;}}</code> としての記載を意図して shortcodes をつくると思うので、覚え書きとして。</p>
 <p>Hugo はこういった変更が割とカジュアルに行われるので、油断すると刺される。</p>
 <h2 id="rsslink-は廃止予定">.RSSLink は廃止予定</h2>
 <p>これまでは下記のように記述していたところですが、</p>
