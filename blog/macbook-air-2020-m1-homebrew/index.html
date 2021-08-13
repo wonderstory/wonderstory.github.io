@@ -2,7 +2,7 @@
 <html lang="ja-JP">
 <head>
 <meta charset="utf-8" />
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.86.1" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 <meta name="theme-color" content="#663300" />
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -79,14 +79,14 @@
 <p>としてみます。x86がいらなくなったら <code>.local</code> のほうはまるごと消すことにします。</p>
 <h2 id="homebrew-インストール">Homebrew インストール</h2>
 <h3 id="arm64">arm64</h3>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% <span style="color:#038">cd</span> /opt
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% <span style="color:#038">cd</span> /opt
 % sudo mkdir homebrew
 % sudo chown <span style="color:#369">$USER</span> homebrew
 % curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip <span style="color:#00d;font-weight:bold">1</span> -C homebrew
 </code></pre></div><h3 id="x86_64">x86_64</h3>
 <p>（ここでは既に Rosetta 2 が導入されて、archコマンドがあるものとする）</p>
 <p>ターミナル自体をx86で動かす。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% <span style="color:#038">exec</span> arch -arch x86_64 <span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#369">$SHELL</span><span style="color:#d20;background-color:#fff0f0">&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% <span style="color:#038">exec</span> arch -arch x86_64 <span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#369">$SHELL</span><span style="color:#d20;background-color:#fff0f0">&#34;</span>
 
 % <span style="color:#038">cd</span> ~
 % mkdir -p .local/homebrew
@@ -95,7 +95,7 @@
 <p><code>PATH</code>の設定、補完関係、アーキテクチャの切り替えエイリアスなど。
 果たしてHomebrewのキャッシュディレクトリは移しておくべきなのか。謎。</p>
 <p>そういえばzshを初めて使う気がします。<code>chpwd()</code>とか、初見ではわからんばい。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#038">export</span> <span style="color:#369">LSCOLORS</span>=gxfxxxxxcxxxxxxxxxgxgx
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#038">export</span> <span style="color:#369">LSCOLORS</span>=gxfxxxxxcxxxxxxxxxgxgx
 zstyle <span style="color:#d20;background-color:#fff0f0">&#39;:completion:*&#39;</span> list-colors <span style="color:#d20;background-color:#fff0f0">&#39;di=36&#39;</span> <span style="color:#d20;background-color:#fff0f0">&#39;ln=35&#39;</span> <span style="color:#d20;background-color:#fff0f0">&#39;ex=32&#39;</span>
 
 
@@ -140,13 +140,13 @@ setopt magic_equal_subst
 autoload -U compinit &amp;&amp; compinit
 </code></pre></div><h2 id="starship">Starship</h2>
 <p>とりあえずこれを書いている時点では、armで失敗するのを確認。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% switch2arm
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% switch2arm
 % brew install starship
 </code></pre></div><p>代わりにx86でインストール。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% switch2x86
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% switch2x86
 % brew_x86 install starship
 </code></pre></div><p>適宜、設定と使用の準備。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% switch2arm
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% switch2arm
 % <span style="color:#038">echo</span> <span style="color:#d20;background-color:#fff0f0">&#39;eval &#34;$(starship init zsh)&#34;&#39;</span> &gt;&gt; ~/.zshrc
 
 % mkdir ~/.config
@@ -165,9 +165,7 @@ autoload -U compinit &amp;&amp; compinit
 <footer>
 <div id="link">
 <a href="https://github.com/wonderstory" title="GitHub" aria-label="GitHub"><i class="fa fa-lg fa-github" aria-hidden="true"></i></a>
-<a href="https://twitter.com/wonderstory" title="Twitter" aria-label="Twitter"><i class="fa fa-lg fa-twitter" aria-hidden="true"></i></a>
-<a href="http://note.mvrck.jp" title="Tumblr" aria-label="Tumblr"><i class="fa fa-lg fa-tumblr-square" aria-hidden="true"></i></a>
-<a href="https://www.flickr.com/photos/wonderstory/" title="Flickr" aria-label="Flickr"><i class="fa fa-lg fa-flickr" aria-hidden="true"></i></a>
+<a href="https://kir.mvrck.jp" title="Tumblr" aria-label="Tumblr"><i class="fa fa-lg fa-tumblr-square" aria-hidden="true"></i></a>
 </div>
 
 <div id="author"><b>wonderstory</b>
