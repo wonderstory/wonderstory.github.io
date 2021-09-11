@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>physical-keyboard on mvrck</title>
+    <link>https://mvrck.jp/tags/physical-keyboard/</link>
+    <description>Recent content in physical-keyboard on mvrck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Sat, 11 Sep 2021 11:15:58 +0900</lastBuildDate><atom:link href="https://mvrck.jp/tags/physical-keyboard/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unihertz Titan Pocket が来たので</title>
+      <link>https://mvrck.jp/blog/unihertz-titan-pocket-2021/</link>
+      <pubDate>Sat, 11 Sep 2021 11:15:58 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/blog/unihertz-titan-pocket-2021/</guid>
+      <description>工場生産体制に定評のあるUnihertzさんの最新作が届いたので、とりあえずおもしろガジェット枠で何日か持ち歩いています。 思ったことを順不同</description>
+    </item>
+    
+    <item>
+      <title>Motorola Flipout 分解＆キーパッド交換</title>
+      <link>https://mvrck.jp/blog/flipout-us-keypad/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/blog/flipout-us-keypad/</guid>
+      <description>Motorola Flipout の US 印字キーパッドが届いたので、本体を分解して交換しました。 裏蓋を外すと、カメラ側にトルクスねじ（たぶんT2）が3か所あります。手持ちの</description>
+    </item>
+    
+    <item>
+      <title>Motorola Flipout キーボードカスタマイズ</title>
+      <link>https://mvrck.jp/blog/flipout-keyboard-config/</link>
+      <pubDate>Mon, 13 Jun 2011 00:00:00 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/blog/flipout-keyboard-config/</guid>
+      <description>ちいささと、ころっとした外見、ぷちぷちした感触のキーボードがだいぶ気に入ってしまって、ローエンド機種だし動作は遅めだし公式アップデートはたぶ</description>
+    </item>
+    
+  </channel>
+</rss>
