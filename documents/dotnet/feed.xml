@@ -6,7 +6,16 @@
     <description>Recent content in .NET memo on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Mon, 27 Jan 2020 00:52:11 +0900</lastBuildDate><atom:link href="https://mvrck.jp/documents/dotnet/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Oct 2021 16:53:16 +0900</lastBuildDate><atom:link href="https://mvrck.jp/documents/dotnet/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>System.Windows.Forms.ListView の SubItem （特定列）だけ色を変える</title>
+      <link>https://mvrck.jp/documents/dotnet/winforms/listview-details-subitem/</link>
+      <pubDate>Fri, 08 Oct 2021 16:53:16 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/documents/dotnet/winforms/listview-details-subitem/</guid>
+      <description>下記の前提で、特定の列だけ色を変えたいときの書き方。 ヘッダは別途オーナードローが必要。 VirtualMode = true View = Details private void ListView_RetrieveVirtualItem(object sender, RetrieveVirtualItemEventArgs e) { if (e.ItemIndex &amp;lt; 0 || e.ItemIndex &amp;gt;= _hogeList.Count) { e.Item = new ListViewItem(new string[]</description>
+    </item>
+    
     <item>
       <title>ItemsControlのテンプレートをカスタマイズする</title>
       <link>https://mvrck.jp/documents/dotnet/wpf/itemscontrol-template/</link>

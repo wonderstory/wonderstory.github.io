@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dotnet on mvrck</title>
-    <link>https://mvrck.jp/tags/dotnet/</link>
-    <description>Recent content in dotnet on mvrck</description>
+    <title>winforms on mvrck</title>
+    <link>https://mvrck.jp/tags/winforms/</link>
+    <description>Recent content in winforms on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Fri, 08 Oct 2021 16:53:16 +0900</lastBuildDate><atom:link href="https://mvrck.jp/tags/dotnet/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Oct 2021 16:53:16 +0900</lastBuildDate><atom:link href="https://mvrck.jp/tags/winforms/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>System.Windows.Forms.ListView の SubItem （特定列）だけ色を変える</title>
       <link>https://mvrck.jp/documents/dotnet/winforms/listview-details-subitem/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://mvrck.jp/documents/dotnet/winforms/listview-details-subitem/</guid>
       <description>下記の前提で、特定の列だけ色を変えたいときの書き方。 ヘッダは別途オーナードローが必要。 VirtualMode = true View = Details private void ListView_RetrieveVirtualItem(object sender, RetrieveVirtualItemEventArgs e) { if (e.ItemIndex &amp;lt; 0 || e.ItemIndex &amp;gt;= _hogeList.Count) { e.Item = new ListViewItem(new string[]</description>
-    </item>
-    
-    <item>
-      <title>ItemsControlのテンプレートをカスタマイズする</title>
-      <link>https://mvrck.jp/documents/dotnet/wpf/itemscontrol-template/</link>
-      <pubDate>Mon, 27 Jan 2020 00:52:11 +0900</pubDate>
-      
-      <guid>https://mvrck.jp/documents/dotnet/wpf/itemscontrol-template/</guid>
-      <description>Template コントロール全体の設定。 全体をScrollViewerで囲ったり、Borderで装飾したりするときは、ここで設定する。 ItemsPrese</description>
     </item>
     
   </channel>
