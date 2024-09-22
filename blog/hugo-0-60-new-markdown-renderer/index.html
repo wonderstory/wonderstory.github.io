@@ -2,7 +2,7 @@
 <html lang="ja-JP">
 <head>
 <meta charset="utf-8" />
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.96.0" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 <meta name="theme-color" content="#663300" />
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -61,14 +61,14 @@
 <div class="content">
 <p>そういえば対処していなかった。</p>
 <p>Hugo 0.60 ではMarkdown処理系が代わったため、HTMLを直に記載していると該当部分が</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#888">&lt;!-- raw HTML omitted --&gt;</span>
-</code></pre></div><p>となってしまいます。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#888">&lt;!-- raw HTML omitted --&gt;</span>
+</span></span></code></pre></div><p>となってしまいます。</p>
 <p><code>config.toml</code> の <code>[markup]</code> 設定を下記のように書き換えると、元の動作に近い結果に。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[markup]
-[markup.goldmark]
-[markup.goldmark.renderer]
-unsafe = <span style="color:#080;font-weight:bold">true</span>
-</code></pre></div><p>相変わらず Hugo は漫然とアップデートしていると刺される。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[markup]
+</span></span><span style="display:flex;"><span>[markup.goldmark]
+</span></span><span style="display:flex;"><span>[markup.goldmark.renderer]
+</span></span><span style="display:flex;"><span>unsafe = <span style="color:#080;font-weight:bold">true</span>
+</span></span></code></pre></div><p>相変わらず Hugo は漫然とアップデートしていると刺される。</p>
 
 </div>
 </article>

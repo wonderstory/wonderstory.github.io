@@ -6,7 +6,16 @@
     <description>Recent content in Blog on mvrck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sun, 26 Sep 2021 00:58:19 +0900</lastBuildDate><atom:link href="https://mvrck.jp/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Sep 2024 00:28:28 +0900</lastBuildDate><atom:link href="https://mvrck.jp/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SMT劇場の上映スケジュールを表にする</title>
+      <link>https://mvrck.jp/blog/smt-timetable/</link>
+      <pubDate>Mon, 23 Sep 2024 00:28:28 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/blog/smt-timetable/</guid>
+      <description>よく行くSMTの上映スケジュールを可視化してダブルヘッダーしやすくする試みです。 動機 最近映画館に行くようになり、せっかく行くからには2本観た</description>
+    </item>
+    
     <item>
       <title>Unihertz Titan Pocket アップデート 2021-09-22 がmicroSDカードのせいで失敗する</title>
       <link>https://mvrck.jp/blog/unihertz-titan-pocket-update-20210922/</link>

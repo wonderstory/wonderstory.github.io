@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8" />
+<meta name="generator" content="Hugo 0.96.0" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+<meta name="theme-color" content="#663300" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/main.css" />
+<link rel="stylesheet" href="https://mvrck.jp/css/custom.css" />
+<title>SMT劇場の上映スケジュールを表にする - mvrck</title>
+
+<link rel="canonical" href="https://mvrck.jp/blog/smt-timetable/" />
+
+</head>
+
+<body>
+
+<header>
+<div id="logo" class="wd">
+<a href="https://mvrck.jp/">mvrck</a>
+</div>
+
+<nav id="menu">
+<ul>
+<li class="blog">
+<a href="https://mvrck.jp/blog/">Blog</a>
+</li>
+<li class="documents">
+<a href="https://mvrck.jp/documents/">Documents</a>
+</li>
+<li class="tags">
+<a href="https://mvrck.jp/tags/">Tags</a>
+</li>
+<li class="about">
+<a href="https://mvrck.jp/about/">About</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<main>
+
+<article>
+<header>
+
+
+<h1>SMT劇場の上映スケジュールを表にする</h1>
+
+<p class="date">
+<time datetime="2024-09-23T00:28:28">2024-09-23</time>
+</p>
+
+<p class="tags">
+<a href="https://mvrck.jp/tags/javascript/">javascript</a>
+<a href="https://mvrck.jp/tags/theater/">theater</a>
+</p>
+
+</header>
+
+<div class="content">
+<p>よく行くSMTの上映スケジュールを可視化してダブルヘッダーしやすくする試みです。</p>
+<h2 id="動機">動機</h2>
+<p>最近映画館に行くようになり、せっかく行くからには2本観たい（ダブルヘッダー？）と思うことがあるのですが、
+作品ごとの上映時刻がそれぞれリストになっていて、作品間の上映終了時刻〜次の開始時刻でいい感じのペアがあるのか、一目見てわかりにくい。</p>
+<p>ということで、ひさしぶりにHTMLをこねる作業をしてみました。JavaScriptの復習も兼ねて。</p>
+<h2 id="タイムテーブル作成">タイムテーブル作成</h2>
+<p>よく行く<a href="https://www.smt-cinema.com/theater/index.html">SMT系列劇場</a>の上映時刻を表にしてみました。</p>
+<p>タイムテーブルの出力には<a href="https://github.com/Grible/timetable.js">Timetable.js</a>を使いました。細かな設定なしでそれなりに描いてくれるので簡単に扱えました（少しCSSを調整）。</p>
+<p>JavaScriptだけで動かすので、URL指定ではなくHTMLをまるごと入力する感じになりました。</p>
+<h3 id="テストページ">テストページ</h3>
+<p><a href="https://mvrck.jp/labs/smt-timetable/">タイムテーブル作成テストページ</a></p>
+<h3 id="使い方">使い方</h3>
+<ol>
+<li>お好きなSMT劇場の日別上映スケジュールを開く</li>
+<li>「印刷用スケジュールを表示」ボタンから開いたページのHTMLソースコードをコピー</li>
+<li>テストページにソースコードを貼り付けて「タイムテーブル作成」を押す</li>
+</ol>
+<h2 id="例">例</h2>
+<p>とある日のスケジュールです。</p>
+
+<figure>
+<img src="https://www.dropbox.com/scl/fi/i5wwy6oikn8kxt0f8xdze/?rlkey=hs68kzqgrs4wd31iwgn3vxg0r&raw=1" width="817" height="886" alt="" />
+</figure>
+
+<p>例えば、19時終盤から、シアター6（ぼっち・ざ・ろっく！） → シアター4（シャイニーカラーズ）と連続視聴できることがわかります。</p>
+<p>20時直前に終わるシアター8（虹ヶ咲学園）からシアター6への移動も、5分被りなのでギリギリ次の本編に間に合うと思われます（冒頭10分くらいは宣伝が流れているので）。</p>
+<h2 id="所感">所感</h2>
+<ul>
+<li>改めて可視化してみると、けっこう詰め詰めに上映をスケジューリングしていることがわかります。大変そう。</li>
+<li>JavaScriptだいぶ忘れている……</li>
+</ul>
+
+</div>
+</article>
+
+
+<div id="neighbors"><a rel="prev" href="https://mvrck.jp/blog/unihertz-titan-pocket-update-20210922/">Unihertz Titan Pocket アップデート 2021-09-22 がmicroSDカードのせいで失敗する</a>
+</div>
+</main>
+
+<footer>
+<div id="link">
+<a href="https://github.com/wonderstory" title="GitHub" aria-label="GitHub"><i class="fa fa-lg fa-github" aria-hidden="true"></i></a>
+<a href="https://twitter.com/wonderstory" title="Twitter" aria-label="Twitter"><i class="fa fa-lg fa-twitter" aria-hidden="true"></i></a>
+<a href="https://kir.mvrck.jp" title="Tumblr" aria-label="Tumblr"><i class="fa fa-lg fa-tumblr-square" aria-hidden="true"></i></a>
+</div>
+
+<div id="author"><b>wonderstory</b>
+<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
+</div>
+</footer>
+</body>
+</html>

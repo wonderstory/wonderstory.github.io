@@ -2,7 +2,7 @@
 <html lang="ja-JP">
 <head>
 <meta charset="utf-8" />
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.96.0" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 <meta name="theme-color" content="#663300" />
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -66,12 +66,12 @@
 </code></pre>
 <p><a href="https://gohugo.io/getting-started/configuration/#configure-file-caches">Hugo のドキュメント</a>を参考に、設定ファイルを書き換える必要があります。
 このサイトの <code>config.toml</code> だと</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">cachedir = <span style="color:#d20;background-color:#fff0f0">&#34;cache&#34;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>cachedir = <span style="color:#d20;background-color:#fff0f0">&#34;cache&#34;</span></span></span></code></pre></div>
 <p>だったものを</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[caches]
-[caches.getjson]
-dir = <span style="color:#d20;background-color:#fff0f0">&#34;:resourceDir/_gen&#34;</span>
-maxAge = <span style="color:#00d;font-weight:bold">-1</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[caches]
+</span></span><span style="display:flex;"><span>[caches.getjson]
+</span></span><span style="display:flex;"><span>dir = <span style="color:#d20;background-color:#fff0f0">&#34;:resourceDir/_gen&#34;</span>
+</span></span><span style="display:flex;"><span>maxAge = <span style="color:#00d;font-weight:bold">-1</span></span></span></code></pre></div>
 <p>に変更しました（必要ならJSON以外も設定）。</p>
 <p>今まではプロジェクトルート階層にある <code>cache</code> ディレクトリに生成されていたものが <code>resources/_gen/getjson</code> の中に作られるようになります。
 <code>:resourceDir</code> は <code>resourceDir</code> の設定を書いておけば変更可能ですが、ディレクトリ構成にこだわりはないのでおとなしくデフォルトを使うことにします。</p>

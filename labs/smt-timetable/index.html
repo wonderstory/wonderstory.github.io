@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SMT Timetable</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="./timetable.js/dist/styles/timetablejs.css" />
+        <style>
+            @media print {
+                form,
+                hr {
+                    display: none;
+                }
+            }
+            body {
+                margin: 1rem;
+            }
+        </style>
+        <script src="./timetable.js/dist/scripts/timetable.js"></script>
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <form id="form">
+            <textarea
+                class="form-control"
+                name="content"
+                placeholder="印刷用スケジュールのHTMLを貼り付ける"
+            ></textarea>
+            <div class="">
+                <button type="submit" class="btn btn-primary">タイムテーブル作成</button>
+                <button
+                    type="button"
+                    class="float-end btn btn-outline-secondary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Credits"
+                >
+                    Credits
+                </button>
+            </div>
+        </form>
+
+        <hr />
+
+        <h1>timetable</h1>
+        <div class="timetable"></div>
+
+        <div class="modal fade" id="Credits" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="fs-5 modal-title">Credits</h2>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 class="fs-6">Open source software</h3>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/Grible/timetable.js">Timetable.js</a>
+                                /
+                                <a href="https://github.com/Grible/timetable.js/blob/master/LICENSE"
+                                    >GPL-3.0</a
+                                >
+                            </li>
+                            <li>
+                                <a href="https://getbootstrap.jp/">Bootstrap</a>
+                                /
+                                <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE"
+                                    >MIT</a
+                                >
+                            </li>
+                        </ul>
+
+                        <hr />
+
+                        <h3 class="fs-6">License</h3>
+                        <a href="./LICENSE">MIT</a>
+
+                        <hr />
+                        <p>
+                            2024年9月現在のWebページに対応しています。先方のリニューアルなどで将来的に使えなくなることがあります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

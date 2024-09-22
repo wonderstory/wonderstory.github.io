@@ -2,7 +2,7 @@
 <html lang="ja-JP">
 <head>
 <meta charset="utf-8" />
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.96.0" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 <meta name="theme-color" content="#663300" />
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -79,59 +79,59 @@
 <p>コントロール全体の設定。
 全体をScrollViewerで囲ったり、Borderで装飾したりするときは、ここで設定する。</p>
 <p>ItemsPresenterには、ItemsPanelの内容が入る。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#b06;font-weight:bold">&lt;ItemsControl.Template&gt;</span>
-    <span style="color:#b06;font-weight:bold">&lt;ControlTemplate</span> <span style="color:#369">TargetType=</span><span style="color:#d20;background-color:#fff0f0">&#34;ItemsControl&#34;</span><span style="color:#b06;font-weight:bold">&gt;</span>
-        <span style="color:#b06;font-weight:bold">&lt;ScrollViewer</span> <span style="color:#369">Focusable=</span><span style="color:#d20;background-color:#fff0f0">&#34;False&#34;</span><span style="color:#b06;font-weight:bold">&gt;</span>
-            <span style="color:#b06;font-weight:bold">&lt;ItemsPresenter/&gt;</span>
-        <span style="color:#b06;font-weight:bold">&lt;/ScrollViewer&gt;</span>
-    <span style="color:#b06;font-weight:bold">&lt;/ControlTemplate&gt;</span>
-<span style="color:#b06;font-weight:bold">&lt;/ItemsControl.Template&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#b06;font-weight:bold">&lt;ItemsControl.Template&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b06;font-weight:bold">&lt;ControlTemplate</span> <span style="color:#369">TargetType=</span><span style="color:#d20;background-color:#fff0f0">&#34;ItemsControl&#34;</span><span style="color:#b06;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b06;font-weight:bold">&lt;ScrollViewer</span> <span style="color:#369">Focusable=</span><span style="color:#d20;background-color:#fff0f0">&#34;False&#34;</span><span style="color:#b06;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#b06;font-weight:bold">&lt;ItemsPresenter/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b06;font-weight:bold">&lt;/ScrollViewer&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b06;font-weight:bold">&lt;/ControlTemplate&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b06;font-weight:bold">&lt;/ItemsControl.Template&gt;</span></span></span></code></pre></div>
 <h2 id="itemspanel">ItemsPanel</h2>
 <p>コレクションを乗せるPanelを指定。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#b06;font-weight:bold">&lt;ItemsControl.ItemsPanel&gt;</span>
-    <span style="color:#b06;font-weight:bold">&lt;ItemsPanelTemplate&gt;</span>
-        <span style="color:#b06;font-weight:bold">&lt;WrapPanel</span> <span style="color:#369">Orientation=</span><span style="color:#d20;background-color:#fff0f0">&#34;Vertical&#34;</span><span style="color:#b06;font-weight:bold">/&gt;</span>
-    <span style="color:#b06;font-weight:bold">&lt;/ItemsPanelTemplate&gt;</span>
-<span style="color:#b06;font-weight:bold">&lt;/ItemsControl.ItemsPanel&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#b06;font-weight:bold">&lt;ItemsControl.ItemsPanel&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b06;font-weight:bold">&lt;ItemsPanelTemplate&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b06;font-weight:bold">&lt;WrapPanel</span> <span style="color:#369">Orientation=</span><span style="color:#d20;background-color:#fff0f0">&#34;Vertical&#34;</span><span style="color:#b06;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b06;font-weight:bold">&lt;/ItemsPanelTemplate&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b06;font-weight:bold">&lt;/ItemsControl.ItemsPanel&gt;</span></span></span></code></pre></div>
 <h2 id="itemcontainerstyle">ItemContainerStyle</h2>
 <p>コレクションの各オブジェクトを格納するコンテナーの設定。
 これがItemsPanelに乗る。</p>
 <p>ContentPresenterには、ItemTemplateの内容が入る。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#b06;font-weight:bold">&lt;ItemsControl.ItemContainerStyle&gt;</span>
-    <span style="color:#b06;font-weight:bold">&lt;Style</span> <span style="color:#369">TargetType=</span><span style="color:#d20;background-color:#fff0f0">&#34;ListBoxItem&#34;</span><span style="color:#b06;font-weight:bold">&gt;</span>
-        <span style="color:#b06;font-weight:bold">&lt;Setter</span> <span style="color:#369">Property=</span><span style="color:#d20;background-color:#fff0f0">&#34;OverridesDefaultStyle&#34;</span> <span style="color:#369">Value=</span><span style="color:#d20;background-color:#fff0f0">&#34;True&#34;</span><span style="color:#b06;font-weight:bold">/&gt;</span>
-        <span style="color:#b06;font-weight:bold">&lt;Setter</span> <span style="color:#369">Property=</span><span style="color:#d20;background-color:#fff0f0">&#34;BorderThickness&#34;</span> <span style="color:#369">Value=</span><span style="color:#d20;background-color:#fff0f0">&#34;1&#34;</span><span style="color:#b06;font-weight:bold">/&gt;</span>
-
-        <span style="color:#b06;font-weight:bold">&lt;Setter</span> <span style="color:#369">Property=</span><span style="color:#d20;background-color:#fff0f0">&#34;Template&#34;</span><span style="color:#b06;font-weight:bold">&gt;</span>
-            <span style="color:#b06;font-weight:bold">&lt;Setter.Value&gt;</span>
-                <span style="color:#b06;font-weight:bold">&lt;ControlTemplate</span> <span style="color:#369">TargetType=</span><span style="color:#d20;background-color:#fff0f0">&#34;ContentControl&#34;</span><span style="color:#b06;font-weight:bold">&gt;</span>
-                    <span style="color:#b06;font-weight:bold">&lt;Border</span>
-                        <span style="color:#369">Background=</span><span style="color:#d20;background-color:#fff0f0">&#34;{TemplateBinding Background}&#34;</span>
-                        <span style="color:#369">BorderThickness=</span><span style="color:#d20;background-color:#fff0f0">&#34;{TemplateBinding BorderThickness}&#34;</span>
-                        <span style="color:#369">BorderBrush=</span><span style="color:#d20;background-color:#fff0f0">&#34;{TemplateBinding BorderBrush}&#34;</span>
-                        <span style="color:#b06;font-weight:bold">&gt;</span>
-                        <span style="color:#b06;font-weight:bold">&lt;ContentPresenter/&gt;</span>
-                    <span style="color:#b06;font-weight:bold">&lt;/Border&gt;</span>
-                <span style="color:#b06;font-weight:bold">&lt;/ControlTemplate&gt;</span>
-            <span style="color:#b06;font-weight:bold">&lt;/Setter.Value&gt;</span>
-        <span style="color:#b06;font-weight:bold">&lt;/Setter&gt;</span>
-
-        <span style="color:#b06;font-weight:bold">&lt;Style.Triggers&gt;</span>
-            <span style="color:#b06;font-weight:bold">&lt;Trigger</span> <span style="color:#369">Property=</span><span style="color:#d20;background-color:#fff0f0">&#34;IsSelected&#34;</span> <span style="color:#369">Value=</span><span style="color:#d20;background-color:#fff0f0">&#34;True&#34;</span><span style="color:#b06;font-weight:bold">&gt;</span>
-                <span style="color:#b06;font-weight:bold">&lt;Setter</span> <span style="color:#369">Property=</span><span style="color:#d20;background-color:#fff0f0">&#34;Background&#34;</span> <span style="color:#369">Value=</span><span style="color:#d20;background-color:#fff0f0">&#34;#9999CCFF&#34;</span><span style="color:#b06;font-weight:bold">/&gt;</span>
-                <span style="color:#b06;font-weight:bold">&lt;Setter</span> <span style="color:#369">Property=</span><span style="color:#d20;background-color:#fff0f0">&#34;BorderBrush&#34;</span> <span style="color:#369">Value=</span><span style="color:#d20;background-color:#fff0f0">&#34;#3399FF&#34;</span><span style="color:#b06;font-weight:bold">/&gt;</span>
-            <span style="color:#b06;font-weight:bold">&lt;/Trigger&gt;</span>
-        <span style="color:#b06;font-weight:bold">&lt;/Style.Triggers&gt;</span>
-    <span style="color:#b06;font-weight:bold">&lt;/Style&gt;</span>
-<span style="color:#b06;font-weight:bold">&lt;/ItemsControl.ItemContainerStyle&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#b06;font-weight:bold">&lt;ItemsControl.ItemContainerStyle&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b06;font-weight:bold">&lt;Style</span> <span style="color:#369">TargetType=</span><span style="color:#d20;background-color:#fff0f0">&#34;ListBoxItem&#34;</span><span style="color:#b06;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b06;font-weight:bold">&lt;Setter</span> <span style="color:#369">Property=</span><span style="color:#d20;background-color:#fff0f0">&#34;OverridesDefaultStyle&#34;</span> <span style="color:#369">Value=</span><span style="color:#d20;background-color:#fff0f0">&#34;True&#34;</span><span style="color:#b06;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b06;font-weight:bold">&lt;Setter</span> <span style="color:#369">Property=</span><span style="color:#d20;background-color:#fff0f0">&#34;BorderThickness&#34;</span> <span style="color:#369">Value=</span><span style="color:#d20;background-color:#fff0f0">&#34;1&#34;</span><span style="color:#b06;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b06;font-weight:bold">&lt;Setter</span> <span style="color:#369">Property=</span><span style="color:#d20;background-color:#fff0f0">&#34;Template&#34;</span><span style="color:#b06;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#b06;font-weight:bold">&lt;Setter.Value&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#b06;font-weight:bold">&lt;ControlTemplate</span> <span style="color:#369">TargetType=</span><span style="color:#d20;background-color:#fff0f0">&#34;ContentControl&#34;</span><span style="color:#b06;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#b06;font-weight:bold">&lt;Border</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#369">Background=</span><span style="color:#d20;background-color:#fff0f0">&#34;{TemplateBinding Background}&#34;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#369">BorderThickness=</span><span style="color:#d20;background-color:#fff0f0">&#34;{TemplateBinding BorderThickness}&#34;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#369">BorderBrush=</span><span style="color:#d20;background-color:#fff0f0">&#34;{TemplateBinding BorderBrush}&#34;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#b06;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#b06;font-weight:bold">&lt;ContentPresenter/&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#b06;font-weight:bold">&lt;/Border&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#b06;font-weight:bold">&lt;/ControlTemplate&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#b06;font-weight:bold">&lt;/Setter.Value&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b06;font-weight:bold">&lt;/Setter&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b06;font-weight:bold">&lt;Style.Triggers&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#b06;font-weight:bold">&lt;Trigger</span> <span style="color:#369">Property=</span><span style="color:#d20;background-color:#fff0f0">&#34;IsSelected&#34;</span> <span style="color:#369">Value=</span><span style="color:#d20;background-color:#fff0f0">&#34;True&#34;</span><span style="color:#b06;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#b06;font-weight:bold">&lt;Setter</span> <span style="color:#369">Property=</span><span style="color:#d20;background-color:#fff0f0">&#34;Background&#34;</span> <span style="color:#369">Value=</span><span style="color:#d20;background-color:#fff0f0">&#34;#9999CCFF&#34;</span><span style="color:#b06;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#b06;font-weight:bold">&lt;Setter</span> <span style="color:#369">Property=</span><span style="color:#d20;background-color:#fff0f0">&#34;BorderBrush&#34;</span> <span style="color:#369">Value=</span><span style="color:#d20;background-color:#fff0f0">&#34;#3399FF&#34;</span><span style="color:#b06;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#b06;font-weight:bold">&lt;/Trigger&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b06;font-weight:bold">&lt;/Style.Triggers&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b06;font-weight:bold">&lt;/Style&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b06;font-weight:bold">&lt;/ItemsControl.ItemContainerStyle&gt;</span></span></span></code></pre></div>
 <h2 id="itemtemplate">ItemTemplate</h2>
 <p>各オブジェクトの表示形式を指定。
 下記の例では、各オブジェクトのNameプロパティを表示する。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#b06;font-weight:bold">&lt;ItemsControl.ItemTemplate&gt;</span>
-    <span style="color:#b06;font-weight:bold">&lt;DataTemplate&gt;</span>
-        <span style="color:#b06;font-weight:bold">&lt;TextBlock</span> <span style="color:#369">Text=</span><span style="color:#d20;background-color:#fff0f0">&#34;{Binding Name}&#34;</span><span style="color:#b06;font-weight:bold">/&gt;</span>
-    <span style="color:#b06;font-weight:bold">&lt;/DataTemplate&gt;</span>
-<span style="color:#b06;font-weight:bold">&lt;/ItemsControl.ItemTemplate&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#b06;font-weight:bold">&lt;ItemsControl.ItemTemplate&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b06;font-weight:bold">&lt;DataTemplate&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b06;font-weight:bold">&lt;TextBlock</span> <span style="color:#369">Text=</span><span style="color:#d20;background-color:#fff0f0">&#34;{Binding Name}&#34;</span><span style="color:#b06;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b06;font-weight:bold">&lt;/DataTemplate&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b06;font-weight:bold">&lt;/ItemsControl.ItemTemplate&gt;</span></span></span></code></pre></div>
 
 </div>
 </article>

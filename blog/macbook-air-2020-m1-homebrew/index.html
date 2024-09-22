@@ -2,7 +2,7 @@
 <html lang="ja-JP">
 <head>
 <meta charset="utf-8" />
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.96.0" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 <meta name="theme-color" content="#663300" />
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -82,79 +82,79 @@
 <p>としてみます。x86がいらなくなったら <code>.local</code> のほうはまるごと消すことにします。</p>
 <h2 id="homebrew-インストール">Homebrew インストール</h2>
 <h3 id="arm64">arm64</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% <span style="color:#038">cd</span> /opt
-% sudo mkdir homebrew
-% sudo chown <span style="color:#369">$USER</span> homebrew
-% curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip <span style="color:#00d;font-weight:bold">1</span> -C homebrew
-</code></pre></div><h3 id="x86_64">x86_64</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>% <span style="color:#038">cd</span> /opt
+</span></span><span style="display:flex;"><span>% sudo mkdir homebrew
+</span></span><span style="display:flex;"><span>% sudo chown <span style="color:#369">$USER</span> homebrew
+</span></span><span style="display:flex;"><span>% curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip <span style="color:#00d;font-weight:bold">1</span> -C homebrew
+</span></span></code></pre></div><h3 id="x86_64">x86_64</h3>
 <p>（ここでは既に Rosetta 2 が導入されて、archコマンドがあるものとする）</p>
 <p>ターミナル自体をx86で動かす。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% <span style="color:#038">exec</span> arch -arch x86_64 <span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#369">$SHELL</span><span style="color:#d20;background-color:#fff0f0">&#34;</span>
-
-% <span style="color:#038">cd</span> ~
-% mkdir -p .local/homebrew
-% curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip <span style="color:#00d;font-weight:bold">1</span> -C .local/homebrew
-</code></pre></div><h2 id="zshrc">~/.zshrc</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>% <span style="color:#038">exec</span> arch -arch x86_64 <span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#369">$SHELL</span><span style="color:#d20;background-color:#fff0f0">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>% <span style="color:#038">cd</span> ~
+</span></span><span style="display:flex;"><span>% mkdir -p .local/homebrew
+</span></span><span style="display:flex;"><span>% curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip <span style="color:#00d;font-weight:bold">1</span> -C .local/homebrew
+</span></span></code></pre></div><h2 id="zshrc">~/.zshrc</h2>
 <p><code>PATH</code>の設定、補完関係、アーキテクチャの切り替えエイリアスなど。
 果たしてHomebrewのキャッシュディレクトリは移しておくべきなのか。謎。</p>
 <p>そういえばzshを初めて使う気がします。<code>chpwd()</code>とか、初見ではわからんばい。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#038">export</span> <span style="color:#369">LSCOLORS</span>=gxfxxxxxcxxxxxxxxxgxgx
-zstyle <span style="color:#d20;background-color:#fff0f0">&#39;:completion:*&#39;</span> list-colors <span style="color:#d20;background-color:#fff0f0">&#39;di=36&#39;</span> <span style="color:#d20;background-color:#fff0f0">&#39;ln=35&#39;</span> <span style="color:#d20;background-color:#fff0f0">&#39;ex=32&#39;</span>
-
-
-<span style="color:#038">alias</span> <span style="color:#369">ls</span>=<span style="color:#d20;background-color:#fff0f0">&#39;ls -FG&#39;</span>
-
-chpwd() { ls }
-
-
-setopt auto_cd
-setopt magic_equal_subst
-
-
-<span style="color:#038">typeset</span> -U path fpath cdpath
-<span style="color:#369">path</span>=(
-	/opt/homebrew/bin(N-/)
-	~/.local/homebrew/bin(N-/)
-	<span style="color:#369">$path</span>
-)
-<span style="color:#369">fpath</span>=(
-	<span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#080;font-weight:bold">$(</span>brew --prefix<span style="color:#080;font-weight:bold">)</span><span style="color:#d20;background-color:#fff0f0">/share/zsh/site-functions&#34;</span>(N-/)
-	<span style="color:#369">$fpath</span>
-)
-<span style="color:#369">cdpath</span>=(
-	..
-	~
-	<span style="color:#369">$cdpath</span>
-)
-
-<span style="color:#080;font-weight:bold">if</span> (( $+commands[arch] )); <span style="color:#080;font-weight:bold">then</span>
-	<span style="color:#038">alias</span> <span style="color:#369">brew_x86</span>=<span style="color:#d20;background-color:#fff0f0">&#39;arch -arch x86_64 &#34;$HOME/.local/homebrew/bin/brew&#34;&#39;</span>
-	<span style="color:#038">alias</span> <span style="color:#369">switch2x86</span>=<span style="color:#d20;background-color:#fff0f0">&#39;exec arch -arch x86_64 &#34;$SHELL&#34; &amp;&amp; source ~/.zshrc&#39;</span>
-	<span style="color:#038">alias</span> <span style="color:#369">switch2arm</span>=<span style="color:#d20;background-color:#fff0f0">&#39;exec arch -arch arm64e &#34;$SHELL&#34; &amp;&amp; source ~/.zshrc&#39;</span>
-<span style="color:#080;font-weight:bold">fi</span>
-
-<span style="color:#080;font-weight:bold">if</span> [[ <span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#080;font-weight:bold">$(</span>uname -m<span style="color:#080;font-weight:bold">)</span><span style="color:#d20;background-color:#fff0f0">&#34;</span> == x86_64 ]]; <span style="color:#080;font-weight:bold">then</span>
-	<span style="color:#038">export</span> <span style="color:#369">HOMEBREW_CACHE</span>=<span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#369">$HOME</span><span style="color:#d20;background-color:#fff0f0">/.local/homebrew/cache&#34;</span>
-<span style="color:#080;font-weight:bold">else</span>
-	<span style="color:#038">export</span> <span style="color:#369">HOMEBREW_CACHE</span>=
-<span style="color:#080;font-weight:bold">fi</span>
-
-
-autoload -U compinit &amp;&amp; compinit
-</code></pre></div><h2 id="starship">Starship</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#038">export</span> <span style="color:#369">LSCOLORS</span>=gxfxxxxxcxxxxxxxxxgxgx
+</span></span><span style="display:flex;"><span>zstyle <span style="color:#d20;background-color:#fff0f0">&#39;:completion:*&#39;</span> list-colors <span style="color:#d20;background-color:#fff0f0">&#39;di=36&#39;</span> <span style="color:#d20;background-color:#fff0f0">&#39;ln=35&#39;</span> <span style="color:#d20;background-color:#fff0f0">&#39;ex=32&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#038">alias</span> <span style="color:#369">ls</span>=<span style="color:#d20;background-color:#fff0f0">&#39;ls -FG&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chpwd() { ls }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>setopt auto_cd
+</span></span><span style="display:flex;"><span>setopt magic_equal_subst
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#038">typeset</span> -U path fpath cdpath
+</span></span><span style="display:flex;"><span><span style="color:#369">path</span>=(
+</span></span><span style="display:flex;"><span>	/opt/homebrew/bin(N-/)
+</span></span><span style="display:flex;"><span>	~/.local/homebrew/bin(N-/)
+</span></span><span style="display:flex;"><span>	<span style="color:#369">$path</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#369">fpath</span>=(
+</span></span><span style="display:flex;"><span>	<span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#080;font-weight:bold">$(</span>brew --prefix<span style="color:#080;font-weight:bold">)</span><span style="color:#d20;background-color:#fff0f0">/share/zsh/site-functions&#34;</span>(N-/)
+</span></span><span style="display:flex;"><span>	<span style="color:#369">$fpath</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#369">cdpath</span>=(
+</span></span><span style="display:flex;"><span>	..
+</span></span><span style="display:flex;"><span>	~
+</span></span><span style="display:flex;"><span>	<span style="color:#369">$cdpath</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-weight:bold">if</span> (( $+commands[arch] )); <span style="color:#080;font-weight:bold">then</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#038">alias</span> <span style="color:#369">brew_x86</span>=<span style="color:#d20;background-color:#fff0f0">&#39;arch -arch x86_64 &#34;$HOME/.local/homebrew/bin/brew&#34;&#39;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#038">alias</span> <span style="color:#369">switch2x86</span>=<span style="color:#d20;background-color:#fff0f0">&#39;exec arch -arch x86_64 &#34;$SHELL&#34; &amp;&amp; source ~/.zshrc&#39;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#038">alias</span> <span style="color:#369">switch2arm</span>=<span style="color:#d20;background-color:#fff0f0">&#39;exec arch -arch arm64e &#34;$SHELL&#34; &amp;&amp; source ~/.zshrc&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-weight:bold">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-weight:bold">if</span> [[ <span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#080;font-weight:bold">$(</span>uname -m<span style="color:#080;font-weight:bold">)</span><span style="color:#d20;background-color:#fff0f0">&#34;</span> == x86_64 ]]; <span style="color:#080;font-weight:bold">then</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#038">export</span> <span style="color:#369">HOMEBREW_CACHE</span>=<span style="color:#d20;background-color:#fff0f0">&#34;</span><span style="color:#369">$HOME</span><span style="color:#d20;background-color:#fff0f0">/.local/homebrew/cache&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-weight:bold">else</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#038">export</span> <span style="color:#369">HOMEBREW_CACHE</span>=
+</span></span><span style="display:flex;"><span><span style="color:#080;font-weight:bold">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>autoload -U compinit &amp;&amp; compinit
+</span></span></code></pre></div><h2 id="starship">Starship</h2>
 <p>とりあえずこれを書いている時点では、armで失敗するのを確認。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% switch2arm
-% brew install starship
-</code></pre></div><p>代わりにx86でインストール。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% switch2x86
-% brew_x86 install starship
-</code></pre></div><p>適宜、設定と使用の準備。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">% switch2arm
-% <span style="color:#038">echo</span> <span style="color:#d20;background-color:#fff0f0">&#39;eval &#34;$(starship init zsh)&#34;&#39;</span> &gt;&gt; ~/.zshrc
-
-% mkdir ~/.config
-% touch ~/.config/starship.toml
-</code></pre></div><p>x86で作業したらarmに戻すのを忘れずに。
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>% switch2arm
+</span></span><span style="display:flex;"><span>% brew install starship
+</span></span></code></pre></div><p>代わりにx86でインストール。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>% switch2x86
+</span></span><span style="display:flex;"><span>% brew_x86 install starship
+</span></span></code></pre></div><p>適宜、設定と使用の準備。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>% switch2arm
+</span></span><span style="display:flex;"><span>% <span style="color:#038">echo</span> <span style="color:#d20;background-color:#fff0f0">&#39;eval &#34;$(starship init zsh)&#34;&#39;</span> &gt;&gt; ~/.zshrc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>% mkdir ~/.config
+</span></span><span style="display:flex;"><span>% touch ~/.config/starship.toml
+</span></span></code></pre></div><p>x86で作業したらarmに戻すのを忘れずに。
 こんな調子で、なんとかなる気がします。</p>
 
 </div>

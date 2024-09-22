@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on mvrck</title>
+    <link>https://mvrck.jp/tags/javascript/</link>
+    <description>Recent content in javascript on mvrck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Mon, 23 Sep 2024 00:28:28 +0900</lastBuildDate><atom:link href="https://mvrck.jp/tags/javascript/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SMT劇場の上映スケジュールを表にする</title>
+      <link>https://mvrck.jp/blog/smt-timetable/</link>
+      <pubDate>Mon, 23 Sep 2024 00:28:28 +0900</pubDate>
+      
+      <guid>https://mvrck.jp/blog/smt-timetable/</guid>
+      <description>よく行くSMTの上映スケジュールを可視化してダブルヘッダーしやすくする試みです。 動機 最近映画館に行くようになり、せっかく行くからには2本観た</description>
+    </item>
+    
+  </channel>
+</rss>
