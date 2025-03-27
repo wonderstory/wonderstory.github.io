@@ -24,6 +24,7 @@ div#logo.wd > *::before,
 .content h4::before,
 #related h2::before {
     font-family: "FontAwesome";
+    font-weight: 900 !important;
     font-size: 40px;
     content: "\f10c";
     color: #eee6e0;
@@ -240,10 +241,11 @@ div#neighbors a:first-child::after {
 }
 div#neighbors a::before {
     font-family: "FontAwesome", "Ubuntu", sans-serif;
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 11px;
+    font-weight: 900;
     display: inline-block;
-    width: 5em;
+    width: 6.5em;
+    margin-right: 0.5em;
     color: #999;
 }
 div#neighbors a[rel=prev]::before {
@@ -431,6 +433,7 @@ a:hover {
     left: 8px;
     content: "\f10d";
     font-family: "FontAwesome";
+    font-weight: 900;
     color: #fcfaf9;
     font-size: 58px;
     line-height: 1;
